@@ -587,7 +587,6 @@ h1, h2, h3, h4, h5, h6 {
 .column-last__listlink1 {
   width: 50%;
   display: inline-block;
-  margin: 0px right 0px;
   font-size: 12px;
   line-height: 25px; }
   .column-last__listlink1 a {
