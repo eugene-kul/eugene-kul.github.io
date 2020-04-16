@@ -1046,7 +1046,8 @@ body {
       border-radius: 10px;
       height: 550px;
       left: 0;
-      top: -620px; } }
+      position: absolute;
+      top: -22px; } }
   @media (max-width: 479.98px) {
     .column-mobile-item {
       -ms-flex-wrap: wrap;
@@ -1148,10 +1149,10 @@ body {
     margin: 0px 0px 40px 0px; }
     @media (max-width: 767.98px) {
       .works__top {
-        margin: -620px 0px 40px 0px; } }
+        margin: 0px 0px 40px 0px; } }
     @media (max-width: 479.98px) {
       .works__top {
-        margin: -620px 0px 20px 0px; } }
+        margin: 0px 0px 20px 0px; } }
   .works__bottom {
     margin: 0px 0px 60px 0px; }
     @media (max-width: 1013px) {
