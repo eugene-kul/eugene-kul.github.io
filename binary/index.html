@@ -13,6 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 </head>
 <body>
+	<div class="button-up"><span><svg viewBox='0 0 477.175 477.175'><path d='M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225   c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z' class='active-path'/></svg></span></div>
 	<div class="wrapper">
 		<div class="mainblock">
 			<div class="mainblock__content">
@@ -31,7 +32,7 @@
 				</div>
 			</div>
 			<div class="mainblock__image ibg">
-				<img src="img/mainblock/01.jpg" alt="">
+				<img src="img/mainblock/02.jpg" alt="">
 			</div>
 		</div>
 		<div class="content">
@@ -39,10 +40,10 @@
 				<div class="container">
 					<nav class="menu__items">
 						<ul class="menu__list">
-							<li><a href="#" class="menu__link menu__link_active">hOmE</a></li>
-							<li><a href="#" class="menu__link">ABOUT US</a></li>
-							<li><a href="#" class="menu__link">Portfolio</a></li>
-							<li><a href="#" class="menu__link">contacts</a></li>
+							<li><a onclick="slowScroll('.mainblock')" href="#" class="menu__link menu__link_active">hOmE</a></li>
+							<li><a onclick="slowScroll('.about')" href="#" class="menu__link">ABOUT</a></li>
+							<li><a onclick="slowScroll('.portfolio')" href="#" class="menu__link">about page</a></li>
+							<li><a onclick="slowScroll('.contacts')" href="#" class="menu__link">contacts</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -83,43 +84,71 @@
 			<div class="portfolio">
 				<div class="container">
 					<div class="portfolio__header-block header-block">
-						<div class="header-block__title">PORTFOLIO</div>
+						<div class="header-block__title">about page</div>
+						<div class="header-block__subtitle"><p>Adaptation of the upper unit for phones with different screen resolutions. Adaptation of the upper block for pictures of different resolutions without additional settings.</p></div>
 					</div>
 					<nav class="portfolio__filter filter">
 						<ul class="filter__list">
 							<li data-filter="1" class="filter__item filter__item__active">ALL</li>
-							<li data-filter="2" class="filter__item">WEB</li>
-							<li data-filter="3" class="filter__item">APPS</li>
-							<li data-filter="4" class="filter__item">OTHER</li>
+							<li data-filter="2" class="filter__item">mobile</li>
+							<li data-filter="3" class="filter__item">pc</li>
+							<li data-filter="4" class="filter__item">Animation</li>
 						</ul>
 					</nav>
 					<div class="portfolio__items gallery">
 						<div class="portfolio__column f_2">
-							<a href="img/portfolio/011.JPG" class="portfolio__link ibg"><img src="img/portfolio/011.JPG" alt=""></a>
+							<a href="img/portfolio/s5(640x360).jpg" class="portfolio__link ibg" title="Adapting the top block for the Samsung Galaxy S5, with a horizontal screen layout. Screen Resolution: 640x360"><img src="img/portfolio/s5(640x360).jpg" alt="">
+							<div class="portfolio__text">Samsung Galaxy S5, 640х360</div></a>
 						</div>
 						<div class="portfolio__column f_2">
-							<a href="img/portfolio/012.JPG" class="portfolio__link ibg"><img src="img/portfolio/012.JPG" alt=""></a>
+							<a href="img/portfolio/i5(568x320).jpg" class="portfolio__link ibg" title="Adaptation of the top block for iPhone 5 / SE, with a horizontal screen layout. Screen Resolution: 568x320"><img src="img/portfolio/i5(568x320).jpg" alt="">
+							<div class="portfolio__text">iPhone 5/SE, 568х320</div></a>
+						</div>
+						<div class="portfolio__column f_2">
+							<a href="img/portfolio/i8(736x414).jpg" class="portfolio__link ibg" title="Adapting the top block for the iPhone 6/7/8 Plus, with a horizontal screen layout. Screen Resolution: 736x414"><img src="img/portfolio/i8(736x414).jpg" alt="">
+							<div class="portfolio__text">iPhone 6/7/8 Plus, 736x414</div></a>
+						</div>
+						<div class="portfolio__column f_2">
+							<a href="img/portfolio/iX(812x375).jpg" class="portfolio__link ibg" title="Adaptation of the top block for iPhone X, with a horizontal screen layout. Screen Resolution: 812x375"><img src="img/portfolio/iX(812x375).jpg" alt="">
+							<div class="portfolio__text">iPhone X, 812x375</div></a>
 						</div>
 						<div class="portfolio__column f_3">
-							<a href="img/portfolio/013.JPG" class="portfolio__link ibg"><img src="img/portfolio/013.JPG" alt=""></a>
+							<a href="img/portfolio/320x240.jpg" class="portfolio__link ibg" title="Adaptation of the upper block for pictures with different resolutions. Resolution of the current picture: 320x240. A very small picture, loses quality, but fills the block completely."><img src="img/portfolio/320x240.jpg" alt="">
+							<div class="portfolio__text">Picture for the top block with a resolution of 320x240</div></a>
 						</div>
 						<div class="portfolio__column f_3">
-							<a href="img/portfolio/04.jpg" class="portfolio__link ibg"><img src="img/portfolio/04.jpg" alt=""></a>
+							<a href="img/portfolio/1366x768.jpg" class="portfolio__link ibg" title="Adaptation of the upper block for pictures with different resolutions. Resolution of the current picture: 1366x768."><img src="img/portfolio/1366x768.jpg" alt="">
+							<div class="portfolio__text">Picture for the top block with a resolution of 1366x768</div></a>
+						</div>
+						<div class="portfolio__column f_3">
+							<a href="img/portfolio/1680x1050.jpg" class="portfolio__link ibg" title="Adaptation of the upper block for pictures with different resolutions. Resolution of the current picture: 1680x1050."><img src="img/portfolio/1680x1050.jpg" alt="">
+							<div class="portfolio__text">Picture for the top block with a resolution of 1680x1050</div></a>
+						</div>
+						<div class="portfolio__column f_3">
+							<a href="img/portfolio/480x854.jpg" class="portfolio__link ibg" title="Adaptation of the upper block for pictures with different resolutions. Resolution of the current picture: 480x854. Non-standard picture, horizontal arrangement, fully adapts to the block."><img src="img/portfolio/480x854.jpg" alt="">
+							<div class="portfolio__text">Picture for the top block with a resolution of 480x854</div></a>
 						</div>
 						<div class="portfolio__column f_4">
-							<a href="img/portfolio/05.jpg" class="portfolio__link ibg"><img src="img/portfolio/05.jpg" alt=""></a>
+							<a href="img/portfolio/01g.gif" class="portfolio__link ibg" title="Custom hover effects"><img src="img/portfolio/01g.gif" alt="">
+							<div class="portfolio__text">Custom hover effects</div></a>
 						</div>
 						<div class="portfolio__column f_4">
-							<a href="img/portfolio/06.jpg" class="portfolio__link ibg"><img src="img/portfolio/06.jpg" alt=""></a>
+							<a href="img/portfolio/02g.gif" class="portfolio__link ibg" title="Custom hover effects"><img src="img/portfolio/02g.gif" alt="">
+							<div class="portfolio__text">Custom hover effects</div></a>
 						</div>
-					</div>
-					<div class="portfolio__footer">
-						<a href="#" class="portfolio__btn btn"><span>READ MORE</span></a>
+						<div class="portfolio__column f_4">
+							<a href="img/portfolio/03g.gif" class="portfolio__link ibg" title="Smoothly rebuild block elements when you rotate the phone screen"><img src="img/portfolio/03g.gif" alt="">
+							<div class="portfolio__text">Smooth rebuild of block elements</div></a>
+						</div>
+						<div class="portfolio__column f_4">
+							<a href="img/portfolio/04g.gif" class="portfolio__link ibg" title="Parallax effect and blur the background when scrolling the page"><img src="img/portfolio/04g.gif" alt="">
+							<div class="portfolio__text">Parallax effect and background blur</div></a>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="partners">
-				<div class="partners__column"><div class="partners__bg ibg"><img src="img/partners/BG-Header.jpg" alt=""></div></div>
+				<div class="partners__column"><div class="partners__bg ibg"><img src="img/partners/01.jpg" alt=""></div></div>
 				<div class="partners__column">
 					<div class="container">
 						<div class="partners__content">
@@ -161,20 +190,21 @@
 										<div class="form-contacts__label">message</div>
 										<textarea autocomplete="off" name="form[]" data-value="" class="input"></textarea>
 									</div>
-									<button type="submit" class="form-contacts__btn btn"><span>send</span></button>
+									<button type="submit" class="form-contacts__btn"><span>send</span></button>
 								</div>
 							</form>
 						</div>
 						<div class="contacts__column">
 							<div class="contacts__content">
 								<div class="contacts__text">Have an idea for a project? Just looking to explore and see the possibilities? I'm here to help.</div>
-								<div class="contacts__name">Postma Elena</div>
+								<div class="contacts__name">Eugene Kulik</div>
 								<div class="contacts__social social">
-									<a href="" class="social__item"><img src="../img/contacts/01.svg" alt=""></a>
-									<a href="" class="social__item"><img src="../img/contacts/02.svg" alt=""></a>
+									<a href="https://vk.com/zongtong" class="social__item"><img src="img/contacts/01.svg" alt=""></a>
+									<a href="#" class="social__item"><img src="img/contacts/02.svg" alt=""></a>
 								</div>
 								<div class="contacts__email">
-									e-mail: <a href="mailto:postma.elena@gmail.com">postma.elena@gmail.com</a>
+									<p>e-mail: <a href="mailto:742445004@mail.ru">742445004@mail.ru</a></p>
+									<p>phone: <a href="tel:79833409069">+7 983-340-90-69</a></p>
 								</div>
 							</div>
 						</div>
@@ -187,13 +217,13 @@
 			<a href="#" class="footer__logo"><img src="img/footer/01.png" alt=""></a>
 			<nav class="footer__menu">
 				<ul class="footer__list">
-					<li class="footer__link"><a href="#">Home</a></li>
-					<li class="footer__link"><a href="#">Facebook</a></li>
-					<li class="footer__link"><a href="#">Linkedin</a></li>
-					<li class="footer__link"><a href="#">Contact</a></li>
+					<li class="footer__link"><a onclick="slowScroll('.mainblock')" href="#">Home</a></li>
+					<li class="footer__link"><a href="https://vk.com/zongtong">vKontakte</a></li>
+					<li class="footer__link"><a href="#">FaceBook</a></li>
+					<li class="footer__link"><a onclick="slowScroll('.contacts')" href="#">Contact</a></li>
 				</ul>
 			</nav>
-			<div class="footer__text">© 2015. All Rights Reserved</div>
+			<div class="footer__text">© 2020. All Rights Reserved</div>
 		</div>
 	</div>
 </footer>
