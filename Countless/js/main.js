@@ -1,4 +1,3 @@
-//Burger=======================================//
 function burgerMenu(selector) {
 	let menu = $(selector);
 	let button = menu.find('.menu-header__icon');
@@ -50,9 +49,7 @@ function burgerMenu(selector) {
 }
 	
 	burgerMenu ('.menu-header');
-//======================//
 
-//TABheaderMenu====================================//
 $('.js__menu').on('click', function(){
 	if ($(this).hasClass('active')) {return;}
 	
@@ -70,38 +67,7 @@ function ibg() {
 	});
 }
 ibg();
-//=======================================//
 
-//перенос русского текста================//
-// $(function() {
-//     $('.txt').hyphenate();
-// });
-
-// $.fn.hyphenate = function() {
-//   var all = "[абвгдеёжзийклмнопрстуфхцчшщъыьэюя]",
-//     glas = "[аеёиоуыэю\я]",
-//     sogl = "[бвгджзклмнпрстфхцчшщ]",
-//     zn = "[йъь]",
-//     shy = "\xAD",
-//     re = [];
-   
-//   re[1] = new RegExp("("+zn+")("+all+all+")","ig");
-//   re[2] = new RegExp("("+glas+")("+glas+all+")","ig");
-//   re[3] = new RegExp("("+glas+sogl+")("+sogl+glas+")","ig");
-//   re[4] = new RegExp("("+sogl+glas+")("+sogl+glas+")","ig");
-//   re[5] = new RegExp("("+glas+sogl+")("+sogl+sogl+glas+")","ig");
-//   re[6] = new RegExp("("+glas+sogl+sogl+")("+sogl+sogl+glas+")","ig");
-//   return this.each(function() {
-//     var text = $(this).html();
-//     for (var i = 1; i < 7; ++i) {
-//       text = text.replace(re[i], "$1"+shy+"$2");
-//     }
-//     $(this).html(text);
-//   });
-// };
-//========================================//
-
-//TAB_mobile====================================//
 $('.js-tab__mobilenavitem').on('click', function(){
 	if ($(this).hasClass('active')) {return;}
 	var tabName = $(this).data('tab'),
@@ -119,9 +85,7 @@ $('.js-tab__mobilenavitem').on('click', function(){
 		}, 300);
 	
 });
-//=======================================//
 
-//TAB_work====================================//
 $('.js-tab__navitem').on('click', function(){
 	if ($(this).hasClass('active')) {return;}
 	var tabName = $(this).data('tab'),
@@ -138,9 +102,7 @@ $('.js-tab__navitem').on('click', function(){
 			tab.addClass('anim');
 		}, 300);
 });
-//=======================================//
 
-//Scroll=================================//
 function slowScroll(id){
 	$('html, body').animate({
 		scrollTop:$(id).offset().top
@@ -152,9 +114,7 @@ $(document).on("scroll", function() {
 	else
 		$("header").attr("class", "fixed");
 });
-//=======================================//
 
-//googleMap===============================//
 function map(n) {
 	google.maps.Map.prototype.sentCenterWithOffset = function(latlng, offsetX, offsetY) {
 		var map = this;
