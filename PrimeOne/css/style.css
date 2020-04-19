@@ -184,7 +184,7 @@ header {
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
-  padding: 4px 0px -4px 0px;
+  padding: 4px 0px 4px 0px;
   margin: 0px 0px 4px 0px;
   letter-spacing: 1px; }
   .header-top__link:hover {
