@@ -394,38 +394,40 @@ textarea.input {
     display: inline-block;
     position: relative;
     z-index: 1; }
-    .btn span:before {
+    @media (min-width: 767.98px) {
+      .btn span:before {
+        content: "";
+        position: absolute;
+        bottom: 12px;
+        left: 0;
+        width: 0%;
+        height: 1px;
+        background-color: #000;
+        -webkit-transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
+        -moz-transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
+        -ms-transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
+        -o-transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
+        transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s; } }
+  @media (min-width: 767.98px) {
+    .btn:after {
       content: "";
       position: absolute;
-      bottom: 12px;
-      left: 0;
-      width: 0%;
-      height: 1px;
-      background-color: #000;
-      -webkit-transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
-      -moz-transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
-      -ms-transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
-      -o-transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
-      transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s; }
-  .btn:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    border-radius: 3px;
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    -webkit-transform: scale(0);
-    -o-transform: scale(0);
-    transform: scale(0);
-    -webkit-transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
-    -moz-transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
-    -ms-transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
-    -o-transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
-    transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
-    background-color: #000; }
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      border-radius: 3px;
+      -moz-transform: scale(0);
+      -ms-transform: scale(0);
+      -webkit-transform: scale(0);
+      -o-transform: scale(0);
+      transform: scale(0);
+      -webkit-transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
+      -moz-transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
+      -ms-transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
+      -o-transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
+      transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
+      background-color: #000; } }
   .btn_w {
     color: #fff;
     border-color: #fff;
@@ -434,10 +436,12 @@ textarea.input {
     -ms-transition: all 1s ease 0s;
     -o-transition: all 1s ease 0s;
     transition: all 1s ease 0s; }
-    .btn_w span:before {
-      background-color: #fff; }
-    .btn_w:after {
-      background-color: #fff; }
+    @media (min-width: 767.98px) {
+      .btn_w span:before {
+        background-color: #fff; } }
+    @media (min-width: 767.98px) {
+      .btn_w:after {
+        background-color: #fff; } }
   @media (min-width: 767.98px) {
     .btn:hover.btn {
       color: #fff; }
@@ -525,7 +529,7 @@ textarea.input {
   transform: rotate(90deg); }
   @media (max-width: 767.98px) {
     .button-up {
-      opacity: 0.5; } }
+      opacity: 0.25; } }
   @media (min-width: 767.98px) {
     .button-up:hover {
       opacity: 0.5; } }
@@ -1359,46 +1363,47 @@ textarea.input {
   -ms-transition: all 0.5s ease 0.4s;
   -o-transition: all 0.5s ease 0.4s;
   transition: all 0.5s ease 0.4s; }
-  .form-contacts__btn:after {
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background-color: #3c3c3c;
-    -webkit-transition: all 0.5s ease 0s;
-    -moz-transition: all 0.5s ease 0s;
-    -ms-transition: all 0.5s ease 0s;
-    -o-transition: all 0.5s ease 0s;
-    transition: all 0.5s ease 0s;
-    border-radius: 2px; }
-  .form-contacts__btn:before {
-    content: "";
-    border-radius: 2px;
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    width: 100%;
-    height: 0%;
-    background-color: #3c3c3c;
-    -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s;
-    -moz-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s;
-    -ms-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s;
-    -o-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s;
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s;
-    z-index: -1; }
-  .form-contacts__btn:hover {
-    -webkit-transition: all 0.5s ease 0.5s;
-    -moz-transition: all 0.5s ease 0.5s;
-    -ms-transition: all 0.5s ease 0.5s;
-    -o-transition: all 0.5s ease 0.5s;
-    transition: all 0.5s ease 0.5s;
-    color: #fff; }
-    .form-contacts__btn:hover:before {
-      height: 100%; }
-    .form-contacts__btn:hover:after {
-      width: 100%; }
+  @media (min-width: 767.98px) {
+    .form-contacts__btn:after {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: #3c3c3c;
+      -webkit-transition: all 0.5s ease 0s;
+      -moz-transition: all 0.5s ease 0s;
+      -ms-transition: all 0.5s ease 0s;
+      -o-transition: all 0.5s ease 0s;
+      transition: all 0.5s ease 0s;
+      border-radius: 2px; }
+    .form-contacts__btn:before {
+      content: "";
+      border-radius: 2px;
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      width: 100%;
+      height: 0%;
+      background-color: #3c3c3c;
+      -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s;
+      -moz-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s;
+      -ms-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s;
+      -o-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s;
+      transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s;
+      z-index: -1; }
+    .form-contacts__btn:hover {
+      -webkit-transition: all 0.5s ease 0.5s;
+      -moz-transition: all 0.5s ease 0.5s;
+      -ms-transition: all 0.5s ease 0.5s;
+      -o-transition: all 0.5s ease 0.5s;
+      transition: all 0.5s ease 0.5s;
+      color: #fff; }
+      .form-contacts__btn:hover:before {
+        height: 100%; }
+      .form-contacts__btn:hover:after {
+        width: 100%; } }
 
 .social {
   display: -webkit-box;
