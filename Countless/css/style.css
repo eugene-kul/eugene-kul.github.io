@@ -61,13 +61,11 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
-  body.lock {
-    overflow: hidden; }
-    @media (max-width: 479.98px) {
-      body.lock {
-        width: 100%;
-        position: fixed;
-        overflow: hidden; } }
+  @media (max-width: 479.98px) {
+    body.lock {
+      width: 100%;
+      position: fixed;
+      overflow: hidden; } }
 
 input, button, textarea {
   font-family: "Open Sans"; }
@@ -667,8 +665,9 @@ h1, h2, h3, h4, h5, h6 {
 .menu-header__active .menu-header__menu {
   right: 0; }
 
-.menu-header__active .menu-header__link {
-  font-size: 20px; }
+@media (max-width: 479.98px) {
+  .menu-header__active .menu-header__link {
+    font-size: 20px; } }
 
 .footer {
   background-color: #000; }
