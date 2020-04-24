@@ -710,7 +710,7 @@ input[type=text], input[type=email], input[type=tel], textarea {
   box-shadow: 0px 0px 100px #fff; }
   .generation__block {
     background-color: #f7f7f7;
-    max-width: 1080;
+    max-width: 1080px;
     padding: 115px 0px 150px 0px; }
     @media (max-width: 1112px) {
       .generation__block {
