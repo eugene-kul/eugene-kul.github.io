@@ -812,14 +812,21 @@ textarea.input {
         padding: 0px; } }
   .mainblock__image {
     z-index: 2;
-    background-blend-mode: multiply;
-    background-color: #0699;
     background-position: 50% 100%;
     position: fixed;
     width: 100%;
     height: 100%;
     top: 0px;
     right: 0%; }
+    .mainblock__image:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      background-color: #034;
+      opacity: 0.4; }
 
 .content {
   background-color: #fff;
@@ -1141,14 +1148,21 @@ textarea.input {
       left: -100%; }
   .partners__bg {
     background-position: 50% 20%;
-    background-blend-mode: multiply;
-    background-color: #0699;
     -webkit-filter: blur(3px);
     filter: blur(3px);
     height: 390px;
     width: 100%;
     position: relative;
     right: 0%; }
+    .partners__bg:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      background-color: #034;
+      opacity: 0.4; }
   .partners__content {
     text-align: center;
     max-width: 900px;
