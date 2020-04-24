@@ -870,6 +870,7 @@ body {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
+    min-width: 100%;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
   .topblock__image {
@@ -1027,13 +1028,15 @@ body {
     font-size: 0;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 33.333%;
-    flex: 0 0 33.333%; }
+    flex: 0 0 33.333%;
+    min-width: 33.333%; }
     @media (max-width: 767.98px) {
       .bottom-features__column {
         margin: 30px 0px 0px 0px;
         -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
-        flex: 1 1 100%; } }
+        flex: 1 1 100%;
+        min-width: 100%; } }
   .bottom-features__second-column {
     margin: 0px 7px; }
     @media (max-width: 767.98px) {
@@ -1107,20 +1110,21 @@ body {
   .mobile__column {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100%;
-    flex: 0 0 100%; }
+    flex: 0 0 100%;
+    min-width: 100%; }
 
 .bg-phone {
   text-align: center; }
   .bg-phone__bg {
     background-size: auto 100%;
     width: 100%;
-    height: 600px; }
+    height: 600px;
+    position: relative; }
     @media (max-width: 767.98px) {
       .bg-phone__bg {
         opacity: 0.5; } }
     .bg-phone__bg .bg-phone__tabitem {
       display: inline-block;
-      border: 1px solid #000;
       visibility: hidden;
       opacity: 0;
       background-size: cover;
@@ -1129,7 +1133,9 @@ body {
       width: 220px;
       height: 391px;
       position: absolute;
-      margin: 0px 0px 0px -3px;
+      top: 0;
+      left: 50%;
+      margin: 0px 0px 0px -111px;
       -webkit-transition: all 1s ease 0.25s;
       -moz-transition: all 1s ease 0.25s;
       -ms-transition: all 1s ease 0.25s;
@@ -1221,7 +1227,8 @@ body {
   .column-mobile-item__column {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 33.333%;
-    flex: 0 0 33.333%; }
+    flex: 0 0 33.333%;
+    min-width: 33.333%; }
     .column-mobile-item__column:first-child {
       margin: 0px 0px 0px -20px; }
     .column-mobile-item__column:last-child {
@@ -1236,7 +1243,8 @@ body {
       .column-mobile-item__column {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
-        flex: 0 0 50%; }
+        flex: 0 0 50%;
+        min-width: 50%; }
         .column-mobile-item__column:first-child {
           padding: 0px 0px 0px 0px; }
         .column-mobile-item__column:last-child {
@@ -1245,7 +1253,8 @@ body {
       .column-mobile-item__column {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
-        flex: 0 0 100%; } }
+        flex: 0 0 100%;
+        min-width: 100%; } }
   @media (max-width: 767.98px) {
     .column-mobile-item {
       display: -webkit-box;
@@ -1454,22 +1463,26 @@ body {
       margin: 0px 0px 0px 0px;
       -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
-      flex: 0 0 50%; } }
+      flex: 0 0 50%;
+      min-width: 50%; } }
 
 .tab-itemlist__item {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 25%;
-  flex: 0 0 25%; }
+  flex: 0 0 25%;
+  min-width: 25%; }
   @media (max-width: 767.98px) {
     .tab-itemlist__item {
       -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
-      flex: 0 0 50%; } }
+      flex: 0 0 50%;
+      min-width: 50%; } }
   @media (max-width: 479.98px) {
     .tab-itemlist__item {
       -webkit-box-flex: 1;
       -ms-flex: 1 1 100%;
-      flex: 1 1 100%; } }
+      flex: 1 1 100%;
+      min-width: 100%; } }
 
 .tab-item-column {
   position: relative; }
@@ -1608,6 +1621,7 @@ body {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
+    min-width: 25%;
     margin: 10px 0px 10px 0px;
     text-align: center; }
     @media (max-width: 767.98px) {
@@ -1615,12 +1629,14 @@ body {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 25%;
         flex: 0 0 25%;
+        min-width: 25%;
         margin: 0px auto 0px; } }
     @media (max-width: 479.98px) {
       .bottom-team__column {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 45%;
         flex: 0 0 45%;
+        min-width: 45%;
         margin: 0px 5px 20px 5px; } }
 
 .column-bottom {
@@ -1796,6 +1812,7 @@ body {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
+    min-width: 100%;
     height: 410px; }
     @media (max-width: 767.98px) {
       .facts__column {
@@ -1850,7 +1867,8 @@ body {
     .bottom-stat__column {
       -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
-      flex: 0 0 50%; } }
+      flex: 0 0 50%;
+      min-width: 50%; } }
 
 .stat-number {
   text-align: center; }
@@ -2068,6 +2086,7 @@ input[type=text], input[type=email], input[type=tel], textarea {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 48%;
   flex: 0 0 48%;
+  min-width: 100%;
   opacity: 0.5;
   color: #5b646e;
   font-size: 11px;

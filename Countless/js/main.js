@@ -1,54 +1,12 @@
-function burgerMenu(selector) {
-	let menu = $(selector);
-	let button = menu.find('.menu-header__icon');
-	let links = menu.find('.menu-header__list');
-	let overlay = menu.find('.menu-header__overlay');
 
-	button.on('click', (e) => {
-		e.preventDefault();
-		toggleMenu();
-		toggleLogo();
-	});
-	links.on('click', () => toggleMenu());
-
-	overlay.on('click', () => toggleMenu());
-	
-	function toggleLogo() {
-		$('.header__text').toggleClass('active');
-		$('.header__logo').toggleClass('active');
-	}
-
-	function toggleMenu() {
-		$(window).resize(function(event) {
-			adaptive_function();
-		});
-		function adaptive_header(w,h) {
-			if(w<767.98){
-				links.on('click', () => toggleLogo());
-				overlay.on('click', () => toggleLogo());
-
-				menu.toggleClass('menu-header__active');
-				if (menu.hasClass('menu-header__active')) {
-					console.log('on');
-					$('body').css('overflow', 'hidden');
-				} else {
-					$('body').css('overflow', 'auto');
-				}
-			}
-			else{
-				$('body').css('overflow', 'auto');
-			}
-		}
-		function adaptive_function() {
-			var w=$(window).outerWidth();
-			var h=$(window).outerHeight();
-			adaptive_header(w,h);
-		}
-		adaptive_function();
-	}
-}
-	
-	burgerMenu ('.menu-header');
+$('.wrapper').addClass('loader');
+$('.menu-header').click(function(event){
+	$(this).toggleClass('menu-header__active');
+	$('.header').toggleClass('menu-header__active');
+	$('.menu-header').toggleClass('menu-header__active');
+	$('body').toggleClass('lock');
+});
+//===========================
 
 $('.js__menu').on('click', function(){
 	if ($(this).hasClass('active')) {return;}
