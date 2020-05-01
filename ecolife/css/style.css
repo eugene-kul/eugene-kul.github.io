@@ -2618,7 +2618,10 @@ textarea.contactinput {
 .bigbottle {
   position: relative;
   padding: 0px 0px 5% 0px;
-  margin: -40px 0px 0px 0px; }
+  margin: -20px 0px 0px 0px; }
+  @media (max-width: 479.98px) {
+    .bigbottle {
+      margin: 0px; } }
   .bigbottle__body {
     text-align: center; }
   .bigbottle__bg {
