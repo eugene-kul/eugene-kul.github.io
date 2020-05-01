@@ -3344,9 +3344,7 @@ $(window).resize(function(event) {
 function mainblock() {
 	var h=$(window).outerHeight();
 	$('.mainblock__bg').css('min-height',h);
-	
 	$('.mainblock__body').css('min-height',h);
-	$('.mainblock__content').css('min-height',h);
 }
 mainblock();
 
