@@ -1139,12 +1139,10 @@ input[type=text], input[type=email], input[type=tel], textarea {
     text-align: right; }
     @media (max-width: 767.98px) {
       .menu__search {
-        position: relative;
-        right: 0px;
-        top: -102px; } }
-    @media (max-width: 479.98px) {
-      .menu__search {
-        padding: 0px 0px 0px 0px; } }
+        position: absolute;
+        right: 25px;
+        top: 10px;
+        margin: 0px 0px 0px 0px; } }
     .menu__search__btn {
       position: absolute;
       width: 20px;
@@ -1495,11 +1493,12 @@ body.touch .sub-menu__list {
       width: 210px; } }
   @media (max-width: 767.98px) {
     .input {
+      padding: 5px 30px 5px 15px;
       height: 30px;
       border-color: rgba(255, 255, 255, 0.75); } }
   @media (max-width: 350px) {
     .input {
-      width: 100%; } }
+      width: 200px; } }
 
 textarea.contactinput {
   color: #ccc;
