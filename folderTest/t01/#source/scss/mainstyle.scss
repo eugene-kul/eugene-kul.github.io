@@ -1,0 +1,207 @@
+$stockmw:1110;
+@mixin animation($name,$time,$delay){animation: $name $time infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;-webkit-animation: $name $time infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;-moz-animation: $name $time infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;-o-animation: $name $time infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;}
+@mixin anim($time,$delay){-webkit-transition:all $time ease $delay;-moz-transition: all $time ease $delay;-ms-transition: all $time ease $delay;-o-transition: all $time ease $delay;transition: all $time ease $delay;}
+@mixin anim_cubic($time,$delay){-webkit-transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-moz-transition: all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-ms-transition: all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-o-transition: all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;transition: all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;}
+@mixin anim_cubic2($time,$delay){-webkit-transition:all $time cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;-moz-transition: all $time cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;-ms-transition: all $time cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;-o-transition: all $time cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;transition: all $time cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;}
+@mixin rotate($deg){-moz-transform:rotate($deg);-ms-transform:rotate($deg);-webkit-transform:rotate($deg);-o-transform:rotate($deg);transform:rotate($deg);}
+@mixin scale($num){-moz-transform:scale($num);-ms-transform:scale($num);-webkit-transform:scale($num);-o-transform:scale($num);transform:scale($num);}
+@mixin skew($num){-moz-transform:skewX($num);-ms-transform:skewX($num);-webkit-transform:skewX($num);-o-transform:skewX($num);transform:skewX($num);}
+@mixin cnt($h){display: flex;flex-direction: column;height: $h;text-align: center;align-items:stretch; justify-content:center;}
+@mixin tr($x,$y,$z){transform: translate3d($x, $y, $z);}
+@mixin flexbox(){display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;font-size: 0;}
+@mixin flexboxinline(){display:-webkit-inline-flex;display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display: inline-flex;}
+@mixin flexorder($val){-webkit-box-ordinal-group:$val;-moz-box-ordinal-group:$val;-ms-flex-order:$val;-webkit-order:$val;order:$val;}
+@mixin adaptiv-font($pcSize, $mobSize) {$addSize: $pcSize - $mobSize;$addMobSize: $addSize + $addSize * 0.75;
+	@media (max-width:$md3+px) {font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$stockmw}));}
+	@media (min-width:$md3+px) {font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$stockmw}));}
+}
+@mixin adaptiv-lh($pcSize, $mobSize) {$addSize: $pcSize - $mobSize;$addMobSize: $addSize + $addSize * 0.75;
+	@media (max-width:$md3+px) {line-height: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$stockmw}));}
+	@media (min-width:$md3+px) {line-height: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$stockmw}));}
+}
+
+//Отзывы========================
+.reviews {
+	padding: 100px 0px 50px 0px;
+	background-color: #F2F2FA;
+	text-align: right;
+	&__title {
+		text-align: left;
+		color: #234D60;
+		font-family: "Montserrat-Alternates";
+		font-style: normal;
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 100%;
+		margin: 0px 0px 30px 0px;
+	}
+	&__body {
+		@include flexbox();
+		height: 100%;
+		justify-content: space-between;
+		margin: 0px -15px;
+		@media (max-width:768px) {
+			display: inline-block;
+		}
+	}
+	&__column {
+		flex: 1 1 33.333%;
+		padding: 0px 15px;
+		text-align: left;
+		height: 100%;
+	}
+}
+.reviewsitem {
+	font-family: "Roboto";
+	font-weight: 300;
+	&__topblock {
+		@include flexbox();
+		align-items: center;
+		margin: 15px 0px;
+	}
+	&__image {
+		img {width: 100%;border-radius: 50%;}
+		width: 46px;
+		height: 46px;
+		border-radius: 50%;
+		margin: 0px 10px 0px 0px;
+	}
+	&__title {
+		display: block;
+		color: #234D60;
+		font-size: 14px;
+		margin: 0px 0px 10px 0px;
+		&:hover{color: #234D60;}
+	}
+	&__date {
+		@include flexboxinline();
+		font-size: 14px;
+		line-height: 100%;
+		margin: 0px 15px 0px 0px;
+		svg {width: 13px;height: 13px;margin: 0px 6px 0px 0px;}
+	}
+	&__like {
+		@include flexboxinline();
+		font-size: 14px;
+		line-height: 100%;
+		margin: 0px 15px 0px 0px;
+		svg {width: 13px;height: 13px;margin: 0px 6px 0px 0px;}
+	}
+	&__text {
+		color: #404040;
+		font-size: 14px;
+		line-height: 16px;
+		margin: 0px 0px 15px 0px;
+	}
+	&__star {
+		@include flexbox();
+		align-items: center;
+		margin: 0px 0px 20px 0px;
+		span {
+			margin: 0px 5px;
+			color: #828282;
+			font-size: 14px;
+		}
+		svg {
+			margin: 0px 5px 0px 0px;
+			width: 14px;
+			height: 14px;
+			stroke: #828282;
+			stroke-width: 30px;
+			path{fill: #E25E2A;fill-opacity: 0.0;}
+		}
+		&.star1 {
+			svg {
+				&:nth-child(1) {path{fill-opacity: 1.0;}stroke: none;}
+			}
+		}
+		&.star2 {
+			svg {
+				&:nth-child(1) {path{fill-opacity: 1.0;}stroke: none;}
+				&:nth-child(2) {path{fill-opacity: 1.0;}stroke: none;}
+			}
+		}
+		&.star3 {
+			svg {
+				&:nth-child(1) {path{fill-opacity: 1.0;}stroke: none;}
+				&:nth-child(2) {path{fill-opacity: 1.0;}stroke: none;}
+				&:nth-child(3) {path{fill-opacity: 1.0;}stroke: none;}
+			}
+		}
+		&.star4 {
+			svg {
+				&:nth-child(1) {path{fill-opacity: 1.0;}stroke: none;}
+				&:nth-child(2) {path{fill-opacity: 1.0;}stroke: none;}
+				&:nth-child(3) {path{fill-opacity: 1.0;}stroke: none;}
+				&:nth-child(4) {path{fill-opacity: 1.0;}stroke: none;}
+			}
+		}
+		&.star5 {
+			svg {
+				&:nth-child(1) {path{fill-opacity: 1.0;}stroke: none;}
+				&:nth-child(2) {path{fill-opacity: 1.0;}stroke: none;}
+				&:nth-child(3) {path{fill-opacity: 1.0;}stroke: none;}
+				&:nth-child(4) {path{fill-opacity: 1.0;}stroke: none;}
+				&:nth-child(5) {path{fill-opacity: 1.0;}stroke: none;}
+			}
+		}
+	}
+}
+//==============================
+//Сертификаты=========================
+.certificates {
+	background-color: #F2F2FA;
+	padding: 0px 0px 100px 0px;
+	&__body {
+		@include flexboxinline();
+		align-items: center;
+		justify-content: center;
+		margin: 0px -20px;
+		flex-wrap: wrap;
+	}
+	&__column {
+		flex: 0 0 auto;
+		padding: 10px 20px;
+		
+	}
+	&__itembody {
+		@include flexbox();
+		justify-content: center;
+		align-items: center;
+		width: 210px;
+		height: 300px;
+		margin: 0px auto 0px;
+	}
+	&__item {
+		cursor: pointer;
+		@include anim(0.3s,0s);
+		@include flexbox();
+		align-items: center;
+		justify-content: center;
+		width: 200px;
+		height: 285px;
+		background-color: #fff;
+		box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);
+		border-radius: 10px;
+		padding: 15px 10px;
+		&:hover{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__image {
+		@include flexboxinline();
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		img {
+			border-radius: 10px;
+			width: 100%;
+			max-width: 100%;
+			max-height: 100%;
+			height: auto;
+		}
+	}
+}
+//====================================
