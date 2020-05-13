@@ -159,7 +159,7 @@ $stockmw:1110;
 		margin: 0px -10px;
 		flex-wrap: wrap;
 	}
-	&__item-certificat {
+	&__item {
 		flex: 0 0 25%;
 		padding: 10px 15px;
 		@include flexbox();
@@ -169,7 +169,7 @@ $stockmw:1110;
 	}
 }
 
-.certificat-item {
+.certificat {
 	cursor: pointer;
 	@include anim(0.3s,0s);
 	background-color: #fff;

@@ -302,7 +302,7 @@
   flex-wrap: wrap;
 }
 
-.certificates__item-certificat {
+.certificates__item {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 25%;
   flex: 0 0 25%;
@@ -322,7 +322,7 @@
   margin: 10px 20px;
 }
 
-.certificat-item {
+.certificat {
   cursor: pointer;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -338,7 +338,7 @@
   min-height: 300px;
 }
 
-.certificat-item:hover {
+.certificat:hover {
   -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   -webkit-transform: scale(1.1);
@@ -346,12 +346,12 @@
   transform: scale(1.1);
 }
 
-.certificat-item__image {
+.certificat__image {
   border-radius: 10px;
   overflow: hidden;
 }
 
-.certificat-item__image img {
+.certificat__image img {
   width: 100%;
   max-width: 100%;
 }
