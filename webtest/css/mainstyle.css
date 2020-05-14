@@ -44,12 +44,12 @@
   height: 100%;
 }
 
-.reviewsitem {
+.reviews-item {
   font-family: "Roboto";
   font-weight: 300;
 }
 
-.reviewsitem__topblock {
+.reviews-item__topblock {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -62,30 +62,30 @@
   margin: 15px 0px;
 }
 
-.reviewsitem__image {
+.reviews-item__image {
   width: 46px;
   height: 46px;
   border-radius: 50%;
   margin: 0px 10px 0px 0px;
 }
 
-.reviewsitem__image img {
+.reviews-item__image img {
   width: 100%;
   border-radius: 50%;
 }
 
-.reviewsitem__title {
+.reviews-item__title {
   display: block;
   color: #234D60;
   font-size: 14px;
   margin: 0px 0px 10px 0px;
 }
 
-.reviewsitem__title:hover {
+.reviews-item__title:hover {
   color: #234D60;
 }
 
-.reviewsitem__date {
+.reviews-item__date {
   display: -webkit-inline-flex;
   display: -moz-inline-flex;
   display: -ms-inline-flex;
@@ -98,13 +98,13 @@
   margin: 0px 15px 0px 0px;
 }
 
-.reviewsitem__date svg {
+.reviews-item__date svg {
   width: 13px;
   height: 13px;
   margin: 0px 6px 0px 0px;
 }
 
-.reviewsitem__like {
+.reviews-item__like {
   display: -webkit-inline-flex;
   display: -moz-inline-flex;
   display: -ms-inline-flex;
@@ -117,20 +117,20 @@
   margin: 0px 15px 0px 0px;
 }
 
-.reviewsitem__like svg {
+.reviews-item__like svg {
   width: 13px;
   height: 13px;
   margin: 0px 6px 0px 0px;
 }
 
-.reviewsitem__text {
+.reviews-item__text {
   color: #404040;
   font-size: 14px;
   line-height: 16px;
   margin: 0px 0px 15px 0px;
 }
 
-.reviewsitem__star {
+.reviews-item__star {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -143,13 +143,13 @@
   margin: 0px 0px 20px 0px;
 }
 
-.reviewsitem__star span {
+.reviews-item__star span {
   margin: 0px 5px;
   color: #828282;
   font-size: 14px;
 }
 
-.reviewsitem__star svg {
+.reviews-item__star svg {
   margin: 0px 5px 0px 0px;
   width: 14px;
   height: 14px;
@@ -157,128 +157,128 @@
   stroke-width: 30px;
 }
 
-.reviewsitem__star svg path {
+.reviews-item__star svg path {
   fill: #E25E2A;
   fill-opacity: 0.0;
 }
 
-.reviewsitem__star.star1 svg:nth-child(1) {
+.reviews-item__star.star1 svg:nth-child(1) {
   stroke: none;
 }
 
-.reviewsitem__star.star1 svg:nth-child(1) path {
+.reviews-item__star.star1 svg:nth-child(1) path {
   fill-opacity: 1.0;
 }
 
-.reviewsitem__star.star2 svg:nth-child(1) {
+.reviews-item__star.star2 svg:nth-child(1) {
   stroke: none;
 }
 
-.reviewsitem__star.star2 svg:nth-child(1) path {
+.reviews-item__star.star2 svg:nth-child(1) path {
   fill-opacity: 1.0;
 }
 
-.reviewsitem__star.star2 svg:nth-child(2) {
+.reviews-item__star.star2 svg:nth-child(2) {
   stroke: none;
 }
 
-.reviewsitem__star.star2 svg:nth-child(2) path {
+.reviews-item__star.star2 svg:nth-child(2) path {
   fill-opacity: 1.0;
 }
 
-.reviewsitem__star.star3 svg:nth-child(1) {
+.reviews-item__star.star3 svg:nth-child(1) {
   stroke: none;
 }
 
-.reviewsitem__star.star3 svg:nth-child(1) path {
+.reviews-item__star.star3 svg:nth-child(1) path {
   fill-opacity: 1.0;
 }
 
-.reviewsitem__star.star3 svg:nth-child(2) {
+.reviews-item__star.star3 svg:nth-child(2) {
   stroke: none;
 }
 
-.reviewsitem__star.star3 svg:nth-child(2) path {
+.reviews-item__star.star3 svg:nth-child(2) path {
   fill-opacity: 1.0;
 }
 
-.reviewsitem__star.star3 svg:nth-child(3) {
+.reviews-item__star.star3 svg:nth-child(3) {
   stroke: none;
 }
 
-.reviewsitem__star.star3 svg:nth-child(3) path {
+.reviews-item__star.star3 svg:nth-child(3) path {
   fill-opacity: 1.0;
 }
 
-.reviewsitem__star.star4 svg:nth-child(1) {
+.reviews-item__star.star4 svg:nth-child(1) {
   stroke: none;
 }
 
-.reviewsitem__star.star4 svg:nth-child(1) path {
+.reviews-item__star.star4 svg:nth-child(1) path {
   fill-opacity: 1.0;
 }
 
-.reviewsitem__star.star4 svg:nth-child(2) {
+.reviews-item__star.star4 svg:nth-child(2) {
   stroke: none;
 }
 
-.reviewsitem__star.star4 svg:nth-child(2) path {
+.reviews-item__star.star4 svg:nth-child(2) path {
   fill-opacity: 1.0;
 }
 
-.reviewsitem__star.star4 svg:nth-child(3) {
+.reviews-item__star.star4 svg:nth-child(3) {
   stroke: none;
 }
 
-.reviewsitem__star.star4 svg:nth-child(3) path {
+.reviews-item__star.star4 svg:nth-child(3) path {
   fill-opacity: 1.0;
 }
 
-.reviewsitem__star.star4 svg:nth-child(4) {
+.reviews-item__star.star4 svg:nth-child(4) {
   stroke: none;
 }
 
-.reviewsitem__star.star4 svg:nth-child(4) path {
+.reviews-item__star.star4 svg:nth-child(4) path {
   fill-opacity: 1.0;
 }
 
-.reviewsitem__star.star5 svg:nth-child(1) {
+.reviews-item__star.star5 svg:nth-child(1) {
   stroke: none;
 }
 
-.reviewsitem__star.star5 svg:nth-child(1) path {
+.reviews-item__star.star5 svg:nth-child(1) path {
   fill-opacity: 1.0;
 }
 
-.reviewsitem__star.star5 svg:nth-child(2) {
+.reviews-item__star.star5 svg:nth-child(2) {
   stroke: none;
 }
 
-.reviewsitem__star.star5 svg:nth-child(2) path {
+.reviews-item__star.star5 svg:nth-child(2) path {
   fill-opacity: 1.0;
 }
 
-.reviewsitem__star.star5 svg:nth-child(3) {
+.reviews-item__star.star5 svg:nth-child(3) {
   stroke: none;
 }
 
-.reviewsitem__star.star5 svg:nth-child(3) path {
+.reviews-item__star.star5 svg:nth-child(3) path {
   fill-opacity: 1.0;
 }
 
-.reviewsitem__star.star5 svg:nth-child(4) {
+.reviews-item__star.star5 svg:nth-child(4) {
   stroke: none;
 }
 
-.reviewsitem__star.star5 svg:nth-child(4) path {
+.reviews-item__star.star5 svg:nth-child(4) path {
   fill-opacity: 1.0;
 }
 
-.reviewsitem__star.star5 svg:nth-child(5) {
+.reviews-item__star.star5 svg:nth-child(5) {
   stroke: none;
 }
 
-.reviewsitem__star.star5 svg:nth-child(5) path {
+.reviews-item__star.star5 svg:nth-child(5) path {
   fill-opacity: 1.0;
 }
 
