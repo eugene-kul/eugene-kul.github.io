@@ -1,0 +1,82 @@
+$stockmw:1110;
+@mixin animation($name,$time,$delay){animation: $name $time infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;-webkit-animation: $name $time infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;-moz-animation: $name $time infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;-o-animation: $name $time infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;}
+@mixin anim($time,$delay){-webkit-transition:all $time ease $delay;-moz-transition: all $time ease $delay;-ms-transition: all $time ease $delay;-o-transition: all $time ease $delay;transition: all $time ease $delay;}
+@mixin anim_cubic($time,$delay){-webkit-transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-moz-transition: all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-ms-transition: all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-o-transition: all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;transition: all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;}
+@mixin anim_cubic2($time,$delay){-webkit-transition:all $time cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;-moz-transition: all $time cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;-ms-transition: all $time cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;-o-transition: all $time cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;transition: all $time cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;}
+@mixin rotate($deg){-moz-transform:rotate($deg);-ms-transform:rotate($deg);-webkit-transform:rotate($deg);-o-transform:rotate($deg);transform:rotate($deg);}
+@mixin scale($num){-moz-transform:scale($num);-ms-transform:scale($num);-webkit-transform:scale($num);-o-transform:scale($num);transform:scale($num);}
+@mixin skew($num){-moz-transform:skewX($num);-ms-transform:skewX($num);-webkit-transform:skewX($num);-o-transform:skewX($num);transform:skewX($num);}
+@mixin cnt($h){display: flex;flex-direction: column;height: $h;text-align: center;align-items:stretch; justify-content:center;}
+@mixin tr($x,$y,$z){transform: translate3d($x, $y, $z);}
+@mixin flexbox(){display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;font-size: 0;}
+@mixin flexboxinline(){display:-webkit-inline-flex;display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display: inline-flex;}
+@mixin flexorder($val){-webkit-box-ordinal-group:$val;-moz-box-ordinal-group:$val;-ms-flex-order:$val;-webkit-order:$val;order:$val;}
+@mixin adaptiv-font($pcSize, $mobSize) {$addSize: $pcSize - $mobSize;$addMobSize: $addSize + $addSize * 0.75;
+	@media (max-width:$md3+px) {font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$stockmw}));}
+	@media (min-width:$md3+px) {font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$stockmw}));}
+}
+@mixin adaptiv-lh($pcSize, $mobSize) {$addSize: $pcSize - $mobSize;$addMobSize: $addSize + $addSize * 0.75;
+	@media (max-width:$md3+px) {line-height: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$stockmw}));}
+	@media (min-width:$md3+px) {line-height: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$stockmw}));}
+}
+
+//Contacts============================
+.contacts {
+	padding: 50px 0px;
+	background-color: #F2F2FA;
+	&__title {margin: 50px 0px;}
+	&__items {
+		@include flexbox();
+		flex-wrap: wrap;
+		justify-content: center;
+		background: #FFFFFF;
+		border-radius: 10px;
+		padding: 2.5% 15px;
+		margin: 3.3% 0px 6% 0px;
+		box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+	}
+	&__social {margin: 0px 0px 6% 0px;}
+	&__map {margin: 0px 0px 6% 0px;height: 305px;}
+}
+
+.item-contact {
+	flex: 0 1 50%;
+	@include flexbox();
+	align-items: center;
+	font-family: Roboto;
+	font-weight: 300;
+	font-size: 14px;
+	padding: 13px 0px;
+	color: #828282;
+	a {font-size: 14px;color: #828282;text-decoration: none;
+		&:hover{color:#E3672A;svg{path{fill:#E3672A}}}
+	}
+	span {display: inline-block;}
+	@media (max-width:767px) {flex: 0 0 100%;font-size: 12px;}
+	&__icon {
+		display: inline-block;
+		margin: 0px 15px 0px 0px;
+		svg {width: 20px;height: 20px;}
+	}
+}
+
+.social-item {
+	@media (max-width:767px) {text-align: center;}
+	&__title {
+		color: #234D60;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 100%;
+		margin: 0px 0px 10px 0px;
+	}
+	&__link {
+		display: inline-block;
+		margin: 0px 7px 0px 0px;
+		width: 28px;
+		height: 28px;
+		@media (max-width:767px) {margin: 5px 10px 0px 10px;}
+	}
+	a {&:hover{.social-item__link{path{fill:#E3672A}}}}
+}
+//====================================
