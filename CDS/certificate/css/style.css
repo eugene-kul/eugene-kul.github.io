@@ -37,8 +37,6 @@
   .mainblock__title {
     font-family: "Montserrat";
     color: #fff;
-    font-size: 75px;
-    line-height: 90px;
     font-weight: 800;
     text-transform: uppercase;
     max-width: 850px; }
@@ -57,7 +55,6 @@
   .mainblock__text {
     color: #fff;
     display: inline-block;
-    font-size: 30px;
     margin: 4% 0px 6% 0px; }
     @media (max-width: 767.98px) {
       .mainblock__text {
@@ -89,6 +86,11 @@
     justify-content: space-between;
     opacity: 0.25; }
     .mainblock__icons--arrows {
+      -webkit-transition: all 0.3s ease 0s;
+      -moz-transition: all 0.3s ease 0s;
+      -ms-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
       display: inline-block;
       bottom: 1px;
       left: 0px;
@@ -101,6 +103,11 @@
         .mainblock__icons--arrows {
           margin: 0px 5px 0px -30px; } }
     .mainblock__icons--smile {
+      -webkit-transition: all 0.3s ease 0s;
+      -moz-transition: all 0.3s ease 0s;
+      -ms-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
       -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
       flex: 0 0 auto;
@@ -115,7 +122,7 @@
         height: 100%; }
       @media (max-width: 767.98px) {
         .mainblock__icons--smile {
-          margin: -200px 0px 0px 0px; } }
+          margin: -150px 0px 0px 0px; } }
       @media (max-width: 479.98px) {
         .mainblock__icons--smile {
           margin: 0px 0px 0px 0px;
@@ -133,9 +140,9 @@
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 5% 6% 5% 6%;
   position: relative; }
   @media (max-width: 479.98px) {
@@ -145,35 +152,33 @@
       -ms-flex-direction: column;
       flex-direction: column;
       top: 0px;
-      padding: 0 10px; } }
+      padding: 0 0px; } }
   .bottomblock__text {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 55%;
     flex: 0 0 55%;
     max-width: 55%;
-    font-size: 20px;
     color: #000;
-    line-height: 25px;
     padding: 0px 6% 0px 0px;
-    font-weight: 700; }
+    font-weight: 600; }
     @media (max-width: 767.98px) {
       .bottomblock__text {
-        font-size: calc(12px + 22.75 * ((100vw - 320px) / 1920)); } }
+        font-size: calc(16px + 10.5 * ((100vw - 320px) / 1920)); } }
     @media (min-width: 767.98px) {
       .bottomblock__text {
-        font-size: calc(12px + 13 * (100vw / 1920)); } }
+        font-size: calc(16px + 6 * (100vw / 1920)); } }
     @media (max-width: 767.98px) {
       .bottomblock__text {
-        line-height: calc(15px + 22.75 * ((100vw - 320px) / 1920)); } }
+        line-height: calc(18px + 17.5 * ((100vw - 320px) / 1920)); } }
     @media (min-width: 767.98px) {
       .bottomblock__text {
-        line-height: calc(15px + 13 * (100vw / 1920)); } }
+        line-height: calc(18px + 10 * (100vw / 1920)); } }
     @media (max-width: 767.98px) {
       .bottomblock__text {
         padding: 0px 3% 0px 0px; } }
     @media (max-width: 479.98px) {
       .bottomblock__text {
-        padding: 20px 15px;
+        padding: 20px;
         -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
         flex: 1 1 auto;
@@ -184,15 +189,12 @@
     flex: 0 0 45%;
     max-width: 45%;
     position: relative;
-    margin: -250px 0px 0px 0px;
+    margin: -30% 0px 0px 0px;
     max-width: 340px;
     max-height: 500px; }
     .bottomblock__image img {
       width: 100%;
       height: 100%; }
-    @media (max-width: 767.98px) {
-      .bottomblock__image {
-        margin: -100px 0px 0px 0px; } }
     @media (max-width: 479.98px) {
       .bottomblock__image {
         margin: 0px auto 0px;
