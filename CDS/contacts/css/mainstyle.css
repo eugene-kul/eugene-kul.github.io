@@ -34,6 +34,7 @@
 .contacts__map {
   margin: 0px 0px 6% 0px;
   height: 305px;
+  width: 100%;
 }
 
 .item-contact {
