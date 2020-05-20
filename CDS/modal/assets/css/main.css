@@ -11600,6 +11600,10 @@ ol .program-list__list-mark {
   content: "";
   background-image: url("../img/svg/email.svg");
 }
+.kuzon-form-group--study::before {
+  content: "";
+  background-image: url("../img/svg/study.svg");
+}
 .kuzon-form-group--town::before {
   content: "";
   background-image: url("../img/svg/town.svg");
