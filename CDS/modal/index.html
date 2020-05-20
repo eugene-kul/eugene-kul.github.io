@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Кузон ЛК | Статистика (main)</title>
+	<title>Кузон ЛК | тарифы + модальные окна</title>
 	<meta content="" name="description">
 	<meta content="" name="keywords">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -516,7 +516,7 @@
 			</div>
 		</section>
 		<!-- offer-partners banner -->
-		<div class="offer-partners">
+		<div class="offer-partners mb-5">
 			<div class="container">
 				<div class="offer-partners__body row justify-content-center">
 					<div class="offer-partners__title title col-12 col-md-9">хотите выгодное предложение от наших парнеров?</div>
@@ -531,7 +531,7 @@
 				<div class="row">
 					<div class="col-12 offset-lg-1 col-lg-10">
 						<h2 class="kuzon-lk__title title">
-							Статистика
+							Тарифы
 						</h2>
 					</div>
 				</div>
@@ -567,7 +567,7 @@
 									<a href="http://kuzon-octo.loc/lk/favorites"title="Кузон | обучение | Личный кабинет | Избранное" class="lk-asside__link ">Избранное</a>
 								</li>
 								<li class="lk-asside__list-item">
-									<a href="http://kuzon-octo.loc/lk/statistics"title="Кузон | обучение | Личный кабинет | Статистика" class="lk-asside__link lk-asside__link--active">Статистика</a>
+									<a href="http://kuzon-octo.loc/lk/statistics"title="Кузон | обучение | Личный кабинет | Статистика" class="lk-asside__link ">Статистика</a>
 								</li>
 								<li class="lk-asside__list-item">
 									<a href="http://kuzon-octo.loc/lk/notifications"title="Кузон | обучение | Личный кабинет | Уведомления" class="lk-asside__link ">Уведомления</a>
@@ -576,7 +576,7 @@
 									<a href="http://kuzon-octo.loc/lk/organizations"title="Кузон | обучение | Личный кабинет | Мои организации" class="lk-asside__link ">Мои организации</a>
 								</li>
 								<li class="lk-asside__list-item">
-									<a href="http://kuzon-octo.loc/lk/tariffs"title="Кузон | обучение | Личный кабинет | Тарифы" class="lk-asside__link ">Тарифы</a>
+									<a href="http://kuzon-octo.loc/lk/tariffs"title="Кузон | обучение | Личный кабинет | Тарифы" class="lk-asside__link lk-asside__link--active">Тарифы</a>
 								</li>
 								<li class="lk-asside__list-item">
 									<a href="http://kuzon-octo.loc/lk/finances"title="Финансовые операции" class="lk-asside__link ">Финансовые операции</a>
@@ -587,21 +587,124 @@
 							</ul>
 						</div>
 					</div>
-					<div class="kuzon-lk__profile lk-profile col-12 col-lg-8 col-xl-7">
-						<h3 class="lk-favor__title title-3">Модальные окна</h3>
-						<div class='kuzon-form-actions row'>
-							<button class="kuzon-btn kuzon-btn--view-3 col-5 m-2 "  data-toggle="modal" data-target="#staticBackdrop">Модальное окно входа</button>
-							<button class="kuzon-btn kuzon-btn--view-3 col-5 m-2"  data-toggle="modal" data-target="#staticBackdropRegistration1">Регистрация ФЛ</button>
-							<button class="kuzon-btn kuzon-btn--view-3 col-5 m-2"  data-toggle="modal" data-target="#staticBackdropRegistration2">Регистрация ЮЛ</button>
-							<button class="kuzon-btn kuzon-btn--view-3 col-5 m-2"  data-toggle="modal" data-target="#staticBackdropResetPassword">Востановить пароль</button>
-							<button class="kuzon-btn kuzon-btn--view-3 col-5 m-2"  data-toggle="modal" data-target="#staticBackdropRequest-v1">Заявка на обучение #1</button>
-							<button class="kuzon-btn kuzon-btn--view-3 col-5 m-2"  data-toggle="modal" data-target="#staticBackdropRequest-v2">Заявка на обучение #2</button>
-							<button class="kuzon-btn kuzon-btn--view-3 col-5 m-2"  data-toggle="modal" data-target="#staticBackdropNewStock">Новая акция</button>
-							<button class="kuzon-btn kuzon-btn--view-3 col-5 m-2"  data-toggle="modal" data-target="#staticBackdropNewEvent">Новое мероприятие</button>
-							<button class="kuzon-btn kuzon-btn--view-3 col-5 m-2"  data-toggle="modal" data-target="#staticBackdropDeleteOrg">Удалить организацию</button>
-							<button class="kuzon-btn kuzon-btn--view-3 col-5 m-2"  data-toggle="modal" data-target="#staticBackdropDeleteProg">Удалить программу</button>
-							<button class="kuzon-btn kuzon-btn--view-3 col-5 m-2"  data-toggle="modal" data-target="#staticBackdropFilter">Фильтр</button>
+					<div class="rate-list col-12 col-lg-8 col-xl-8">
+						<div class="rate-list__body">
+							<div class="rate-list__navtab">
+								<div data-tab="1" class="rate-list__navtab-item rate-list__navtab-item_active">Активные</div>
+								<div data-tab="2" class="rate-list__navtab-item">Завершенные</div>
+							</div>
+							<div class="rate-list__tab">
+								<div data-tab="1" class="rate-list__tab-item rate-list__tab-item_active">
+									<div class="rate-item">
+										<div class="rate-item__column">
+											<a href="#!" class="rate-item__image"><img src="img/rate/01.png" alt=""></a>
+										</div>
+										<div class="rate-item__column">
+											<a href="#!" class="rate-item__org-name">Санкт-Петербургский гуманитарный университет профсоюзов</a>
+											<div class="rate-item__adress"><svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 2.55682C3.62148 2.55682 2.5 3.70379 2.5 5.11364C2.5 6.52348 3.62148 7.67045 5 7.67045C6.37852 7.67045 7.5 6.52348 7.5 5.11364C7.5 3.70379 6.37852 2.55682 5 2.55682ZM5 6.81818C4.08099 6.81818 3.33333 6.05353 3.33333 5.11364C3.33333 4.17374 4.08099 3.40909 5 3.40909C5.91901 3.40909 6.66667 4.17374 6.66667 5.11364C6.66667 6.05353 5.91901 6.81818 5 6.81818ZM5 0C2.23857 0 0 2.28944 0 5.11364C0 7.17542 0.702344 7.75118 4.48615 13.3612C4.73443 13.728 5.26555 13.7281 5.51388 13.3612C9.29766 7.75118 10 7.17542 10 5.11364C10 2.28944 7.76143 0 5 0ZM5 12.6225C1.37253 7.25732 0.833333 6.83134 0.833333 5.11364C0.833333 3.97537 1.26674 2.90526 2.05372 2.1004C2.8407 1.29553 3.88703 0.852273 5 0.852273C6.11297 0.852273 7.1593 1.29553 7.94628 2.1004C8.73325 2.90526 9.16667 3.97537 9.16667 5.11364C9.16667 6.83123 8.62781 7.25684 5 12.6225Z" fill="#828282"/></svg>г. Москва, ул. Карла-Маркса, д.25, 3 этаж</div >
+										</div>
+										<div class="rate-item__column">
+											<div class="rate-item__name-rate">PRO 1</div>
+											<ul class="rate-item__status">
+												<li class="rate-item__status--v1 active"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 7.3629C5.15705 7.3629 4.87903 7.64092 4.87903 7.98387C4.87903 8.32682 5.15705 8.60484 5.5 8.60484C5.84295 8.60484 6.12097 8.32682 6.12097 7.98387C6.12097 7.64092 5.84295 7.3629 5.5 7.3629ZM5.6701 6.83065H5.31526C5.16829 6.83065 5.04913 6.71149 5.04913 6.56452V6.55607C5.04913 4.99604 6.76655 5.14516 6.76655 4.17403C6.76655 3.73013 6.37266 3.28226 5.49268 3.28226C4.84634 3.28226 4.511 3.49625 4.17953 3.91857C4.09286 4.02902 3.93439 4.05153 3.8192 3.97127L3.52792 3.76834C3.40317 3.68143 3.37578 3.50729 3.46926 3.3874C3.94 2.78358 4.49851 2.39516 5.49268 2.39516C6.653 2.39516 7.65365 3.05496 7.65365 4.17403C7.65365 5.6691 5.93623 5.59004 5.93623 6.55607V6.56452C5.93623 6.71149 5.81707 6.83065 5.6701 6.83065ZM5.5 0.709677C8.13071 0.709677 10.2903 2.84037 10.2903 5.5C10.2903 8.14557 8.14776 10.2903 5.5 10.2903C2.85548 10.2903 0.709677 8.14883 0.709677 5.5C0.709677 2.85639 2.85206 0.709677 5.5 0.709677ZM5.5 0C2.46265 0 0 2.46353 0 5.5C0 8.53824 2.46265 11 5.5 11C8.53735 11 11 8.53824 11 5.5C11 2.46353 8.53735 0 5.5 0Z" fill="#828282"/></svg>Ожидает оплаты</li>
+												<li class="rate-item__status--v2"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 0C2.46243 0 0 2.46243 0 5.5C0 8.53757 2.46243 11 5.5 11C8.53757 11 11 8.53757 11 5.5C11 2.46243 8.53757 0 5.5 0ZM5.5 10.2903C2.86834 10.2903 0.709677 8.16007 0.709677 5.5C0.709677 2.86836 2.83993 0.709677 5.5 0.709677C8.13166 0.709677 10.2903 2.83993 10.2903 5.5C10.2903 8.13164 8.16007 10.2903 5.5 10.2903ZM8.64099 4.1924L4.63841 8.16286C4.53406 8.26637 4.36556 8.2657 4.26206 8.16136L2.3575 6.24141C2.254 6.13707 2.25467 5.96856 2.35901 5.86506L2.54796 5.67764C2.65231 5.57414 2.82081 5.5748 2.92431 5.67915L4.45402 7.22121L8.07872 3.62559C8.18307 3.52208 8.35157 3.52275 8.45507 3.62709L8.6425 3.81605C8.74602 3.92039 8.74533 4.08889 8.64099 4.1924Z" fill="#8BB671"/></svg>Активно <span>(01.12 - 02.01.20)</span></li>
+												<li class="rate-item__status--v3"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 0C2.46243 0 0 2.46243 0 5.5C0 8.53757 2.46243 11 5.5 11C8.53757 11 11 8.53757 11 5.5C11 2.46243 8.53757 0 5.5 0ZM5.5 10.2903C2.86834 10.2903 0.709677 8.16007 0.709677 5.5C0.709677 2.86836 2.83993 0.709677 5.5 0.709677C8.13166 0.709677 10.2903 2.83993 10.2903 5.5C10.2903 8.13164 8.16007 10.2903 5.5 10.2903ZM8.64099 4.1924L4.63841 8.16286C4.53406 8.26637 4.36556 8.2657 4.26206 8.16136L2.3575 6.24141C2.254 6.13707 2.25467 5.96856 2.35901 5.86506L2.54796 5.67764C2.65231 5.57414 2.82081 5.5748 2.92431 5.67915L4.45402 7.22121L8.07872 3.62559C8.18307 3.52208 8.35157 3.52275 8.45507 3.62709L8.6425 3.81605C8.74602 3.92039 8.74533 4.08889 8.64099 4.1924Z" fill="#D8232A"/></svg>Скоро закончится <span>(30.12 - 02.01.20)</span></li>
+											</ul>
+											<a href="#!" class="rate-item__btn-dwl">Скачать счет</a>
+										</div>
+									</div>
+									<div class="rate-item">
+										<div class="rate-item__column">
+											<a href="#!" class="rate-item__image"><img src="img/rate/01.png" alt=""></a>
+										</div>
+										<div class="rate-item__column">
+											<a href="#!" class="rate-item__org-name">Санкт-Петербургский гуманитарный университет профсоюзов</a>
+											<div class="rate-item__adress"><svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 2.55682C3.62148 2.55682 2.5 3.70379 2.5 5.11364C2.5 6.52348 3.62148 7.67045 5 7.67045C6.37852 7.67045 7.5 6.52348 7.5 5.11364C7.5 3.70379 6.37852 2.55682 5 2.55682ZM5 6.81818C4.08099 6.81818 3.33333 6.05353 3.33333 5.11364C3.33333 4.17374 4.08099 3.40909 5 3.40909C5.91901 3.40909 6.66667 4.17374 6.66667 5.11364C6.66667 6.05353 5.91901 6.81818 5 6.81818ZM5 0C2.23857 0 0 2.28944 0 5.11364C0 7.17542 0.702344 7.75118 4.48615 13.3612C4.73443 13.728 5.26555 13.7281 5.51388 13.3612C9.29766 7.75118 10 7.17542 10 5.11364C10 2.28944 7.76143 0 5 0ZM5 12.6225C1.37253 7.25732 0.833333 6.83134 0.833333 5.11364C0.833333 3.97537 1.26674 2.90526 2.05372 2.1004C2.8407 1.29553 3.88703 0.852273 5 0.852273C6.11297 0.852273 7.1593 1.29553 7.94628 2.1004C8.73325 2.90526 9.16667 3.97537 9.16667 5.11364C9.16667 6.83123 8.62781 7.25684 5 12.6225Z" fill="#828282"/></svg>г. Москва, ул. Карла-Маркса, д.25, 3 этаж</div >
+										</div>
+										<div class="rate-item__column">
+											<div class="rate-item__name-rate">PRO 1</div>
+											<ul class="rate-item__status">
+												<li class="rate-item__status--v1"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 7.3629C5.15705 7.3629 4.87903 7.64092 4.87903 7.98387C4.87903 8.32682 5.15705 8.60484 5.5 8.60484C5.84295 8.60484 6.12097 8.32682 6.12097 7.98387C6.12097 7.64092 5.84295 7.3629 5.5 7.3629ZM5.6701 6.83065H5.31526C5.16829 6.83065 5.04913 6.71149 5.04913 6.56452V6.55607C5.04913 4.99604 6.76655 5.14516 6.76655 4.17403C6.76655 3.73013 6.37266 3.28226 5.49268 3.28226C4.84634 3.28226 4.511 3.49625 4.17953 3.91857C4.09286 4.02902 3.93439 4.05153 3.8192 3.97127L3.52792 3.76834C3.40317 3.68143 3.37578 3.50729 3.46926 3.3874C3.94 2.78358 4.49851 2.39516 5.49268 2.39516C6.653 2.39516 7.65365 3.05496 7.65365 4.17403C7.65365 5.6691 5.93623 5.59004 5.93623 6.55607V6.56452C5.93623 6.71149 5.81707 6.83065 5.6701 6.83065ZM5.5 0.709677C8.13071 0.709677 10.2903 2.84037 10.2903 5.5C10.2903 8.14557 8.14776 10.2903 5.5 10.2903C2.85548 10.2903 0.709677 8.14883 0.709677 5.5C0.709677 2.85639 2.85206 0.709677 5.5 0.709677ZM5.5 0C2.46265 0 0 2.46353 0 5.5C0 8.53824 2.46265 11 5.5 11C8.53735 11 11 8.53824 11 5.5C11 2.46353 8.53735 0 5.5 0Z" fill="#828282"/></svg>Ожидает оплаты</li>
+												<li class="rate-item__status--v2 active"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 0C2.46243 0 0 2.46243 0 5.5C0 8.53757 2.46243 11 5.5 11C8.53757 11 11 8.53757 11 5.5C11 2.46243 8.53757 0 5.5 0ZM5.5 10.2903C2.86834 10.2903 0.709677 8.16007 0.709677 5.5C0.709677 2.86836 2.83993 0.709677 5.5 0.709677C8.13166 0.709677 10.2903 2.83993 10.2903 5.5C10.2903 8.13164 8.16007 10.2903 5.5 10.2903ZM8.64099 4.1924L4.63841 8.16286C4.53406 8.26637 4.36556 8.2657 4.26206 8.16136L2.3575 6.24141C2.254 6.13707 2.25467 5.96856 2.35901 5.86506L2.54796 5.67764C2.65231 5.57414 2.82081 5.5748 2.92431 5.67915L4.45402 7.22121L8.07872 3.62559C8.18307 3.52208 8.35157 3.52275 8.45507 3.62709L8.6425 3.81605C8.74602 3.92039 8.74533 4.08889 8.64099 4.1924Z" fill="#8BB671"/></svg>Активно <span>(01.12 - 02.01.20)</span></li>
+												<li class="rate-item__status--v3"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 0C2.46243 0 0 2.46243 0 5.5C0 8.53757 2.46243 11 5.5 11C8.53757 11 11 8.53757 11 5.5C11 2.46243 8.53757 0 5.5 0ZM5.5 10.2903C2.86834 10.2903 0.709677 8.16007 0.709677 5.5C0.709677 2.86836 2.83993 0.709677 5.5 0.709677C8.13166 0.709677 10.2903 2.83993 10.2903 5.5C10.2903 8.13164 8.16007 10.2903 5.5 10.2903ZM8.64099 4.1924L4.63841 8.16286C4.53406 8.26637 4.36556 8.2657 4.26206 8.16136L2.3575 6.24141C2.254 6.13707 2.25467 5.96856 2.35901 5.86506L2.54796 5.67764C2.65231 5.57414 2.82081 5.5748 2.92431 5.67915L4.45402 7.22121L8.07872 3.62559C8.18307 3.52208 8.35157 3.52275 8.45507 3.62709L8.6425 3.81605C8.74602 3.92039 8.74533 4.08889 8.64099 4.1924Z" fill="#D8232A"/></svg>Скоро закончится <span>(30.12 - 02.01.20)</span></li>
+											</ul>
+											<a href="#!" class="rate-item__btn-dwl">Скачать счет</a>
+										</div>
+									</div>
+									<div class="rate-item">
+										<div class="rate-item__column">
+											<a href="#!" class="rate-item__image"><img src="img/rate/01.png" alt=""></a>
+										</div>
+										<div class="rate-item__column">
+											<a href="#!" class="rate-item__org-name">Санкт-Петербургский гуманитарный университет профсоюзов</a>
+											<div class="rate-item__adress"><svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 2.55682C3.62148 2.55682 2.5 3.70379 2.5 5.11364C2.5 6.52348 3.62148 7.67045 5 7.67045C6.37852 7.67045 7.5 6.52348 7.5 5.11364C7.5 3.70379 6.37852 2.55682 5 2.55682ZM5 6.81818C4.08099 6.81818 3.33333 6.05353 3.33333 5.11364C3.33333 4.17374 4.08099 3.40909 5 3.40909C5.91901 3.40909 6.66667 4.17374 6.66667 5.11364C6.66667 6.05353 5.91901 6.81818 5 6.81818ZM5 0C2.23857 0 0 2.28944 0 5.11364C0 7.17542 0.702344 7.75118 4.48615 13.3612C4.73443 13.728 5.26555 13.7281 5.51388 13.3612C9.29766 7.75118 10 7.17542 10 5.11364C10 2.28944 7.76143 0 5 0ZM5 12.6225C1.37253 7.25732 0.833333 6.83134 0.833333 5.11364C0.833333 3.97537 1.26674 2.90526 2.05372 2.1004C2.8407 1.29553 3.88703 0.852273 5 0.852273C6.11297 0.852273 7.1593 1.29553 7.94628 2.1004C8.73325 2.90526 9.16667 3.97537 9.16667 5.11364C9.16667 6.83123 8.62781 7.25684 5 12.6225Z" fill="#828282"/></svg>г. Москва, ул. Карла-Маркса, д.25, 3 этаж</div >
+										</div>
+										<div class="rate-item__column">
+											<div class="rate-item__name-rate">PRO 1</div>
+											<ul class="rate-item__status">
+												<li class="rate-item__status--v1"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 7.3629C5.15705 7.3629 4.87903 7.64092 4.87903 7.98387C4.87903 8.32682 5.15705 8.60484 5.5 8.60484C5.84295 8.60484 6.12097 8.32682 6.12097 7.98387C6.12097 7.64092 5.84295 7.3629 5.5 7.3629ZM5.6701 6.83065H5.31526C5.16829 6.83065 5.04913 6.71149 5.04913 6.56452V6.55607C5.04913 4.99604 6.76655 5.14516 6.76655 4.17403C6.76655 3.73013 6.37266 3.28226 5.49268 3.28226C4.84634 3.28226 4.511 3.49625 4.17953 3.91857C4.09286 4.02902 3.93439 4.05153 3.8192 3.97127L3.52792 3.76834C3.40317 3.68143 3.37578 3.50729 3.46926 3.3874C3.94 2.78358 4.49851 2.39516 5.49268 2.39516C6.653 2.39516 7.65365 3.05496 7.65365 4.17403C7.65365 5.6691 5.93623 5.59004 5.93623 6.55607V6.56452C5.93623 6.71149 5.81707 6.83065 5.6701 6.83065ZM5.5 0.709677C8.13071 0.709677 10.2903 2.84037 10.2903 5.5C10.2903 8.14557 8.14776 10.2903 5.5 10.2903C2.85548 10.2903 0.709677 8.14883 0.709677 5.5C0.709677 2.85639 2.85206 0.709677 5.5 0.709677ZM5.5 0C2.46265 0 0 2.46353 0 5.5C0 8.53824 2.46265 11 5.5 11C8.53735 11 11 8.53824 11 5.5C11 2.46353 8.53735 0 5.5 0Z" fill="#828282"/></svg>Ожидает оплаты</li>
+												<li class="rate-item__status--v2 active"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 0C2.46243 0 0 2.46243 0 5.5C0 8.53757 2.46243 11 5.5 11C8.53757 11 11 8.53757 11 5.5C11 2.46243 8.53757 0 5.5 0ZM5.5 10.2903C2.86834 10.2903 0.709677 8.16007 0.709677 5.5C0.709677 2.86836 2.83993 0.709677 5.5 0.709677C8.13166 0.709677 10.2903 2.83993 10.2903 5.5C10.2903 8.13164 8.16007 10.2903 5.5 10.2903ZM8.64099 4.1924L4.63841 8.16286C4.53406 8.26637 4.36556 8.2657 4.26206 8.16136L2.3575 6.24141C2.254 6.13707 2.25467 5.96856 2.35901 5.86506L2.54796 5.67764C2.65231 5.57414 2.82081 5.5748 2.92431 5.67915L4.45402 7.22121L8.07872 3.62559C8.18307 3.52208 8.35157 3.52275 8.45507 3.62709L8.6425 3.81605C8.74602 3.92039 8.74533 4.08889 8.64099 4.1924Z" fill="#8BB671"/></svg>Активно <span>(01.12 - 02.01.20)</span></li>
+												<li class="rate-item__status--v3"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 0C2.46243 0 0 2.46243 0 5.5C0 8.53757 2.46243 11 5.5 11C8.53757 11 11 8.53757 11 5.5C11 2.46243 8.53757 0 5.5 0ZM5.5 10.2903C2.86834 10.2903 0.709677 8.16007 0.709677 5.5C0.709677 2.86836 2.83993 0.709677 5.5 0.709677C8.13166 0.709677 10.2903 2.83993 10.2903 5.5C10.2903 8.13164 8.16007 10.2903 5.5 10.2903ZM8.64099 4.1924L4.63841 8.16286C4.53406 8.26637 4.36556 8.2657 4.26206 8.16136L2.3575 6.24141C2.254 6.13707 2.25467 5.96856 2.35901 5.86506L2.54796 5.67764C2.65231 5.57414 2.82081 5.5748 2.92431 5.67915L4.45402 7.22121L8.07872 3.62559C8.18307 3.52208 8.35157 3.52275 8.45507 3.62709L8.6425 3.81605C8.74602 3.92039 8.74533 4.08889 8.64099 4.1924Z" fill="#D8232A"/></svg>Скоро закончится <span>(30.12 - 02.01.20)</span></li>
+											</ul>
+											<a href="#!" class="rate-item__btn-dwl">Скачать счет</a>
+										</div>
+									</div>
+									<div class="rate-item">
+										<div class="rate-item__column">
+											<a href="#!" class="rate-item__image"><img src="img/rate/01.png" alt=""></a>
+										</div>
+										<div class="rate-item__column">
+											<a href="#!" class="rate-item__org-name">Санкт-Петербургский гуманитарный университет профсоюзов</a>
+											<div class="rate-item__adress"><svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 2.55682C3.62148 2.55682 2.5 3.70379 2.5 5.11364C2.5 6.52348 3.62148 7.67045 5 7.67045C6.37852 7.67045 7.5 6.52348 7.5 5.11364C7.5 3.70379 6.37852 2.55682 5 2.55682ZM5 6.81818C4.08099 6.81818 3.33333 6.05353 3.33333 5.11364C3.33333 4.17374 4.08099 3.40909 5 3.40909C5.91901 3.40909 6.66667 4.17374 6.66667 5.11364C6.66667 6.05353 5.91901 6.81818 5 6.81818ZM5 0C2.23857 0 0 2.28944 0 5.11364C0 7.17542 0.702344 7.75118 4.48615 13.3612C4.73443 13.728 5.26555 13.7281 5.51388 13.3612C9.29766 7.75118 10 7.17542 10 5.11364C10 2.28944 7.76143 0 5 0ZM5 12.6225C1.37253 7.25732 0.833333 6.83134 0.833333 5.11364C0.833333 3.97537 1.26674 2.90526 2.05372 2.1004C2.8407 1.29553 3.88703 0.852273 5 0.852273C6.11297 0.852273 7.1593 1.29553 7.94628 2.1004C8.73325 2.90526 9.16667 3.97537 9.16667 5.11364C9.16667 6.83123 8.62781 7.25684 5 12.6225Z" fill="#828282"/></svg>г. Москва, ул. Карла-Маркса, д.25, 3 этаж</div >
+										</div>
+										<div class="rate-item__column">
+											<div class="rate-item__name-rate">PRO 1</div>
+											<ul class="rate-item__status">
+												<li class="rate-item__status--v1"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 7.3629C5.15705 7.3629 4.87903 7.64092 4.87903 7.98387C4.87903 8.32682 5.15705 8.60484 5.5 8.60484C5.84295 8.60484 6.12097 8.32682 6.12097 7.98387C6.12097 7.64092 5.84295 7.3629 5.5 7.3629ZM5.6701 6.83065H5.31526C5.16829 6.83065 5.04913 6.71149 5.04913 6.56452V6.55607C5.04913 4.99604 6.76655 5.14516 6.76655 4.17403C6.76655 3.73013 6.37266 3.28226 5.49268 3.28226C4.84634 3.28226 4.511 3.49625 4.17953 3.91857C4.09286 4.02902 3.93439 4.05153 3.8192 3.97127L3.52792 3.76834C3.40317 3.68143 3.37578 3.50729 3.46926 3.3874C3.94 2.78358 4.49851 2.39516 5.49268 2.39516C6.653 2.39516 7.65365 3.05496 7.65365 4.17403C7.65365 5.6691 5.93623 5.59004 5.93623 6.55607V6.56452C5.93623 6.71149 5.81707 6.83065 5.6701 6.83065ZM5.5 0.709677C8.13071 0.709677 10.2903 2.84037 10.2903 5.5C10.2903 8.14557 8.14776 10.2903 5.5 10.2903C2.85548 10.2903 0.709677 8.14883 0.709677 5.5C0.709677 2.85639 2.85206 0.709677 5.5 0.709677ZM5.5 0C2.46265 0 0 2.46353 0 5.5C0 8.53824 2.46265 11 5.5 11C8.53735 11 11 8.53824 11 5.5C11 2.46353 8.53735 0 5.5 0Z" fill="#828282"/></svg>Ожидает оплаты</li>
+												<li class="rate-item__status--v2"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 0C2.46243 0 0 2.46243 0 5.5C0 8.53757 2.46243 11 5.5 11C8.53757 11 11 8.53757 11 5.5C11 2.46243 8.53757 0 5.5 0ZM5.5 10.2903C2.86834 10.2903 0.709677 8.16007 0.709677 5.5C0.709677 2.86836 2.83993 0.709677 5.5 0.709677C8.13166 0.709677 10.2903 2.83993 10.2903 5.5C10.2903 8.13164 8.16007 10.2903 5.5 10.2903ZM8.64099 4.1924L4.63841 8.16286C4.53406 8.26637 4.36556 8.2657 4.26206 8.16136L2.3575 6.24141C2.254 6.13707 2.25467 5.96856 2.35901 5.86506L2.54796 5.67764C2.65231 5.57414 2.82081 5.5748 2.92431 5.67915L4.45402 7.22121L8.07872 3.62559C8.18307 3.52208 8.35157 3.52275 8.45507 3.62709L8.6425 3.81605C8.74602 3.92039 8.74533 4.08889 8.64099 4.1924Z" fill="#8BB671"/></svg>Активно <span>(01.12 - 02.01.20)</span></li>
+												<li class="rate-item__status--v3  active"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 0C2.46243 0 0 2.46243 0 5.5C0 8.53757 2.46243 11 5.5 11C8.53757 11 11 8.53757 11 5.5C11 2.46243 8.53757 0 5.5 0ZM5.5 10.2903C2.86834 10.2903 0.709677 8.16007 0.709677 5.5C0.709677 2.86836 2.83993 0.709677 5.5 0.709677C8.13166 0.709677 10.2903 2.83993 10.2903 5.5C10.2903 8.13164 8.16007 10.2903 5.5 10.2903ZM8.64099 4.1924L4.63841 8.16286C4.53406 8.26637 4.36556 8.2657 4.26206 8.16136L2.3575 6.24141C2.254 6.13707 2.25467 5.96856 2.35901 5.86506L2.54796 5.67764C2.65231 5.57414 2.82081 5.5748 2.92431 5.67915L4.45402 7.22121L8.07872 3.62559C8.18307 3.52208 8.35157 3.52275 8.45507 3.62709L8.6425 3.81605C8.74602 3.92039 8.74533 4.08889 8.64099 4.1924Z" fill="#D8232A"/></svg>Скоро закончится <span>(30.12 - 02.01.20)</span></li>
+											</ul>
+											<a href="#!" class="rate-item__btn-dwl">Скачать счет</a>
+										</div>
+									</div>
+								</div>
+								<div data-tab="2" class="rate-list__tab-item">
+									<div class="rate-item">
+										<div class="rate-item__column">
+											<a href="#!" class="rate-item__image"><img src="img/rate/01.png" alt=""></a>
+										</div>
+										<div class="rate-item__column">
+											<a href="#!" class="rate-item__org-name">Санкт-Петербургский гуманитарный университет профсоюзов</a>
+											<div class="rate-item__adress"><svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 2.55682C3.62148 2.55682 2.5 3.70379 2.5 5.11364C2.5 6.52348 3.62148 7.67045 5 7.67045C6.37852 7.67045 7.5 6.52348 7.5 5.11364C7.5 3.70379 6.37852 2.55682 5 2.55682ZM5 6.81818C4.08099 6.81818 3.33333 6.05353 3.33333 5.11364C3.33333 4.17374 4.08099 3.40909 5 3.40909C5.91901 3.40909 6.66667 4.17374 6.66667 5.11364C6.66667 6.05353 5.91901 6.81818 5 6.81818ZM5 0C2.23857 0 0 2.28944 0 5.11364C0 7.17542 0.702344 7.75118 4.48615 13.3612C4.73443 13.728 5.26555 13.7281 5.51388 13.3612C9.29766 7.75118 10 7.17542 10 5.11364C10 2.28944 7.76143 0 5 0ZM5 12.6225C1.37253 7.25732 0.833333 6.83134 0.833333 5.11364C0.833333 3.97537 1.26674 2.90526 2.05372 2.1004C2.8407 1.29553 3.88703 0.852273 5 0.852273C6.11297 0.852273 7.1593 1.29553 7.94628 2.1004C8.73325 2.90526 9.16667 3.97537 9.16667 5.11364C9.16667 6.83123 8.62781 7.25684 5 12.6225Z" fill="#828282"/></svg>г. Москва, ул. Карла-Маркса, д.25, 3 этаж</div >
+										</div>
+										<div class="rate-item__column">
+											<div class="rate-item__name-rate">PRO 1</div>
+												<ul class="rate-item__status">
+													<li class="rate-item__status--v3 active"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 0C2.46243 0 0 2.46243 0 5.5C0 8.53757 2.46243 11 5.5 11C8.53757 11 11 8.53757 11 5.5C11 2.46243 8.53757 0 5.5 0ZM5.5 10.2903C2.86834 10.2903 0.709677 8.16007 0.709677 5.5C0.709677 2.86836 2.83993 0.709677 5.5 0.709677C8.13166 0.709677 10.2903 2.83993 10.2903 5.5C10.2903 8.13164 8.16007 10.2903 5.5 10.2903ZM8.64099 4.1924L4.63841 8.16286C4.53406 8.26637 4.36556 8.2657 4.26206 8.16136L2.3575 6.24141C2.254 6.13707 2.25467 5.96856 2.35901 5.86506L2.54796 5.67764C2.65231 5.57414 2.82081 5.5748 2.92431 5.67915L4.45402 7.22121L8.07872 3.62559C8.18307 3.52208 8.35157 3.52275 8.45507 3.62709L8.6425 3.81605C8.74602 3.92039 8.74533 4.08889 8.64099 4.1924Z" fill="#D8232A"/></svg>Завершен <span>(30.12 - 02.01.20)</span></li>
+												</ul>
+											<a href="#!" class="rate-item__btn-dwl">Скачать счет</a>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
+					</div>
+				</div>
+				<div class="kuzon-lk__profile lk-profile">
+					<h3 class="lk-favor__title title-3">Модальные окна</h3>
+					<div class='kuzon-form-actions row justify-content-center'>
+						<button class="kuzon-btn kuzon-btn--view-3 col-4 m-2"  data-toggle="modal" data-target="#staticBackdrop">Модальное окно входа</button>
+						<button class="kuzon-btn kuzon-btn--view-3 col-4 m-2"  data-toggle="modal" data-target="#staticBackdropRegistration1">Регистрация ФЛ</button>
+						<button class="kuzon-btn kuzon-btn--view-3 col-4 m-2"  data-toggle="modal" data-target="#staticBackdropRegistration2">Регистрация ЮЛ</button>
+						<button class="kuzon-btn kuzon-btn--view-3 col-4 m-2"  data-toggle="modal" data-target="#staticBackdropResetPassword">Востановить пароль</button>
+						<button class="kuzon-btn kuzon-btn--view-3 col-4 m-2"  data-toggle="modal" data-target="#staticBackdropRequest-v1">Заявка на обучение #1</button>
+						<button class="kuzon-btn kuzon-btn--view-3 col-4 m-2"  data-toggle="modal" data-target="#staticBackdropRequest-v2">Заявка на обучение #2</button>
+						<button class="kuzon-btn kuzon-btn--view-3 col-4 m-2"  data-toggle="modal" data-target="#staticBackdropNewStock">Новая акция</button>
+						<button class="kuzon-btn kuzon-btn--view-3 col-4 m-2"  data-toggle="modal" data-target="#staticBackdropNewEvent">Новое мероприятие</button>
+						<button class="kuzon-btn kuzon-btn--view-3 col-4 m-2"  data-toggle="modal" data-target="#staticBackdropDeleteOrg">Удалить организацию</button>
+						<button class="kuzon-btn kuzon-btn--view-3 col-4 m-2"  data-toggle="modal" data-target="#staticBackdropDeleteProg">Удалить программу</button>
+						<button class="kuzon-btn kuzon-btn--view-3 col-4 m-2"  data-toggle="modal" data-target="#staticBackdropFilter">Фильтр</button>
+						<button class="kuzon-btn kuzon-btn--view-3 col-4 m-2"  data-toggle="modal" data-target="#staticBackdropPoll">Опрос</button>
 					</div>
 				</div>
 			</div>
@@ -1657,6 +1760,53 @@
 				</div>
 			</div>
 		</div>
+		<!--  -->
+		<div class="modal fade kuzon-modal" id="staticBackdropPoll">
+			<div class="modal-dialog kuzon-modal__dialog--width-content">
+				<div class="modal-content modal-bdrad">
+					<section class="feedback modal-bdrad">
+						<div class="poll__block modal-bdrad">
+							<div class="container">
+								<button class="close" type="button" data-dismiss="modal"></button>
+								<div class="poll__text col-11">Как вы считаете, не слишком ли навязчиво показывать несколько форм обратной связи на одной странице?</div>
+								<div class="modal-body">
+									<div class="container">
+										<form>
+											<div class="lk-main-info__form-group kuzon-form-group row">
+												<div class="col-11">
+													<div class="kuzon-form-group__items row">
+														<div class="kuzon-form-group__item col-12 col-md-12">
+															<div class="kuzon-input">
+															<select class="custom-select-default selectized" name="edu_level">
+																<option value="0">Навязчиво</option>
+																<option value="1">Не навязчиво</option>
+																<option value="2">Затрудняюсь ответить</option>
+															</select>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="poll__dots row justify-content-center">
+												<span class="poll__dots-item poll__dots-item_acive"></span>
+												<span class="poll__dots-item"></span>
+												<span class="poll__dots-item"></span>
+												<span class="poll__dots-item"></span>
+											</div>
+											<div class="kuzon-modal-actions">
+												<div class="kuzon-form-group__items row justify-content-center">
+													<button type="submit" class="button button--orange button--orange-solid">Следующий</button>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
 	</main>
 	<!-- LogIn -->
 	<footer class="page__footer">
@@ -1772,7 +1922,7 @@
 <script src="./assets/javascript/modals.js"></script>
 <script src="./assets/javascript/framework.js"></script>
 <script src="./assets/javascript/framework.extras.js"></script>
-<script src="myforms.js"></script>
+<script src="myscript.js"></script>
 <link rel="stylesheet" property="stylesheet" href="./assets/css/framework.extras.css">
 <link rel="stylesheet" property="stylesheet" href="css/mainstyle.css">
 
