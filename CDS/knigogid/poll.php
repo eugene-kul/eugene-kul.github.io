@@ -15,7 +15,6 @@
 	<link type="text/css" rel="stylesheet" href="css/slick.css?v<?=rand(1000,999999)?>" media="screen" />
 	<link type="text/css" rel="stylesheet" href="css/main.css?v<?=rand(1000,999999)?>" media="screen" />
 	<link type="text/css" rel="stylesheet" href="css/poll.css?v<?=rand(1000,999999)?>" media="screen" />
-	<link type="text/css" rel="stylesheet" href="css/itsmain.css?v<?=rand(1000,999999)?>" media="screen" />
 	<script type="text/javascript" src="js/js.cookie.js" charset="UTF-8"></script>
 	<script type="text/javascript" src="js/libs.min.js" charset="UTF-8"></script>
 	<script type="text/javascript" src="js/slick.min.js" charset="UTF-8"></script>
@@ -1514,11 +1513,11 @@
 
 		
 	</footer>
-	<div style="text-align: center;padding: 20px"><button onclick="" data-toggle="modal" data-target="#welc-modal" class="registration-btn">Welcome</button></div>
+
 
 	
 <!-- new modal Welcome -->
-<div  class="modal fаde welc-modal" id="welc-modal" tabindex="-1" role="dialog" aria-hidden="true">
+<div  class="modal fade welc-modal" id="welc-modal"  tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered modal-sm" role="document">
 		<div class="modal-content">
 			<div class="welc-modal_content-box">
@@ -1528,9 +1527,9 @@
 				</div>
 				<div class="modal-body">
 					<div class="welc-modal_content">
-						<div class="welc-modal_title">Добро пожаловать, Вася!</div>
+						<div class="welc-modal_title">Добро пожаловать, <span id="notify_name_modal">Вася</span>!</div>
 						<div class="welc-modal_text">Книгогид – рекомендательный книжный сервис, который станет вашим проводником в мире литературы. Давайте сформируем вашу первую книжную подборку! </div>
-						<a data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#poll-modal" onclick="" href="javascript:void(0)" class="welc-modal_link">Сформировать подборку</a>
+						<a href="#" class="welc-modal_link j-open-timeout-poll">Сформировать подборку</a>
 					</div>
 				</div>
 			</div>
@@ -1709,12 +1708,21 @@
 								});
 							});
 							function go_login() {
-
+								
+								$("#reg-modal").modal("hide");
+								setTimeout(function() {
+									show_welcome_notify('Иван Петрович');
+								}, 1000);
+								
 								if($('#action_login').val() == 'register') ajax_login() ;
 								if($('#action_login').val() == 'login') ajax_login() ;
 								if($('#action_login').val() == 'reset') ajax_remind() ;
 								$('#form_authorization .submit').addClass('disabled') ;
 
+							}
+							function show_welcome_notify(name) {
+								$("#notify_name_modal").text(name);
+								$("#welc-modal").modal("show");
 							}
 							</script>
 						</form>
@@ -2252,7 +2260,7 @@
 												
 					</div>
 					<div class="modal-poll-btn">
-						<button type="submit" class="modal-poll-blut-btn" disabled>Далее</button>
+						<button onclick="openLoader();" type="submit" class="modal-poll-blut-btn" disabled>Далее</button>
 					</div>
 					<div class="modal-poll-bottom-text">
 						<a href="javascript:void(0);"  data-dismiss="modal" >Сформировать подборку позднее</a>
@@ -2266,6 +2274,24 @@
 	</div>
 </div>
 <!-- end -->
+
+<!-- loader -->
+<div  class="modal fаde loader-modal" id="loader" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+		<div class="modal-content">
+			<div class="loader-modal-body">
+				<div class="modal-body">
+					<span class="loader-text">Собираем вдохновляющие литературные подборки на основе Ваших вкусовых предпрочтений</span>
+					<div class="loader">
+						<div class="circle"></div>
+						<div class="circle"></div>
+						<div class="circle"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 <div class="poll-notify-wrapper">
 	<div class="poll-notify-wrapper__close"></div>

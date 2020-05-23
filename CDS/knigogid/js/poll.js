@@ -129,9 +129,11 @@ $(function() {
 	
 	$(document).on("click", ".poll-notify-wrapper__close", function() {
 		$(".poll-notify-wrapper").fadeOut(300);		
+		console.log('ok');
 	});
 	
 	$(document).on("submit", ".j-final-step-poll", function(e) {
+		openLoader();
 		var formpoll = $(this);
 		//аякс отправка данных при нажатии на кнопку "получить подборку" с последующим редиректом
 		$.ajax({
@@ -213,4 +215,10 @@ function showPollNotify(link) {
 	setTimeout(function() {
 		$(".poll-notify-wrapper__close").trigger("click");
 	}, 10000);
+}
+
+function openLoader() {
+	$('#loader').show();
+	console.log('step2');
+	setTimeout(function(){$('#loader').hide();}, 4000);
 }
