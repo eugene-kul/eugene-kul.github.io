@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 54.1 (76490) - https://sketchapp.com -->
+    <title>8CE0E901-18A3-4CB9-9F58-878EABA4F4EA</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M13.125,11.25 C13.125,10.2375 12.0459375,9.358125 10.441875,8.863125 C9.755625,9.73875 8.6990625,10.3125 7.5,10.3125 C6.3009375,10.3125 5.244375,9.73875 4.558125,8.863125 C2.9540625,9.358125 1.875,10.2375 1.875,11.25 L1.875,13.125 L2.8125,13.125 L3.3346875,13.125 L10.3125,13.125 L11.25,13.125 L11.6653125,13.125 L13.125,13.125 L13.125,11.25 Z M9.375,3.75 C9.375,2.7140625 8.5359375,1.875 7.5,1.875 C6.4640625,1.875 5.625,2.7140625 5.625,3.75 L5.625,6.5625 C5.625,7.5984375 6.4640625,8.4375 7.5,8.4375 C8.5359375,8.4375 9.375,7.5984375 9.375,6.5625 L9.375,3.75 Z M14.0625,15 L11.95875,15 L3.04125,15 L0.9375,15 C0.42,15 0,14.58 0,14.0625 L0,11.25 C0,9.5025 1.545,7.995 3.81375,7.1896875 C3.778125,6.9853125 3.75,6.7771875 3.75,6.5625 L3.75,3.75 C3.75,1.6790625 5.4290625,0 7.5,0 C9.5709375,0 11.25,1.6790625 11.25,3.75 L11.25,6.5625 C11.25,6.7771875 11.221875,6.9853125 11.18625,7.1896875 C13.455,7.995 15,9.5025 15,11.25 L15,14.0625 C15,14.58 14.58,15 14.0625,15 L14.0625,15 Z" id="path-1"></path>
+    </defs>
+    <g id="profile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Extra-large:-Desktops---my-profile_people" transform="translate(-509.000000, -694.000000)">
+            <g id="Group-5" transform="translate(393.000000, 524.000000)">
+                <g id="Group-3" transform="translate(14.000000, 164.000000)">
+                    <g id="Icon/emoticon" transform="translate(102.000000, 6.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Person-Icon"></g>
+                        <g id="UI/Color/Flat/Grey-50%" mask="url(#mask-2)" fill="#A8AAB7">
+                            <rect id="Base" x="0" y="0" width="15" height="15"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

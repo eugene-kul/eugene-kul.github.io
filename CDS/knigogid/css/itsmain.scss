@@ -1,0 +1,379 @@
+//Миксины=========================================================================================================================//
+@mixin animation($name,$time,$delay){animation: $name $time infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;-webkit-animation: $name $time infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;-moz-animation: $name $time infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;-o-animation: $name $time infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;}
+@mixin anim($time,$delay){-webkit-transition:all $time ease $delay;-moz-transition: all $time ease $delay;-ms-transition: all $time ease $delay;-o-transition: all $time ease $delay;transition: all $time ease $delay;}
+@mixin anim_cubic($time,$delay){-webkit-transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-moz-transition: all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-ms-transition: all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-o-transition: all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;transition: all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;}
+@mixin anim_cubic2($time,$delay){-webkit-transition:all $time cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;-moz-transition: all $time cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;-ms-transition: all $time cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;-o-transition: all $time cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;transition: all $time cubic-bezier(0.455, 0.03, 0.515, 0.955) $delay;}
+@mixin rotate($deg){-moz-transform:rotate($deg);-ms-transform:rotate($deg);-webkit-transform:rotate($deg);-o-transform:rotate($deg);transform:rotate($deg);}
+@mixin scale($num){-moz-transform:scale($num);-ms-transform:scale($num);-webkit-transform:scale($num);-o-transform:scale($num);transform:scale($num);}
+@mixin skew($num){-moz-transform:skewX($num);-ms-transform:skewX($num);-webkit-transform:skewX($num);-o-transform:skewX($num);transform:skewX($num);}
+@mixin cnt($h){display: flex;flex-direction: column;height: $h;text-align: center;align-items:stretch; justify-content:center;}
+@mixin tr($x,$y,$z){transform: translate3d($x, $y, $z);}
+@mixin flexbox(){display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;font-size: 0;}
+@mixin flexboxinline(){display:-webkit-inline-flex;display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display: inline-flex;}
+@mixin flexorder($val){-webkit-box-ordinal-group:$val;-moz-box-ordinal-group:$val;-ms-flex-order:$val;-webkit-order:$val;order:$val;}
+@mixin adaptiv-font($pcSize, $mobSize) {$addSize: $pcSize - $mobSize;$addMobSize: $addSize + $addSize * 0.75;
+	@media (max-width:$md3+px) {font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maketmw}));}
+	@media (min-width:$md3+px) {font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maketmw}));}
+}
+@mixin adaptiv-lh($pcSize, $mobSize) {$addSize: $pcSize - $mobSize;$addMobSize: $addSize + $addSize * 0.75;
+	@media (max-width:$md3+px) {line-height: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maketmw}));}
+	@media (min-width:$md3+px) {line-height: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maketmw}));}
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap");
+
+/*welcome=======================================================*/
+
+.modal-sm {
+	max-width: 590px;
+	@media (max-width:767px) {
+		max-width: 100%;
+	}
+}
+
+
+.welc-modal {
+	&_content-box {
+		text-align: center;
+		padding: 17px 19px 80px 19px;
+		@media (max-width:767px) {
+			padding: 17px 19px 40px 19px;
+		}
+	}
+	&_header {
+		img {
+			height: 170px;
+			width: auto;
+			margin: 80px 0px 20px 0px;
+			@media (max-width:767px) {
+				margin: 40px 0px 20px 0px;
+			}
+			@media (max-width:575px) {
+				margin: 40px 0px 10px 0px;
+			}
+		}
+	}
+	&_content {}
+	&_title {
+		font-family: Roboto Slab;
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 37px;
+		max-width: 370px;
+		margin: 0px auto 25px;
+		text-align: center;
+		color: #1991EB;
+		@media (max-width:575px) {
+			font-size: 25px;
+			line-height: 30px;
+			margin: 0px auto 20px;
+		}
+		@media (max-width:450px) {
+			font-size: 20px;
+			line-height: 25px;
+		}
+	}
+	&_text{
+		font-family: Montserrat_regular;
+		font-size: 18px;
+		line-height: 24px;
+		text-align: center;
+		color: #354052;
+		padding: 0px 20px;
+		margin: 0px 0px 40px 0px;
+		@media (max-width:575px) {
+			padding: 0px 0px;
+			font-size: 14px;
+			line-height: 18px;
+		}
+	}
+	&_link {
+		font-family: Montserrat_semibold;
+		border: 0;
+		outline: 0;
+		background: linear-gradient(125deg, #1991eb 50%, rgba(78, 42, 206, 0.99));
+		color: #fff;
+		padding: 8px 20px;
+		margin: 0px auto 0px;
+		border-radius: 4px;
+		background-size: 200%;
+		background-position: 100% 0;
+		box-shadow: 2px 4px 14px 0 rgba(74, 74, 74, 0.28);
+		transition: .3s;
+		&:hover{color: #fff;}
+	}
+}
+/*=======================================================*/
+/*notification=============================================*/
+
+.modal-sx {
+	max-width: 615px;
+	@media (max-width:767px) {
+		max-width: 100%;
+	}
+}
+
+.notif-modal {
+	&_content-box {
+		padding: 25px 25px 15px 25px;
+		text-align: center;
+		@media (max-width:575px) {
+			padding: 25px 0px 15px 0px;
+		}
+	}
+	&_header {
+		padding: 0px 0px;
+		@media (max-width:767px) {
+			padding: 0px 10px;
+		}
+		@media (max-width:370px) {
+			padding: 0px 10px;
+		}
+	}
+	&_avatar {
+		display: inline-block;
+		border-radius: 50%;
+		overflow: hidden;
+		width: 81px;height: 81px;
+		img {width: 100%;}
+		margin: 0px 0px 10px 0px;
+	}
+	&_title {
+		font-family: Montserrat_bold;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 21px;
+		text-align: center;
+		a {color: #1991EB;}
+	}
+	&_content {}
+	&_btn {
+		cursor: pointer;
+		border: 0;
+		outline: 0;
+		background: #A4A5B0;
+		color: #fff !important;
+		padding: 11px 74px;
+		margin: 0px auto 0px;
+		border-radius: 4px;
+		line-height: 100%;
+		box-shadow: 2px 4px 14px 0 rgba(74, 74, 74, 0.15);
+		transition: .3s;
+		&:hover{color: #fff;background: #1991eb;text-decoration: none;}
+	}
+}
+
+.notif-modal-item {
+	&_body {
+		background: #F9F8F8;
+		border-radius: 6px;
+		padding: 25px;
+		margin: 5px -23px 30px -23px;
+		@include flexbox();
+		@media (max-width:575px) {
+			align-items: center;
+			padding: 15px;
+			margin: 5px -16px 30px -16px;
+		}
+	}
+	&_book {
+		flex: 0 0 96px;
+		width: 96px;
+		height: 147px;
+		border-radius: 6px;
+		overflow: hidden;
+		position: relative;
+		z-index: 1;
+		img {height: 100%;}
+		.number {
+			display: inline-block;
+			background: #F7981C;
+			font-family: Montserrat_bold;
+			color: #fff;
+			font-size: 18px;
+			line-height: 32px;
+			padding: 0px 15px;
+			border-radius: 0px 4px 4px 0px;
+			position: absolute;
+			bottom: 15px;
+			left: 0px;
+			z-index: 2;
+		}
+		@media (max-width:400px) {
+			flex: 0 0 64px;
+			width: 80px;
+			height: 96px;
+		}
+	}
+	&_comment {
+		padding: 0px 0px 0px 20px;
+		@include flexbox();
+		flex-direction: column;
+		justify-content: space-between;
+		@media (max-width:575px) {padding: 0px 0px 0px 15px;}
+
+	}
+	&_row {
+		@include flexbox();
+		&:nth-child(1) {}
+		&:nth-child(2) {margin: 0px 0px 10px 0px;}
+		&:nth-child(3) {justify-content: space-between;}
+	}
+	&_avatar {
+		border-radius: 50%;
+		width: 38px;
+		height: 38px;
+		overflow: hidden;
+		img {width: 100%;}
+		margin: 0px 0px 10px 0px;
+	}
+	&_name {
+		padding: 0px 0px 0px 10px;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 21px;
+		color: #354052;
+	}
+	&_date {
+		text-align: left;
+		display: block;
+		font-size: 10px;
+		line-height: 14px;
+		color: #7F8FA4;
+	}
+	&_text {
+		text-align: left;
+		font-size: 14px;
+		line-height: 21px;
+		color: #354052;
+		margin: 0px 0px 10px 0px;
+		position: relative;
+		span {
+			display: inline-block;
+			background: linear-gradient(-190deg, rgba(245, 242, 239, 0.0001) 40%, #F9F8F8 100%);
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0px;
+			left: 0px;
+		}
+		@media (max-width:767px) {
+			span {background: linear-gradient(180deg, rgba(245, 242, 239, 0.0001) 60%, #F9F8F8 100%);}
+		}
+		@media (max-width:575px) {
+			font-size: 12px;
+			line-height: 16px;
+			span {background: linear-gradient(180deg, rgba(245, 242, 239, 0.0001) 60%, #F9F8F8 100%);}
+		}
+	}
+	&_like {
+		font-family: Montserrat_bold;
+		font-size: 10px;
+		line-height: 12px;
+		color: #354052;
+		svg {path {fill: #354052;}width: 17px;height: 17px; margin: 0px 5px 0px 0px;position: relative;top:-3px;}
+	}
+	&_shere {
+		font-family: Montserrat_bold;
+		font-size: 10px;
+		line-height: 12px;
+		color: #354052;
+		svg {path {fill: #354052;}width: 17px;height: 17px; margin: 0px 5px 0px 0px;}
+	}
+}
+/*============================================================*/
+
+/*==========================================================
+table*/
+.pr-col-body-book {
+	padding: 0px 5px;
+	&_top {}
+	@include flexbox();
+	align-items: center;
+	@media (max-width:620px) {padding: 0;align-items: stretch;}
+}
+.pr-col-body-book-image {
+	flex: 0 0 57px;
+	box-shadow: 0px 0px 10px rgba(75, 76, 78, 0.15);
+	width: 57px;
+	height: 87px;
+	margin: 5px 0px;
+	div {
+		display: inline-block;
+		border-radius: 4px;
+		position: relative;
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
+}
+.pr-col-body-book-titles {
+	display: inline-block;
+	font-family: Montserrat_bold;
+	font-size: 14px;
+	line-height: 22px;
+	color: #354052;
+	padding: 0px 0px 0px 15px;
+	@media (max-width:620px) {
+		font-size: 12px;
+		line-height: 18px;
+	}
+	&__inner {}
+}
+
+/**/
+.premiums-table-short {
+	.pr-col-noms {display: none;}
+	.pr-col-book {
+		width: 40%;
+	}
+	.pr-col-laur {
+		width: 35%;
+	}
+	.pr-col-nom {
+		width: 20%;
+	}
+	.pr-col-year {
+		width: 5%;
+	}
+	@media(max-width:991px) {
+		.pr-col-book {
+			width: 35%;
+		}
+		.pr-col-laur {
+			width: 40%;
+		}
+		.pr-col-nom {
+			width: 25%;
+		}
+	}
+	@media(max-width:620px) {
+		.pr-col-book {
+			width: 100%;
+		}
+		.pr-col-laur {
+			width: 100%;
+		}
+		.pr-col-nom {
+			width: 100%;
+		}
+	}
+}
+/**/
+
+@media(max-width:620px) {
+	.premiums-table {margin: 40px 0px 65px 0px;}
+	.premiums-table__row {position: relative;margin: 0px 0px 50px 0px;}
+	.pr-col-body-year {
+		display: inline-block;
+		position: absolute;
+		width: auto !important;
+		padding: 0 !important;
+		top: -35px;
+		left: 15px;
+	}
+}
+/*======================================================*/
