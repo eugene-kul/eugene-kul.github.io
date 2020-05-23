@@ -1,0 +1,48 @@
+@use postcss-nested;
+
+@keyframes animate-circle {
+    from {
+        transform: scale(0);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+body {
+    background: #A53860;
+}
+
+.loader {
+    --size: 10rem;
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: var(--size);
+    width: var(--size);
+    transform: translateX(-50%) translateY(-50%);
+    
+    > .circle {
+        --duration: 2s;
+        
+        position: absolute;
+        height: inherit;
+        width: inherit;
+        background: #FFA5AB;
+        border-radius: 50%;
+        animation: animate-circle var(--duration) cubic-bezier(.9,.24,.62,.79) infinite;
+        
+        &:nth-of-type(1) {
+            animation-delay: 0;
+        }
+        &:nth-of-type(2) {
+            animation-delay: calc(var(--duration) / -3);
+        }
+        &:nth-of-type(3) {
+            animation-delay: calc(var(--duration) / -6);
+        }
+    }
+}
