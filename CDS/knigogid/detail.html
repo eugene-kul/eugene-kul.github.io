@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title></title>
+            
+
+    <link type="text/css" rel="stylesheet" href="css/libs.css" media="screen" />
+    <link type="text/css" rel="stylesheet" href="css/index.css" media="screen" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" media="screen" />
+    <link type="text/css" rel="stylesheet" href="css/slick.css" media="screen" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" media="screen" />
+    <script type="text/javascript" src="js/js.cookie.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/libs.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/slick.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/custom.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/main.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/functions.js" charset="UTF-8"></script>
+    <script src="https://kit.fontawesome.com/6bf203f25b.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
+</head>
+<body>
+
+    <div class="search-win">
+        <div class="search-win_box">
+            <form action="/search" method="get">
+
+                <div class="search-win_top">
+                    <button type="button" class="search-win_close-btn"></button>
+                    <div class="search-win_top-inp">
+                        <input type="text" autocomplete="off" name="query" class="search_input" />
+                        <button type="button" class="clear-text_btn"></button>
+                    </div>
+                </div>
+
+                <div class="scrollbar-inner1">
+                    <div class="search-results result_search_block scrollbar-inner">
+
+                        <ul class="search-result_list-authors"></ul>
+
+                        <ul class="search-result_list-books">
+                                                    <li class="result_list book">
+                                <div class="search-res_img2 book"><a href="/books/696017-kletka-korolya" title=""><img src="https://knigogid.ru/storage/books/7/a/6/03ce2dcb81664bccc33a894c95d0a29a.jpg" /></a></div>
+                                <div class="search-res_contetnt">
+                                    <div class="search-res_content-name"><a href="/books/696017-kletka-korolya" title=""><span class="res_content-title">Клетка короля</span></a><span class="res_content-author">Виктория Авеярд</span></div>
+                                    <div class="search-res_content-rate">
+                                        <div class="rate-box">8.0</div>
+                                        <div class="rate-counter">2 оценки</div>
+                                    </div>
+                                </div>
+                            </li>
+                                                    <li class="result_list book">
+                                <div class="search-res_img2 book"><a href="/books/509443-4-3-2-1" title=""><img src="https://knigogid.ru/storage/books/e9a/f96/1ba/931/76e/f23/067ba3a3b063d1367bdd4a5abe1fbe2b.jpg" /></a></div>
+                                <div class="search-res_contetnt">
+                                    <div class="search-res_content-name"><a href="/books/509443-4-3-2-1" title=""><span class="res_content-title">4, 3, 2, 1</span></a><span class="res_content-author">Пол Остер</span></div>
+                                    <div class="search-res_content-rate">
+                                        <div class="rate-box">6.9</div>
+                                        <div class="rate-counter">5 оценок</div>
+                                    </div>
+                                </div>
+                            </li>
+                                                    <li class="result_list book">
+                                <div class="search-res_img2 book"><a href="/books/492826-paradoks-rasteniy-skrytye-opasnosti-zdorovoy-pischi-kak-produkty-pitaniya-ubivayut-nas-lishaya-zdorovya-molodosti-i-krasoty" title=""><img src="https://knigogid.ru/storage/books/a3/94/44/3f/b42987b18a1b2ececf1e8215d0c5811f.jpg" /></a></div>
+                                <div class="search-res_contetnt">
+                                    <div class="search-res_content-name"><a href="/books/492826-paradoks-rasteniy-skrytye-opasnosti-zdorovoy-pischi-kak-produkty-pitaniya-ubivayut-nas-lishaya-zdorovya-molodosti-i-krasoty" title=""><span class="res_content-title">Парадокс растений. Скрытые опасности "здоровой" пищи: как продукты питания убивают нас, лишая здоровья, молодости и красоты</span></a><span class="res_content-author">Стивен Гандри</span></div>
+                                    <div class="search-res_content-rate">
+                                        <div class="rate-box">7.6</div>
+                                        <div class="rate-counter">61 оценка</div>
+                                    </div>
+                                </div>
+                            </li>
+                                                    <li class="result_list book">
+                                <div class="search-res_img2 book"><a href="/books/1254413-prorok-smerti" title=""><img src="https://knigogid.ru/storage/books/7c/c7a121b88bb6a8f3eb1e8f58fe72598b.jpg" /></a></div>
+                                <div class="search-res_contetnt">
+                                    <div class="search-res_content-name"><a href="/books/1254413-prorok-smerti" title=""><span class="res_content-title">Пророк смерти</span></a><span class="res_content-author">Крис Карлден</span></div>
+                                    <div class="search-res_content-rate">
+                                        <div class="rate-box">6.7</div>
+                                        <div class="rate-counter">11 оценок</div>
+                                    </div>
+                                </div>
+                            </li>
+                                                    <li class="result_list book">
+                                <div class="search-res_img2 book"><a href="/books/1252620-spasti-odettu" title=""><img src="https://knigogid.ru/storage/books/146/588/9c9/56b/5a0/04a/082604fb034103ae134882997b55bd55.jpg" /></a></div>
+                                <div class="search-res_contetnt">
+                                    <div class="search-res_content-name"><a href="/books/1252620-spasti-odettu" title=""><span class="res_content-title">Спасти Одетту</span></a><span class="res_content-author">Фрауке Шойнеманн</span></div>
+                                    <div class="search-res_content-rate">
+                                        <div class="rate-box">9.2</div>
+                                        <div class="rate-counter">22 оценки</div>
+                                    </div>
+                                </div>
+                            </li>
+                                                    <li class="result_list book">
+                                <div class="search-res_img2 book"><a href="/books/1250160-dikovinnye-istorii" title=""><img src="https://knigogid.ru/storage/books/9/2/9/f/d/6ca6496a1957e8f8cb8d71b96b180957.jpg" /></a></div>
+                                <div class="search-res_contetnt">
+                                    <div class="search-res_content-name"><a href="/books/1250160-dikovinnye-istorii" title=""><span class="res_content-title">Диковинные истории</span></a><span class="res_content-author">Ольга Токарчук</span></div>
+                                    <div class="search-res_content-rate">
+                                        <div class="rate-box">7.5</div>
+                                        <div class="rate-counter">90 оценок</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <a class="all-results_link" href="#" style="visibility: hidden" onclick="var val = $('.search_input').val() ; if(val) document.location='/search?query='+val">Все результаты</a>
+            </form>
+        </div>
+    </div>
+
+    <header>
+        
+        <div class="header-container fixed">
+
+            
+            <!--<div class="header-box">-->
+            <div class="header-box registered">
+                
+                <a class="logo" href=""><img src="images/main-logo.svg" alt="Книгогид"></a>
+                
+                <!--
+                <div class="header-login">
+
+                    <button onclick="" data-toggle="modal" data-target="#reg-modal" class="registration-btn">Зарегистрироваться</button>
+                    <button class="header-search_btn unreg"></button>
+                    <button onclick="" data-toggle="modal" data-target="#reg-modal" class="sign-btn">Войти</button>
+
+                    
+                </div>
+                -->
+
+                <div class="header-login">
+
+                    
+                    <div class="header-user_block">
+                        <div class="header-search_btn-mobile"></div>
+                        <div class="header-user">
+                            <div class="header-user_avatar" style="background: url('https://knigogid.ru/uploads/users/3/35d70feae359fdc559d849fa82f83a08_42x42.png') no-repeat ;" >
+                                <div class="dropdown-block">
+                                    <div class="dropdown-block_item"><a onclick="" href="/selection">Рекомендации</a></div>
+                                    <div class="dropdown-block_item"><a href="">Настройки</a></div>
+                                    <div class="dropdown-block_item"><a href="">Выход</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                    
+                <nav class="header-nav">
+                    <ul>
+                        <li><a href="">Что читают</a></li>
+                        <li><a href="">Жанры</a></li>
+                        <li><a href="">Авторы</a></li>
+                        <li><a href="">Мои книги</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-search">
+                    <div class="header-search_box">
+                        <input id="search-input" type="text" placeholder="Найти книгу/автора/жанр">
+                        <button class="header-search_btn"></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+     
+    <main>
+
+        <section class="promo">
+            <div class="promo-img"><div class="promo-img_box"></div></div>
+            <div class="promo-title">
+                <h1 class="promo-title_header">Получите персональную <span>книжную подборку</span></h1>
+                <div class="promo-title_tip">Расскажите, какие книги вам нравятся!</div>
+                <a data-toggle="modal" data-target="#user-help-modal" onclick="" href="javascript:void(0)" class="promo-compilation_link">Получить подборку</a>
+            </div>
+        </section>
+
+		<!-- вот эта вставочка -->
+			<div class="book-detail-l-side__wrapper j-detail-book-rating" data-id="3485">	
+				<div class="book-detail-l-side__image">
+		            <div class="books-slider_item-image_rate_container">
+			            <div class="books-slider_item-image_rate">
+						4,8
+			            </div>
+			            
+			            <!--  добавляем блок books-slider_item-image_rate-rating если пользователь оставлял уже оценку 
+			            <div class="books-slider_item-image_rate-rating">8</div>-->
+
+		            </div>					
+					<img src="/images/bg_book.jpg" width="100%">
+				</div>
+				
+				<div class="book-detail-l-side__mobile-modal-rate j-show-modal-rate showed" data-id="3485">
+					Оценить книгу
+				</div>
+				
+				<div class="book-detail-l-side__mobile-modal-change-rate j-show-modal-rate" data-id="3485" data-init-rate="3" data-init-comment="sdfkgljsdfg">
+				<!-- добавить класс showed если показывать по умолчанию в мобилке
+				<div class="book-detail-l-side__mobile-modal-change-rate j-show-modal-rate showed" data-id="3485" data-init-rate="3" data-init-comment="sdfkgljsdfg">-->
+					Ваша оценка <span class="j-detail-book-rate-label">5</span>. <span class="book-detail-l-side__mobile-modal-change-rate__link">Изменить</span>
+				</div>
+				
+				<div class="book-detail-l-side__rate-form_change">
+					Ваша оценка <span class="j-change-detail-rate__value">5</span>. <span class="j-change-detail-rate">Изменить</span>
+				</div>
+									
+				<div class="book-detail-l-side__rate-form">
+					<div class="book-detail-l-side__rate-form_thx">
+						Спасибо за вашу оценку!
+					</div>
+					<div class="book-detail-l-side__rate-form_wrapper">
+						<div class="book-detail-l-side__rate-form__title">
+							Оцените книгу
+						</div>
+	
+			            <div class="books-slider_item-image_rate-form-stars">
+				            <div class="books-slider_item-image_rate-form-star star_1 j-hover-star" data-value="1" data-text="Оверужасно"><span class="rate-value">1</span><span class="rate-text">Оверужасно</span></div>
+				            <div class="books-slider_item-image_rate-form-star star_2 j-hover-star" data-value="2" data-text="Оверплохо"><span class="rate-value">2</span><span class="rate-text">Оверплохо</span></div>
+				            <div class="books-slider_item-image_rate-form-star star_3 j-hover-star" data-value="3" data-text="Плохо"><span class="rate-value">3</span><span class="rate-text">Плохо</span></div>
+				            <div class="books-slider_item-image_rate-form-star star_4 j-hover-star" data-value="4" data-text="Неплохо"><span class="rate-value">4</span><span class="rate-text">Неплохо</span></div>
+				            <div class="books-slider_item-image_rate-form-star star_5 j-hover-star" data-value="5" data-text="Средне"><span class="rate-value">5</span><span class="rate-text">Средне</span></div>
+				            <div class="books-slider_item-image_rate-form-star star_6 j-hover-star" data-value="6" data-text="Нормально"><span class="rate-value">6</span><span class="rate-text">Нормально</span></div>
+				            <div class="books-slider_item-image_rate-form-star star_7 j-hover-star" data-value="7" data-text="Ништячок"><span class="rate-value">7</span><span class="rate-text">Ништячок</span></div>
+				            <div class="books-slider_item-image_rate-form-star star_8 j-hover-star" data-value="8" data-text="Каеф"><span class="rate-value">8</span><span class="rate-text">Каеф</span></div>
+				            <div class="books-slider_item-image_rate-form-star star_9 j-hover-star" data-value="9" data-text="Пушечка"><span class="rate-value">9</span><span class="rate-text">Пушечка</span></div>
+				            <div class="books-slider_item-image_rate-form-star star_10 j-hover-star" data-value="10" data-text="Бомба"><span class="rate-value">10</span><span class="rate-text">Бомба</span></div>
+			            </div>	
+					</div>			
+				</div>
+				
+				
+				<div class="book-detail-l-side__rate-remove-rate j-remove-detail-rate">
+					удалить оценку
+				</div>
+				
+				<div class="book-detail-l-side__rate-full-count">
+				Эту книгу оценили 560 пользователей
+				</div>
+				
+			</div>
+			
+		<!-- и до сюда -->
+
+
+
+
+
+
+    </main>
+
+
+    <footer>
+
+        <section class="footer">
+            <div class="box">
+                <div class="footer-content">
+
+                    <div class="footer-header">
+                        <a class="logo" href=""><img src="images/main-logo.svg" alt="Книгогид"></a>
+                        <div class="footer-tagline">Книги, которые вы полюбите</div>
+                        <div class="footer-tip">Читайте, ставьте оценки и делитесь с друзьями</div>
+                        <button onclick="" data-toggle="modal" data-target="#reg-modal" class="footer-reg_btn">Зарегистрироваться</button>                    
+                        <div class="footer_media">
+                            <a href="https://vk.com/knigogidru" title="" target="_blank"><img src="https://knigogid.ru/images/icons/social/vk.png" width="30px"></a>
+                            <a href="https://www.instagram.com/knigogid.ru/" title="" target="_blank"><img src="https://knigogid.ru/images/icons/social/in.png" width="30px"></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-main">
+                        <div class="accordion" id="accordionExample">
+                            <div class="card compilation">
+                                <div class="card-header" id="headingOne">
+                                    <h5 class="mb-0">
+                                        <button class="accordion-opener" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><span>Книжные подборки</span><span class="accordion-icon"><span></span><span></span></span></button>
+                                    </h5>
+                                </div>
+                                <div class="collapse" id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <ul class="footer-list">
+                                            <li><a href="http://localhost/collections/vse-knigi-o-vedmake-17">Все книги о Ведьмаке</a></li>
+                                            <li><a href="http://localhost/collections/molodye-rossiyskie-avtory-24">Молодые российские авторы</a></li>
+                                            <li><a href="http://localhost/collections/za-slovom-ne-v-karman-28">За словом не в карман</a></li>
+                                            <li><a href="http://localhost/collections/labirinty-eho-maksa-fraya-27">"Лабиринты Ехо" Макса Фрая</a></li>
+                                            <li><a href="http://localhost/collections/pochitaem-multiki-26">Почитаем мультики</a></li>
+                                            <li><a href="http://localhost/collections/na-voyne-kak-na-voyne-18">На войне как на войне</a></li>
+                                            <li><a href="http://localhost/collections/top-15-luchshih-knig-2020-goda-30">ТОП-15 лучших книг 2020 года</a></li>
+                                            <li><a href="http://localhost/collections/lyubov-i-drugie-11">Любовь и другие</a></li>
+                                            <li><a href="http://localhost/collections/ot-klassicheskogo-do-voennogo-zavedi-svoy-roman-32">От классического до военного. Заведи свой роман</a></li>
+                                            <li><a href="http://localhost/collections/chitaem-pervymi-top-15-noveyshih-knig-2020-goda-31">Читаем первыми. ТОП-15 новейших книг 2020 года</a></li>
+                                            <li><a href="http://localhost/collections/psihologiya-napadenie-ili-oborona-21">Психология.  Нападение или оборона?</a></li>
+                                            <li><a href="http://localhost/collections/nauchnaya-i-ochen-populyarnaya-zabavnaya-anatomiya-22">Научная и очень популярная. Забавная анатомия</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card-shelf">
+                                <div class="card-header" id="headingTwo">
+                                    <h5 class="mb-0">
+                                        <button class="accordion-opener" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"><span>Популярные полки</span><span class="accordion-icon"><span></span><span></span></span></button>
+                                    </h5>
+                                </div>
+                                <div class="collapse" id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <ul class="footer-list">
+                                            <li><a href="http://localhost/shelfs/1217-strugackie">Стругацкие</a></li>
+                                            <li><a href="http://localhost/shelfs/774-poleznye-knigi">Полезные книги</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h5 class="mb-0">
+                                        <button class="accordion-opener" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree"><span>Книгогид</span><span class="accordion-icon"><span></span><span></span></span></button>
+                                    </h5>
+                                </div>
+                                <div class="collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <ul class="footer-list">
+                                            <li><a href="http://localhost/about">О проекте</a></li>
+                                            <li><a href="http://localhost/terms">Пользовательское соглашение</a></li>
+                                            <li><a href="http://localhost/contacts">Помощь и контакты</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-copy">
+                    <ul>
+                        <li><a class="footer-brand_link" href="http://localhost/">© Knigogid 2020</a></li>
+                        <li><a href="javascript:void(0)" data-toggle="modal" data-target="#feedback_modal">Жалоба</a></li>
+                        <li><a href="http://localhost/for-holders">Правообладателям</a></li>
+                        <li><a href="javascript:void(0)" data-toggle="modal" data-target="#error_book_author_modal">Помогите нам стать лучше</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </section>
+
+        
+    </footer>
+    
+    
+<!-- модалка оценки рейтинга -->
+<div class="rate-modal-overlay">
+	<div class="rate-modal">
+		<form class="j-rate-form-mobile">
+            <div class="books-slider_item-image_rate-center">
+	            <span class="j-hover-star-value">4</span>
+	            <span class="j-hover-star-text">средне</span>
+            </div>			
+            
+            <div class="books-slider_item-image_rate-form-stars">
+	            <div class="books-slider_item-image_rate-form-star star_1 j-hover-star" data-value="1" data-text="Оверужасно"></div>
+	            <div class="books-slider_item-image_rate-form-star star_2 j-hover-star" data-value="2" data-text="Оверплохо"></div>
+	            <div class="books-slider_item-image_rate-form-star star_3 j-hover-star" data-value="3" data-text="Плохо"></div>
+	            <div class="books-slider_item-image_rate-form-star star_4 j-hover-star" data-value="4" data-text="Неплохо"></div>
+	            <div class="books-slider_item-image_rate-form-star star_5 j-hover-star" data-value="5" data-text="Средне"></div>
+	            <div class="books-slider_item-image_rate-form-star star_6 j-hover-star" data-value="6" data-text="Нормально"></div>
+	            <div class="books-slider_item-image_rate-form-star star_7 j-hover-star" data-value="7" data-text="Ништячок"></div>
+	            <div class="books-slider_item-image_rate-form-star star_8 j-hover-star" data-value="8" data-text="Каеф"></div>
+	            <div class="books-slider_item-image_rate-form-star star_9 j-hover-star" data-value="9" data-text="Пушечка"></div>
+	            <div class="books-slider_item-image_rate-form-star star_10 j-hover-star" data-value="10" data-text="Бомба"></div>
+            </div>	
+			<div class="rate-modal_inner-form">			
+				<!-- не благодари -->
+				<input type="hidden" name="book_id" value="">
+				<input type="hidden" name="rate" value="">
+				<textarea name="comment" class="rate-modal-textarea" placeholder="Напишите отзыв, если хотите поделиться мнением с другими"></textarea>
+				<div class="rate-modal_buttons">
+					<button type="submit" class="btn btn-success">Готово</button>
+					<button type="button" class="btn btn-cancel j-close-rate-modal">Отмена</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+</body>
+</html>
