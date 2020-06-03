@@ -1257,10 +1257,8 @@
 
 @media (max-width: 767px) {
   .personal-cart_body {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+   display: inline-block;
+   width: 100%;
     padding: 0px 0px 10px 0px;
   }
 }
@@ -1365,6 +1363,8 @@
   border-radius: 20px;
   padding: 3px 12px 2px 12px;
   margin: -10px 0px 0px 0px;
+  position: relative;
+  z-index: 5;
 }
 
 .personal-cart_username {
@@ -1462,6 +1462,12 @@
   font-size: 14px;
   line-height: 18px;
   color: #354052;
+}
+
+@media (max-width: 575px) {
+  .personal-cart_about-text {
+    margin: 0px 20px 0px 0px;
+  }
 }
 
 .personal-cart_about-text span {
