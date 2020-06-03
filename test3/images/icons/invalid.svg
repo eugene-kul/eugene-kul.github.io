@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="13px" viewBox="0 0 13 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 54.1 (76490) - https://sketchapp.com -->
+    <title>B5BF43A3-7860-4C68-AB6D-927BBF7F60DD</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M0,6.5 C0,2.910375 2.9095625,0 6.5,0 C10.089625,0 13,2.910375 13,6.5 C13,10.089625 10.089625,13 6.5,13 C2.9095625,13 0,10.089625 0,6.5 Z M7.5684375,8.708375 C7.882875,9.0228125 8.3939375,9.0228125 8.708375,8.708375 C9.023625,8.3939375 9.023625,7.882875 8.708375,7.5684375 L7.645625,6.5056875 L8.708375,5.442125 C9.0228125,5.1276875 9.0228125,4.6174375 8.708375,4.3021875 C8.393125,3.9869375 7.882875,3.9869375 7.5684375,4.3021875 L6.5056875,5.3649375 L5.438875,4.2989375 C5.1244375,3.9836875 4.613375,3.9836875 4.2989375,4.2989375 C3.9836875,4.613375 3.9836875,5.123625 4.2989375,5.438875 L5.3649375,6.504875 L4.2989375,7.5716875 C3.9836875,7.8869375 3.9836875,8.3971875 4.2989375,8.711625 C4.613375,9.026875 5.1244375,9.026875 5.438875,8.711625 L6.5056875,7.645625 L7.5684375,8.708375 Z" id="path-1"></path>
+    </defs>
+    <g id="main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Extra-Small-Devices:-Phones---2-Col-Copy-24" transform="translate(-255.000000, -391.000000)">
+            <g id="Icon/Cross-Circle" transform="translate(255.000000, 391.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Error-Icon"></g>
+                <g id="UI/Color/Flat/Red" mask="url(#mask-2)" fill="#F85359" fill-rule="evenodd">
+                    <g transform="translate(-1.500000, -1.500000)" id="Base">
+                        <rect x="0" y="0" width="16" height="16"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
