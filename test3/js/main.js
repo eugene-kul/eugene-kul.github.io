@@ -167,6 +167,11 @@ function mainblock() {
 	$('.content').css('min-height',h);
 }
 mainblock();
+
+function slowScroll(id){
+  $('html, body').animate({scrollTop:$(id).offset().top}, 300);
+}
+
 //forms=======
 //placeholder====================================
 function forms(){
