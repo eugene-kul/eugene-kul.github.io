@@ -441,6 +441,7 @@
   height: 15px;
   position: relative;
   border-radius: 50%;
+  padding: 0;
   margin: 0px 0px 0px -16px;
 }
 
