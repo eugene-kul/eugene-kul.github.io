@@ -111,5 +111,5 @@ input[type=text], input[type=email], input[type=tel], textarea {
 .wrapper {
   width: 100%;
   min-height: 100%;
-  overflow: hidden;
+  overflow: auto;
 }

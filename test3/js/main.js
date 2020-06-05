@@ -146,7 +146,6 @@
 
 
 $(document).ready(function(){
-	$('.spSub').slideUp(300);
 	$('.spMain').click(function(event) {
 		if($('.spBlock').hasClass('oneBlock')){
 			$('.spMain').not($(this)).removeClass('active');
@@ -169,7 +168,8 @@ function mainblock() {
 mainblock();
 
 function slowScroll(id){
-  $('html, body').animate({scrollTop:$(id).offset().top}, 300);
+	console.log('ok');
+	$('html, body').animate({scrollTop:$(id).offset().top}, 300);
 }
 
 //forms=======
