@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>jQuery</title>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" >
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="css/stylecommon.css">
+<link rel="stylesheet" href="css/style.css">
+<!-- <link rel="shortcut icon" href="logo/logo2.png"> -->
+<!-- <meta name="robots" content="noindex, nofollow"> -->
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<body>
+	<div class="noselect">
+		<div class="btn-info" id="btn-info">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><g><g><path d="M248.158,343.22c-14.639,0-26.491,12.2-26.491,26.84c0,14.291,11.503,26.84,26.491,26.84c14.988,0,26.84-12.548,26.84-26.84C274.998,355.42,262.799,343.22,248.158,343.22z"/><path d="M252.69,140.002c-47.057,0-68.668,27.885-68.668,46.708c0,13.595,11.502,19.869,20.914,19.869c18.822,0,11.154-26.84,46.708-26.84c17.429,0,31.372,7.669,31.372,23.703c0,18.824-19.52,29.629-31.023,39.389c-10.108,8.714-23.354,23.006-23.354,52.983c0,18.125,4.879,23.354,19.171,23.354c17.08,0,20.565-7.668,20.565-14.291c0-18.126,0.35-28.583,19.521-43.571c9.411-7.32,39.04-31.023,39.04-63.789S297.307,140.002,252.69,140.002z"/><path d="M256,0C114.516,0,0,114.497,0,256v236c0,11.046,8.954,20,20,20h236c141.483,0,256-114.497,256-256C512,114.516,397.503,0,256,0z M256,472H40V256c0-119.377,96.607-216,216-216c119.377,0,216,96.607,216,216C472,375.377,375.393,472,256,472z"/></g></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><g><g><path d="M248.158,343.22c-14.639,0-26.491,12.2-26.491,26.84c0,14.291,11.503,26.84,26.491,26.84c14.988,0,26.84-12.548,26.84-26.84C274.998,355.42,262.799,343.22,248.158,343.22z"/><path d="M252.69,140.002c-47.057,0-68.668,27.885-68.668,46.708c0,13.595,11.502,19.869,20.914,19.869c18.822,0,11.154-26.84,46.708-26.84c17.429,0,31.372,7.669,31.372,23.703c0,18.824-19.52,29.629-31.023,39.389c-10.108,8.714-23.354,23.006-23.354,52.983c0,18.125,4.879,23.354,19.171,23.354c17.08,0,20.565-7.668,20.565-14.291c0-18.126,0.35-28.583,19.521-43.571c9.411-7.32,39.04-31.023,39.04-63.789S297.307,140.002,252.69,140.002z"/><path d="M256,0C114.516,0,0,114.497,0,256v236c0,11.046,8.954,20,20,20h236c141.483,0,256-114.497,256-256C512,114.516,397.503,0,256,0z M256,472H40V256c0-119.377,96.607-216,216-216c119.377,0,216,96.607,216,216C472,375.377,375.393,472,256,472z"/></g></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+		</div>
+		<div class="overflow" id="overflow"></div>
+		<div class="info" id="info">
+			<div class="btn-close" id="btn-close"></div>
+			<span class="info-list">
+				<p class="title">Инфо:</p>
+				<p>развлекательная симуляция силы притяжения частиц с помощью javaScript
+				<span>- сила притяжения зависит от радиуса частицы, чем меньше частица, тем хуже она притягивается</span>
+				<span>- точки появляются при нажатии на любую кнопку мыши</span></p>
+				<p class="title">ВСЕ ПАРАМЕТРЫ МОЖНО (И НУЖНО МЕНЯТЬ) В МЕНЮ.</p>
+				<p>
+					<span>- можно пробовать ставить дробные значения (например, 0.01).</span>
+					<span>- можно пробовать ставить отрицательные значения.</span>
+					<span>- если страница зависнит, значит какое-то значение вызвало ошибку в скрипте, нужно просто обновить страницу</span>
+					<span>- сила притяжения зависит от радиуса частиц, если на экране есть крупные частицы, при больших значениях частицы могут улететь, из-за большого ускорения, хотя при мелких частицах, от 0 до 1, большие значения не выкенут их за орбиты</span>
+							</p>
+			</span>
+			<div class="btn-close2" id="btn-close2">Close</div>
+			<span class="info-links">
+				<p>javaScript анимация сделанна на основе видео с youTube канала <a href="https://www.youtube.com/watch?v=KEQsm2yL6Lg" target="_blanc">ThreePixDroid</a></p>
+				<p><a href="https://vk.com/zongtong" target="_blanc">Вконтакте</a></p>
+				<p>11.06.2020</p>
+			</span>
+		</div>
+		<div class="btn noselect" id="btn">MENU</div>
+		<form action="#" name="my" class="list" id="list">
+			<span class="desc">Главная точка</span>
+			<p>
+				<span class="item-info">это радиус главной точки, которая уже есть на экране</span>
+				<span>радиус:</span><input id="bigDotRad" 
+				value="15" type="number" name="form1">
+			</p>
+			<p>
+				<span class="item-info">это сила притяжения? 0 - частицы не будут следовать за курсором, 10000 - практически не отстают от курсора. При отрицательном значении, частицы будут отталкиваться, при положительном притягиваться</span>
+				<span>сила притяжения:</span><input id="gravity"
+				value="30" type="number" name="form1">
+			</p>
+			<p>
+				<span class="item-info">это радиус отталкивания</span>
+				<span>радиус отталкивания:</span><input id="mouseSize" 
+				value="100" type="number" name="form1">
+			</p>
+			<p>
+				<span class="item-info">это сила отталкивания. При значении 0 не будут отталкиваться друг от друга</span>
+				<span>сила отталкивания:</span><input id="dotPushMain" 
+				value="10" type="number" name="form1">
+			</p>
+			<span class="desc">Все точки</span>
+			<p>
+				<span class="item-info">это min радиус появляющихся частиц, значение может быть 0, тогда частички будут создаваться с радиусом, начиная от 0,01, мелкие частицы слабже притягиваются.</span>
+				<span>min радиус:</span><input id="dotMinRad" 
+				value="0" type="number" name="form1">
+			</p>
+			<p>
+				<span class="item-info">это max радиус появляющихся частиц, недопустимо, чтобы значение было меньше минимального</span>
+				<span>max радиус:</span><input id="dotMaxRad" 
+				value="20" type="number" name="form1">
+			</p>
+			<p>
+				<span class="item-info">окружность приятжения всех частиц, при значении 0 частицы будут собираться в точку</span>
+				<span>радиус притяжения:</span><input id="sphereRad" 
+				value="500" type="number" name="form1">
+			</p>
+			<p>
+				<span class="item-info">это сила взаимодействия частиц друг с другом, при значении 0 частицы неподвижны, при большом значении силы, частицы может выбить большим ускорением, свойство не действует на частицы, которые уже созданны, свойство применяется только на частицы созданные после изменения параметра</span>
+				<span>сила взаимосвязи частиц:</span><input id="massFactor" 
+				value="7" type="number" name="form1">
+			</p>
+			<p>
+				<span class="item-info">это скорость частиц</span>
+				<span>скорость частиц:</span><input id="dotSpeed" 
+				value="100" type="number" name="form1">
+			</p>
+			<p>
+				<span class="item-info">0 - частицы неподвижны, <br> 100 - частицы никогда не остановятся. <br> оптимальное значение: 95-98</span>
+				<span>коэфициент сопротивления:</span><input id="smooth" 
+				value="98" type="number" name="form1">
+			</p>
+			<p>
+				<span class="item-info">это сила ооталкивания частиц друг от друга. При значении 0 не будут отталкиваться друг от друга</span>
+				<span>сила отталкивания:</span><input id="dotPush" 
+				value="1" type="number" name="form1">
+			</p>
+			<p>
+				<span class="item-info">это вид частичек, либо полная заливка круга, либо только контур</span>
+				<span>Заливка частиц:</span>
+				<span class="checkbox">
+					<input class="active" checked="" id="checkbox" type="checkbox">
+				</span>
+				
+			</p>
+			<p>
+				<span class="item-info">это цвет точек</span>
+				<span>цвет точек:</span><input class="color" id="defColor"
+				value="#ffffff" type="color">
+			</p>
+			<p>
+				<span class="item-info">это цвет фона</span>
+				<span>цвет фона:</span>	<input class="color" id="bgColor"
+				value="#333333" type="color">
+			</p>
+			<div class="block-btn">
+				<div>
+					<div id="go2" class="noselect">APPLY</div>
+					<div id="go" class="noselect">RELOAD</div>
+				</div>
+				<div>
+					<div id="reset" type="reset" class="noselect">RESET</div>
+					<div id="cls" class="noselect">CLOSE</div>
+				</div>
+			</div>
+		</form>
+		<div class="btn2 noselect" id="btn2">add dots</div>
+		<canvas id="canvas"></canvas>
+	</div>
+	<script src="js/main.js"></script>
+
+
+</body>
+</html>
