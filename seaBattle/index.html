@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8" >
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" href="style.css">
+	<title>Морской бой</title>
+</head>
+<body>
+	<div class="container">
+		<div class="game noselect">
+			<div class="input-block active" id="input-block">
+				<div class="item-name"><span>Имя игрока:</span><input type="text" maxlength="18" name="form[]" class="input" id="namePlayer"></div>
+				<div class="item-name"><span>Имя компьютера:</span><input type="text" maxlength="18" name="form[]" class="input" id="nameCamp"></div>
+				<div class="btn-block">
+					<div class="input-btn" id="btn-skip">Пропустить</div>
+					<div class="input-btn" id="btn-ok">Далее</div>
+				</div>
+			</div>
+			<div class="game_status">
+				<div class="name">
+					<div class="player-name" id="mainNamePlayer"><span>Player</span></div>
+					<div class="camp-name" id="mainNameCamp"><span>Camp</span></div>
+				</div>
+				<div>
+					<div class="win-point"><span id="winPlayer">0</span> <span class="element">:</span> <span id="winCamp">0</span></div>
+					<div class="game_time" id="time"><span id="hrs">00</span>:<span id="min">00</span>:<span id="sec">00</span></div>
+					<div class="game_status-item" id="game_status">Нажми Play, <br> чтобы начать игру</div>
+				</div>
+				<div class="game_console">
+					<div class="order active" id="order">ТЫ можешь поменять расположение своих кораблей</div>
+					<div class="steps" id="steps">
+					</div>
+					<div class="game_gameOver" id="gameOver">
+						<span class="game_gameOver-text"><span id="winner">Ты победил, поздравляем!</span></span>
+						<div class="game_gameOver-btn" id="btn-replay">Сыграть еще раз</div>
+					</div>
+					<div class="level">
+						<div>
+							<p id="level">Выбири уровень сложности компьютера</p>
+							<div class="level-block active" id="level-block">
+								<span class="camp-level" id="level1">1</span>
+								<span class="camp-level" id="level2">2</span>
+								<span class="camp-level active" id="level3">3</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="game_btn btn active" id="btn-block">
+					<div class="btn_item btn_random active" id="btn_random">Random</div>
+					<div class="btn_item btn_play" id="btn_play">Play</div>
+				</div>
+			</div>
+		</div>
+		<canvas></canvas>
+	</div>
+	
+	<script src="Game.js"></script>
+	<script src="Topology.js"></script>
+	<script src="mouse.js"></script>
+	<script src="aspect.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
