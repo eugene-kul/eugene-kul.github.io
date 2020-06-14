@@ -6,7 +6,6 @@ class Topology {
 		this.offsetY = param.offsetY;
 		this.level = param.level;
 		this.hideShip = param.hideShip || false;
-		this.isPlayerReady = param.isPlayerReady || false;
 
 		this.ships = [];
 		this.deadShips = [];
@@ -28,7 +27,6 @@ class Topology {
 		for(const ship of ships) {
 			if (!this.deadShips.includes(ship)) {
 				this.deadShips.push(ship);
-				//console.log('добавили')
 			}
 		}
 		return this
@@ -53,11 +51,7 @@ class Topology {
 			for(const check of checks) {
 				if (!this.checks.includes(check)) {
 					if (check.x<=9 && check.y<=9 && check.x>=0 && check.y>=0) {
-						
-							
-								this.checks.push(check);
-							
-						
+						this.checks.push(check);
 					}
 				}
 			}
@@ -110,9 +104,6 @@ class Topology {
 		for (const check of this.checks) {
 			this.drawChecks(context, check);
 		}
-		// for (const isCheck of this.isChecks) {
-		// 	this.drawIsChecks(context, isCheck);
-		// }
 		for (const injury of this.injuries) {
 			this.drawInjuries(context, injury);
 		}
@@ -143,7 +134,6 @@ class Topology {
 			this.offsetY + injury.y * FIELD_SIZE+FIELD_SIZE+2,
 		);
 		context.stroke();
-
 		return this;
 	}
 
@@ -226,20 +216,6 @@ class Topology {
 		return this;
 	}
 
-	drawIsChecks(context, isCheck) {
-		context.fillStyle = 'rgba(251, 102, 153,0.2)'
-		context.beginPath();
-		context.arc(
-			this.offsetX + isCheck.x * FIELD_SIZE+FIELD_SIZE *1.5,
-			this.offsetY + isCheck.y * FIELD_SIZE+FIELD_SIZE *1.5,
-			8,
-			0,
-			Math.PI * 2
-		);
-		context.fill();
-		return this;
-	}
-
 	drawDeadShips(context, ship) {
 		context.fillStyle = 'rgba(255, 0, 0, 0.3)'
 		context.beginPath();
@@ -256,11 +232,10 @@ class Topology {
 
 	isPointUnder(point) {
 		if (
-			point.x < this.offsetX + FIELD_SIZE ||
-			point.x > this.offsetX + 11 * FIELD_SIZE ||
-			point.y < this.offsetY + FIELD_SIZE ||
-			point.y > this.offsetY + 11 * FIELD_SIZE
-
+			point.x < this.offsetX + 4 + FIELD_SIZE ||
+			point.x > this.offsetX + 4 + 11 * FIELD_SIZE ||
+			point.y < this.offsetY + 4 + FIELD_SIZE ||
+			point.y > this.offsetY + 4 + 11 * FIELD_SIZE
 		) {
 			return false;
 		}
@@ -271,8 +246,8 @@ class Topology {
 		if(!this.isPointUnder(point)) {
 			return false}
 
-		const x = parseInt((point.x - this.offsetX - FIELD_SIZE)/FIELD_SIZE);
-		const y = parseInt((point.y - this.offsetY - FIELD_SIZE)/FIELD_SIZE);
+		const x = parseInt((point.x - this.offsetX - 5 - FIELD_SIZE)/FIELD_SIZE);
+		const y = parseInt((point.y - this.offsetY - 6 - FIELD_SIZE)/FIELD_SIZE);
 
 		return {
 			x: Math.max(0, Math.min(9, x)),
@@ -402,9 +377,6 @@ class Topology {
 				const index = this.checks.indexOf(check);
 				this.checks.splice(index, 1);
 				game.isCheckedPoint = false;
-				//console.log('точка x:'+check.x+' y:'+check.y);
-				//console.log(this.getCheckenFields());
-				//console.log(this.getUnknownFields());
 				this.getShipIn(check.x,check.y);
 				for (const unk of this.getCheckenFields()) {
 					if (unk.x === coordinate.x && unk.y === coordinate.y) {
@@ -428,7 +400,6 @@ class Topology {
 	getCheckenFields() {
 		const roundChecked = [];
 		let x,y;
-		//roundChecked.push({x:4, y:4});
 		for (let iy=0; iy<10; iy++) {
 			for (let ix=0; ix<10; ix++) {
 				for (let unk of this.getUnknownFields()) {
@@ -504,10 +475,6 @@ class Topology {
 			map[injury.y][injury.x] = false;
 		}
 		for (let status of map.flat()) {
-			// if (game.stage === 'preparation') {
-			// 	return true;
-			// }
-			//else 
 			if (status) {
 				return false;
 			}

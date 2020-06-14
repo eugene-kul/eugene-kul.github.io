@@ -2,7 +2,7 @@ function getMouse(element) {
 	const mouse = {
 		x: 0,
 		y: 0,
-		s: false,
+		//s: false,
 		left: false,
 		pleft: false,
 	}
@@ -13,9 +13,9 @@ function getMouse(element) {
 		mouse.y = event.clientY - rect.top;
 	});
 
-	element.addEventListener('wheel', function(event) {
-		mouse.s = !mouse.s;
-	});
+	// element.addEventListener('wheel', function(event) {
+	// 	mouse.s = !mouse.s;
+	// });
 
 	element.addEventListener('mousedown', function(event) {
 		if (event.buttons === 1) {

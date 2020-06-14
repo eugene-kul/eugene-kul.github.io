@@ -12,7 +12,6 @@ class Game {
 			name: 'Player',
 			offsetX: 32,
 			offsetY: 88,
-			isPlayerReady: false,
 		});
 
 		this.camp = new Topology({
@@ -35,11 +34,7 @@ class Game {
 		drawGrid();
 		this.player.draw(context);
 		this.camp.draw(context);
-
-		if (this.stage === 'preparation') {
-			this.tickPreparation(timestamp);
-		}
-		else if (this.stage === 'play') {
+		if (this.stage === 'play') {
 			refreshText("level","Уровень сложности: "+this.camp.level);
 			refreshText("game_status","Игра началась!");
 			addClsActive('order');
@@ -72,29 +67,6 @@ class Game {
 			}
 		}
 		mouse.pleft = mouse.left;
-	}
-
-	tickPreparation(timestamp) {
-		if (!this.player.isPointUnder(mouse)) {
-			return}
-		const shipSizes = [4,3,3,2,2,2,1,1,1,1];
-		const shipSize = shipSizes[this.player.ships.length];
-		const coordinate = this.player.getCoordinats(mouse);
-		const ship = {
-			x: coordinate.x,
-			y: coordinate.y,
-			direct: mouse.s ? 1 : 0,
-			size: shipSize
-		}
-		if (!this.player.canStay(ship)) {
-			return}
-		this.player.drawShips(context, ship);
-		if (mouse.left && !mouse.pleft) {
-			this.player.addShips(ship);
-			if (this.player.ships.length === 10) {
-				this.player.isPlayerReady = true;
-			}
-		}
 	}
 
 	tickPlay(timestamp) {
