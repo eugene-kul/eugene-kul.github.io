@@ -176,7 +176,7 @@ body {
 			&.active {display: inline-block;}
 		}
 		.steps {
-			font-size: 14px;
+			font-size: 13px;
 			font-weight: 600;
 			background-color: #fff;
 			color: #445f7e;
@@ -184,7 +184,7 @@ body {
 			overflow: auto;
 			border-radius: 5px;
 			line-height: 20px;
-			padding: 10px 10px 10px 20px;
+			padding: 10px 0px 10px 10px;
 			margin: 10px 0px 5px 0px;
 			display: none;
 			text-align: left;
@@ -285,6 +285,8 @@ body {
 }
 
 .hide-ships {
+	display: none;
+	font-size: 16px;
 	cursor: pointer;
 	position: absolute;
 	top: -35px;
@@ -294,7 +296,7 @@ body {
 	margin: 0px auto 0px;
 	z-index: 55;
 	border-radius: 5px;
-	padding: 5px 35px 1px 5px;
+	padding: 5px 35px 2px 5px;
 	letter-spacing: 1px;
 	&:before {
 		content:"";

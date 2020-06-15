@@ -12,6 +12,10 @@ class Topology {
 		this.checks = [];
 		this.isChecks = [];
 		this.injuries = [];
+		//для разработчика
+		this.isChecksF = [];
+		this.isChecksF2 = [];
+		//==============
 	}
 
 	addShips(...ships) {
@@ -94,6 +98,77 @@ class Topology {
 		return this;
 	}
 
+	//для разработчика
+	addIsChecksF(...isChecksF) {
+		if (game.isPlayerOrder) {
+			const coordinate = this.getCoordinats(mouse);
+			for (const unk of this.getUnknownFields()) {
+				if (unk.x === coordinate.x && unk.y === coordinate.y) {
+					game.isCheckedPoint = true;
+					for(const isCheckF of isChecksF) {
+						if (!this.isChecksF.includes(isCheckF)) {
+							if (isCheckF.x<=9 && isCheckF.y<=9 && isCheckF.x>=0 && isCheckF.y>=0) {
+								if (unk.x === isCheckF.x && unk.y === isCheckF.y) {
+									this.isChecksF.push(isCheckF);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else {
+			game.isCheckedPoint = false;
+			for(const isCheckF of isChecksF) {
+				if (!this.isChecksF.includes(isCheckF)) {
+					for (let unk of this.getUnknownFields()) {
+						if (isCheckF.x<=9 && isCheckF.y<=9 && isCheckF.x>=0 && isCheckF.y>=0) {
+							if (unk.x === isCheckF.x && unk.y === isCheckF.y) {
+								this.isChecksF.push(isCheckF);
+							}
+						}
+					}
+				}
+			}
+		}
+		return this;
+	}
+	addIsChecksF2(...isChecksF2) {
+		if (game.isPlayerOrder) {
+			const coordinate = this.getCoordinats(mouse);
+			for (const unk of this.getUnknownFields()) {
+				if (unk.x === coordinate.x && unk.y === coordinate.y) {
+					game.isCheckedPoint = true;
+					for(const isCheckF2 of isChecksF2) {
+						if (!this.isChecksF2.includes(isCheckF)) {
+							if (isCheckF2.x<=9 && isCheckF2.y<=9 && isCheckF2.x>=0 && isCheckF2.y>=0) {
+								if (unk.x === isCheckF2.x && unk.y === isCheckF2.y) {
+									this.isChecksF2.push(isCheckF);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else {
+			game.isCheckedPoint = false;
+			for(const isCheckF2 of isChecksF2) {
+				if (!this.isChecksF2.includes(isCheckF2)) {
+					for (let unk of this.getUnknownFields()) {
+						if (isCheckF2.x<=9 && isCheck2F.y<=9 && isCheckF2.x>=0 && isCheckF2.y>=0) {
+							if (unk.x === isCheckF2.x && unk.y === isCheck2F.y) {
+								this.isChecksF2.push(isCheckF);
+							}
+						}
+					}
+				}
+			}
+		}
+		return this;
+	}
+	//=============
+
 	draw(context) {
 		this.drawFields(context);
 		if (!this.hideShip) {
@@ -104,6 +179,14 @@ class Topology {
 		for (const check of this.checks) {
 			this.drawChecks(context, check);
 		}
+		// для разработчика
+		// for (const isCheckF of this.isChecksF) {
+		// 	this.drawIsChecksF(context, isCheckF);
+		// }
+		// for (const isCheckF2 of this.isChecksF2) {
+		// 	this.drawIsChecksF2(context, isCheckF2);
+		// }
+		//======
 		for (const injury of this.injuries) {
 			this.drawInjuries(context, injury);
 		}
@@ -169,7 +252,8 @@ class Topology {
 		context.fillStyle = '#2B5E97'
 		context.textAlign = 'center';
 		context.font = 'bold 16px Pangolin';
-		const alphabet = "АБВГДЕЖЗИК";
+		//const alphabet = "АБВГДЕЖЗИК";
+		const alphabet = "0123456789";
 		for (let i=0; i<10; i++) {
 			const letter = alphabet[i];
 			context.fillText(
@@ -180,7 +264,7 @@ class Topology {
 		}
 		for (let i=1; i<11; i++) {
 			context.fillText(
-				i,
+				i-1,
 				this.offsetX + FIELD_SIZE*.45,
 				this.offsetY+ i * FIELD_SIZE + FIELD_SIZE*0.7,
 			);
@@ -215,6 +299,36 @@ class Topology {
 		context.fill();
 		return this;
 	}
+
+	//для разработчика отрисовка возможных ходов
+	drawIsChecksF(context, isCheck) {
+		context.fillStyle = 'rgba(251, 2, 3,0.3)'
+		context.beginPath();
+		context.arc(
+			this.offsetX + isCheck.x * FIELD_SIZE+FIELD_SIZE *1.5,
+			this.offsetY + isCheck.y * FIELD_SIZE+FIELD_SIZE *1.5,
+			8,
+			0,
+			Math.PI * 2
+		);
+		context.fill();
+		return this;
+	}
+	//отрисовка клеток для следующего хода кампьютера
+	drawIsChecksF2(context, isCheck) {
+		context.fillStyle = 'rgba(1, 252, 3,0.3)'
+		context.beginPath();
+		context.arc(
+			this.offsetX + isCheck.x * FIELD_SIZE+FIELD_SIZE *1.5,
+			this.offsetY + isCheck.y * FIELD_SIZE+FIELD_SIZE *1.5,
+			8,
+			0,
+			Math.PI * 2
+		);
+		context.fill();
+		return this;
+	}
+	//===========
 
 	drawDeadShips(context, ship) {
 		context.fillStyle = 'rgba(255, 0, 0, 0.3)'
@@ -370,7 +484,6 @@ class Topology {
 
 	update() {
 		const map = this.getShipsMap();
-		const coordinate = this.getCoordinats(mouse);
 		for (const check of this.checks) {
 			if (map[check.y][check.x]) {
 				this.injuries.push(check);
@@ -378,16 +491,7 @@ class Topology {
 				this.checks.splice(index, 1);
 				game.isCheckedPoint = false;
 				this.getShipIn(check.x,check.y);
-				for (const unk of this.getCheckenFields()) {
-					if (unk.x === coordinate.x && unk.y === coordinate.y) {
-						game.isCheckedPoint = true;
-						for(const check of checks) {
-							if (!this.checks.includes(check)) {
-								this.checks.push(check);
-							}
-						}
-					}
-				}
+				this.getCheckenFields();
 			}
 		}
 	}
@@ -399,44 +503,69 @@ class Topology {
 
 	getCheckenFields() {
 		const roundChecked = [];
+		this.isChecksF2 = roundChecked;
 		let x,y;
+		let n = 0;
 		for (let iy=0; iy<10; iy++) {
 			for (let ix=0; ix<10; ix++) {
-				for (let unk of this.getUnknownFields()) {
-					for (const injury of this.injuries) {
-						if (injury.x === ix && injury.y === iy) {
-							let varX = ix;
-							let varX2 = ix + 1;
-							let varX3 = ix - 1;
-							let varY = iy;
-							let varY2 = iy + 1;
-							let varY3 = iy - 1;
-							if (varY3 <= 9 && varY3 >= 0) {
-								x = varX; y = varY3;
-								if (unk.x === x && unk.y === y) {roundChecked.push({x,y});}
-							}
-							if (varX2 <= 9 && varX2 >= 0) {
-								x = varX2; y = varY;
-								if (unk.x === x && unk.y === y) {roundChecked.push({x,y});}
-							}
-							if (varY2 <= 9 && varY2 >= 0) {
-								x = varX; y = varY2;
-								if (unk.x === x && unk.y === y) {roundChecked.push({x,y});}
-							}
-							if (varX3 <= 9 && varX3 >= 0) {
-								x = varX3; y = varY;
-								if (unk.x === x && unk.y === y) {roundChecked.push({x,y});}
+				for (const injury of this.injuries) {
+					if (this.name == game.camp.name) {break}
+					if (injury.x === ix && injury.y === iy) {
+						for (let unk of this.getUnknownFields()) {
+							for (let k=0; k<5; k++) {
+								for(let l=-1; l<2; l++) {
+									if (l===0){continue};
+									x = ix+l;
+									y = iy;
+									if (x <= 9 && x >= 0 && y <= 9 && y >= 0) {
+										if (unk.x === x && unk.y === y) {roundChecked.push({x,y});}
+									}
+									x = ix;
+									y = iy+l;
+									if (x <= 9 && x >= 0 && y <= 9 && y >= 0) {
+										if (unk.x === x && unk.y === y) {roundChecked.push({x,y});}
+									}
+								}
+								n++;
+								break;
 							}
 						}
 					}
 				}
 			}
+			if (n == 4 && n != 0) {n = 0;break;}
 		}
 		return roundChecked;
 	}
 
+	removeRoundCheck(ship) {
+		let x,y;
+		if (ship.direct === 0) {
+			for (let k=0; k<ship.size; k++) {
+				x = ship.x + k;
+				y = ship.y+1;
+				this.addIsChecks({x,y});
+				x = ship.x + k;
+				y = ship.y-1;
+				this.addIsChecks({x,y});
+			}
+		}
+		if (ship.direct === 1) {
+			for (let k=0; k<ship.size; k++) {
+				x = ship.x + 1;
+				y = ship.y + k;
+				this.addIsChecks({x,y});
+				x = ship.x - 1;
+				y = ship.y + k;
+				this.addIsChecks({x,y});
+			}
+		}
+	}
+
 	getUnknownFields() {
 		const unknownFields = [];
+		this.isChecksF = unknownFields;
+
 		for (let y=0; y<10; y++) {
 			for (let x=0; x<10; x++) {
 				let isChecked = false;
@@ -465,7 +594,6 @@ class Topology {
 				}
 			}
 		}
-
 		return unknownFields;
 	}
 
@@ -483,62 +611,41 @@ class Topology {
 	}
 
 	getCheckAroundDeadShip(ship,x,y) {
-		if (game.camp.level !== 3) {return}
-		if(ship.direct === 0) {
-			x = ship.x - 1;
-			y = ship.y;
-			this.addIsChecks({x,y});
-			x = ship.x + ship.size;
-			y = ship.y;
-			this.addIsChecks({x,y});
-			x = ship.x - 1;
-			y = ship.y + 1;
-			this.addIsChecks({x,y});
-			x = ship.x - 1;
-			y = ship.y - 1;
-			this.addIsChecks({x,y});
-			x = ship.x + ship.size;
-			y = ship.y + 1;
-			this.addIsChecks({x,y});
-			x = ship.x + ship.size;
-			y = ship.y - 1;
-			this.addIsChecks({x,y});
-			for (let k=0; k<ship.size; k++) {
-				x = ship.x + k;
-				y = ship.y+1;
-				this.addIsChecks({x,y});
-				x = ship.x + k;
-				y = ship.y-1;
-				this.addIsChecks({x,y});
+		if (this.name == game.camp.name) {return}
+		if (ship.direct === 0) {
+			for (let x=ship.x - 1; x<ship.x + ship.size + 1; x++) {
+				for (let y=ship.y - 1; y<ship.y + 2; y++) {
+					if (x === ship.x && y === ship.y) {continue}
+					if (x <= 9 && x >= 0 && y <= 9 && y >= 0) {
+						this.addIsChecks({x,y});console.log(x,y)
+					}
+				}
 			}
 		}
-		if(ship.direct === 1) {
-			x = ship.x;
-			y = ship.y - 1;
-			this.addIsChecks({x,y});
-			x = ship.x;
-			y = ship.y+ ship.size;
-			this.addIsChecks({x,y});
-			x = ship.x + 1;
-			y = ship.y - 1;
-			this.addIsChecks({x,y});
-			x = ship.x - 1;
-			y = ship.y - 1;
-			this.addIsChecks({x,y});
-			x = ship.x + 1;
-			y = ship.y + ship.size;
-			this.addIsChecks({x,y});
-			x = ship.x - 1;
-			y = ship.y + ship.size;
-			this.addIsChecks({x,y});
-			for (let k=0; k<ship.size; k++) {
-				x = ship.x + 1;
-				y = ship.y + k;
-				this.addIsChecks({x,y});
-				x = ship.x - 1;
-				y = ship.y + k;
-				this.addIsChecks({x,y});
+		if (ship.direct === 1) {
+			for (let x=ship.x - 1; x<ship.x + 2; x++) {
+				for (let y=ship.y - 1; y<ship.y + ship.size + 1; y++) {
+					if (x === ship.x && y === ship.y) {continue}
+					if (x <= 9 && x >= 0 && y <= 9 && y >= 0) {
+						this.addIsChecks({x,y});console.log(x,y)
+					}
+				}
 			}
+		}
+	}
+
+	getShipHit(ship,x,y) {
+		ship.live = ship.live - 1;
+		if (game.camp.level === 3) {
+			if (ship.live === ship.size - 2 && ship.size > 2) {
+				this.removeRoundCheck(ship);
+			}
+		}
+		game.hitStatus = 'попал';
+		if (ship.live===0) {
+			this.addDeadShips(ship);
+			this.getCheckAroundDeadShip(ship,x,y);
+			game.hitStatus = 'убил';
 		}
 	}
 
@@ -550,36 +657,18 @@ class Topology {
 			let y = ship.y;
 			for (let i=0; i<ship.size; i++) {
 				if (ship.x === jx && ship.y === jy) {
-					ship.live = ship.live - 1;
-					game.hitStatus = 'попал';
-					if (ship.live===0) {
-						this.addDeadShips(ship);
-						this.getCheckAroundDeadShip(ship,x,y);
-						game.hitStatus = 'убил';
-					}
+					this.getShipHit(ship,x,y);
 					return ship;
 				}
 				if (ship.x === jx - i && ship.y === jy) {
 					if (ship.direct === 0) {
-						ship.live = ship.live - 1;
-						game.hitStatus = 'попал';
-						if (ship.live===0) {
-							this.addDeadShips(ship);
-							this.getCheckAroundDeadShip(ship,x,y);
-							game.hitStatus = 'убил';
-						}
+						this.getShipHit(ship,x,y);
 						return ship;
 					}
 				}
 				if (ship.x === jx && ship.y === jy - i) {
 					if (ship.direct === 1) {
-						ship.live = ship.live - 1;
-						game.hitStatus = 'попал';
-						if (ship.live===0) {
-							this.addDeadShips(ship);
-							this.getCheckAroundDeadShip(ship,x,y);
-							game.hitStatus = 'убил';
-						}
+						this.getShipHit(ship,x,y);
 						return ship;
 					}
 				}

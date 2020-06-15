@@ -10,15 +10,17 @@
 <body>
 	<div class="container">
 		<div class="game noselect">
+
 			<div class="input-block active" id="input-block">
-				<div class="item-name"><span>Имя игрока:</span><input type="text" maxlength="18" name="form[]" class="input" id="namePlayer"></div>
-				<div class="item-name"><span>Имя компьютера:</span><input type="text" maxlength="18" name="form[]" class="input" id="nameCamp"></div>
+				<div class="item-name"><span>Имя игрока:</span><input type="text" maxlength="10" name="form[]" class="input" id="namePlayer"></div>
+				<div class="item-name"><span>Имя компьютера:</span><input type="text" maxlength="10" name="form[]" class="input" id="nameCamp"></div>
 				<div class="btn-block">
 					<div class="input-btn" id="btn-skip">Пропустить</div>
 					<div class="input-btn" id="btn-ok">Далее</div>
 				</div>
 			</div>
 			<div class="game_status">
+				<div class="hide-ships" id="hide-ships">hide</div>
 				<div class="name">
 					<div class="player-name" id="mainNamePlayer"><span>Player</span></div>
 					<div class="camp-name" id="mainNameCamp"><span>Camp</span></div>

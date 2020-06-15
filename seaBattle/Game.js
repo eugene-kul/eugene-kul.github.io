@@ -4,6 +4,7 @@ class Game {
 		this.hitStatus = 'мимо',
 		this.isPlayerOrder = true,
 		this.isChackedPoint = false,
+		this.isTimeout = true,
 		this.isHit = false,
 		this.alphabet = ['А','Б','В','Г','Д','Е','Ж','З','И','К'],
 		this.n = 1,
@@ -35,11 +36,11 @@ class Game {
 		this.player.draw(context);
 		this.camp.draw(context);
 		if (this.stage === 'play') {
+			timer();
 			refreshText("level","Уровень сложности: "+this.camp.level);
 			refreshText("game_status","Игра началась!");
 			addClsActive('order');
 			addClsActive('steps');
-			timer();
 			this.tickPlay(timestamp);
 			rmvClsActive('btn-block');
 			rmvClsActive('level-block');
@@ -66,6 +67,8 @@ class Game {
 				rmvClsActive('steps');
 			}
 		}
+		game.isTimeout = true;
+		console.log(this.isTimeout)
 		mouse.pleft = mouse.left;
 	}
 
@@ -88,8 +91,10 @@ class Game {
 			}
 		} else {
 			if (this.camp.level === 1) {
-				let point = getRandomFrom(this.player.getUnknownFields());
 				refreshText("order","Ход кампьютера");
+				setTimeout( function() {game.isTimeout = false;},250);
+				if (this.isTimeout) {return};
+				let point = getRandomFrom(this.player.getUnknownFields());
 				this.player.addChecks(point);
 				this.player.update();
 				gameConsoleLog(this.camp.name,point,this.hitStatus);
@@ -97,19 +102,21 @@ class Game {
 				if (!this.player.isShipUnderpoint(point)) {
 					this.isPlayerOrder = true;
 				}
+				console.log(54)
 			}
-			if (this.camp.level === 2 || this.camp.level === 3) {
+			if (this.camp.level !== 1) {
+				refreshText("order","Ход кампьютера");
+				setTimeout( function() {game.isTimeout = false;},250);
+				if (this.isTimeout) {return};
 				let point = 0;
-				if (this.player.getCheckenFields().length == 0) {
+				if (this.player.getCheckenFields().length === 0) {
 					this.isHit = false;
 				}
 				if (this.isHit) {
 					point = getRandomFrom(this.player.getCheckenFields());
-					
 				} else {
 				point = getRandomFrom(this.player.getUnknownFields());
 				}
-				refreshText("order","Ход кампьютера");
 				this.player.addChecks(point);
 				this.player.update();
 				gameConsoleLog(this.camp.name,point,this.hitStatus);

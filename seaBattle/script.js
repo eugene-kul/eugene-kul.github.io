@@ -80,7 +80,7 @@ function rmvClsActive(id) {
 	document.getElementById(id).classList.remove('active');
 }
 function tglClsActive(id) {
-	document.getElementById(id).classList.remove('active');
+	document.getElementById(id).classList.toggle('active');
 }
 
 function gameConsoleLog(name,point,event) {

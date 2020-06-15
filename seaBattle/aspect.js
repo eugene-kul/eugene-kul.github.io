@@ -1,35 +1,30 @@
+document.getElementById('hide-ships').addEventListener('click', function(event) {
+	tglClsActive('hide-ships');
+	game.camp.hideShip = !game.camp.hideShip;
+});
+
 document.getElementById('btn_random').addEventListener('click', function(event) {
-	if (game.stage !== 'preparation') {
-			return}
 	game.player.randoming();
 	game.player.isPlayerReady = true;
 });
 
 document.getElementById('btn_play').addEventListener('click', function(event) {
-	if (game.stage !== 'preparation') {
-			return}
 	game.stage = 'play';
 });
 
 document.getElementById('level1').addEventListener('click', function(event) {
-	if (game.stage === 'play') {
-			return}
 	game.camp.level = 1;
 	addClsActive('level1');
 	rmvClsActive('level2');
 	rmvClsActive('level3');
 });
 document.getElementById('level2').addEventListener('click', function(event) {
-	if (game.stage === 'play') {
-			return}
 	game.camp.level = 2;
 	addClsActive('level2');
 	rmvClsActive('level1');
 	rmvClsActive('level3');
 });
 document.getElementById('level3').addEventListener('click', function(event) {
-	if (game.stage === 'play') {
-			return}
 	game.camp.level = 3;
 	addClsActive('level3');
 	rmvClsActive('level2');
