@@ -391,7 +391,7 @@ body {
   height: 340px;
   left: 0px;
   z-index: 60;
-  padding: 40px 20px 10px 20px;
+  padding: 20px 20px 10px 20px;
   font-weight: 600;
   letter-spacing: 1px;
   display: none;
@@ -403,7 +403,7 @@ body {
 
 .input-block .input {
   border: 2px solid #445f7e;
-  margin: 10px 0px 30px 0px;
+  margin: 10px 0px 20px 0px;
   height: 40px;
   width: 100%;
   font-size: 20px;
@@ -437,6 +437,16 @@ body {
   border-radius: 5px;
   padding: 5px 10px;
   margin: 10px 0px 0px 0px;
+}
+
+.input-block .input-text {
+  margin: 0px 0px 20px 0px;
+}
+
+.input-block .item-text {
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
 }
 
 .hide-ships {

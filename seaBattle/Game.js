@@ -68,7 +68,6 @@ class Game {
 			}
 		}
 		game.isTimeout = true;
-		console.log(this.isTimeout)
 		mouse.pleft = mouse.left;
 	}
 
@@ -102,7 +101,6 @@ class Game {
 				if (!this.player.isShipUnderpoint(point)) {
 					this.isPlayerOrder = true;
 				}
-				console.log(54)
 			}
 			if (this.camp.level !== 1) {
 				refreshText("order","Ход кампьютера");
