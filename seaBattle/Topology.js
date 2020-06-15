@@ -252,8 +252,8 @@ class Topology {
 		context.fillStyle = '#2B5E97'
 		context.textAlign = 'center';
 		context.font = 'bold 16px Pangolin';
-		//const alphabet = "АБВГДЕЖЗИК";
-		const alphabet = "0123456789";
+		const alphabet = "АБВГДЕЖЗИК";
+		//const alphabet = "0123456789";
 		for (let i=0; i<10; i++) {
 			const letter = alphabet[i];
 			context.fillText(
@@ -264,7 +264,7 @@ class Topology {
 		}
 		for (let i=1; i<11; i++) {
 			context.fillText(
-				i-1,
+				i,
 				this.offsetX + FIELD_SIZE*.45,
 				this.offsetY+ i * FIELD_SIZE + FIELD_SIZE*0.7,
 			);
