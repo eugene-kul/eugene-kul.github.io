@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<title>jQuery</title>
+	<title>Particle</title>
 <meta http-equiv="Content-type" content="text/html; charset=UTF-8" >
 <meta name="format-detection" content="telephone=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -52,7 +52,7 @@
 			<p>
 				<span class="item-info">это сила притяжения? 0 - частицы не будут следовать за курсором, 10000 - практически не отстают от курсора. При отрицательном значении, частицы будут отталкиваться, при положительном притягиваться</span>
 				<span>сила притяжения:</span><input id="gravity"
-				value="30" type="number" name="form1">
+				value="0" type="number" name="form1">
 			</p>
 			<p>
 				<span class="item-info">это радиус отталкивания</span>
@@ -83,7 +83,7 @@
 			<p>
 				<span class="item-info">это сила взаимодействия частиц друг с другом, при значении 0 частицы неподвижны, при большом значении силы, частицы может выбить большим ускорением, свойство не действует на частицы, которые уже созданны, свойство применяется только на частицы созданные после изменения параметра</span>
 				<span>сила взаимосвязи частиц:</span><input id="massFactor" 
-				value="7" type="number" name="form1">
+				value="10" type="number" name="form1">
 			</p>
 			<p>
 				<span class="item-info">это скорость частиц</span>
@@ -92,13 +92,13 @@
 			</p>
 			<p>
 				<span class="item-info">0 - частицы неподвижны, <br> 100 - частицы никогда не остановятся. <br> оптимальное значение: 95-98</span>
-				<span>коэфициент сопротивления:</span><input id="smooth" 
+				<span>сопротивление:</span><input id="smooth" 
 				value="98" type="number" name="form1">
 			</p>
 			<p>
 				<span class="item-info">это сила ооталкивания частиц друг от друга. При значении 0 не будут отталкиваться друг от друга</span>
 				<span>сила отталкивания:</span><input id="dotPush" 
-				value="1" type="number" name="form1">
+				value="0.01" type="number" name="form1">
 			</p>
 			<p>
 				<span class="item-info">это вид частичек, либо полная заливка круга, либо только контур</span>

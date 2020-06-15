@@ -116,15 +116,13 @@ body {
 
 input {
   border-radius: 0 5px 5px 0;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 70px;
-  flex: 0 0 70px;
   border: 1px solid #ccc;
   padding: 0px 0px 0px 5px;
-  width: 70px;
+  width: 90px;
   height: 30px; }
   input.color {
-    padding: 0; }
+    padding: 0;
+    min-width: 90px; }
 
 canvas {
   z-index: 1;
@@ -286,7 +284,7 @@ canvas {
   position: fixed;
   background-color: #eee;
   height: 90%;
-  margin: 0px 0px 0px -160px;
+  margin: 0px 0px 0px -220px;
   bottom: -150%;
   left: 50%;
   display: -webkit-box;
@@ -310,7 +308,7 @@ canvas {
   .list span {
     border-radius: 5px 0 0 5px;
     height: 30px;
-    min-width: 210px;
+    width: 100%;
     padding: 0px 20px 0px 0px;
     margin: 0px 0px 0px 0px;
     border: 1px solid #ccc;
@@ -337,11 +335,12 @@ canvas {
     display: -webkit-flex;
     display: flex;
     font-size: 0;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     font-size: 14px;
-    position: relative; }
+    position: relative;
+    width: 100%; }
     .list p:hover span.item-info {
       display: inline-block; }
 
@@ -352,6 +351,7 @@ span.item-info {
   height: auto;
   background-color: #f50;
   padding: 10px 20px;
+  border-radius: 5px;
   text-align: center;
   line-height: 110%;
   color: #fff;
@@ -362,7 +362,7 @@ span.item-info {
     display: none !important; }
 
 span.desc {
-  width: 280px;
+  width: 380px;
   font-weight: 700;
   display: -webkit-box;
   display: -moz-box;
@@ -413,7 +413,8 @@ span.desc {
 
 span.checkbox {
   display: inline;
-  min-width: 70px;
+  min-width: 90px;
+  max-width: 90px;
   position: relative;
   line-height: 28px;
   cursor: pointer;
