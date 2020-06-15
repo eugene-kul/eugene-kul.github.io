@@ -1,23 +1,18 @@
-const CELL_SIZE = 30;
-const FIELD_SIZE = 30;
-let s = 0;
-
-const	canvas = document.querySelector('canvas');
+const canvas = document.querySelector('canvas');
 const context = canvas.getContext('2d');
-
+const mouse = getMouse(canvas);
+const game = new Game;
+const FIELD_SIZE = 30;
+const CELL_SIZE = 30;
 canvas.width = 1055;
 canvas.height = 450;
-
-
-const mouse = getMouse(canvas);
-const game = new Game
-
-// setInterval(() => console.log(player.getCoordinats(mouse)));
+let s = 0;
 
 function clearCanvas() {
 	canvas.width |= 0;
 }
 
+//отрисовка главной сетки
 function drawGrid() {
 	context.strokeStyle = '#2B5E97';
 	context.lineWidth = 0.5;
@@ -43,7 +38,7 @@ function drawGrid() {
 	context.stroke();
 }
 
-function timer() {
+function gameTimer() {
 	s++;
 	let msec = Math.floor(s/60);
 
@@ -52,18 +47,19 @@ function timer() {
 	hrs = Math.floor(Math.floor(msec % 360000/60)/60);
 
 	if (hrs<10) {
-		refreshText("hrs",'0'+hrs);
-	} else {refreshText("hrs",hrs);}
+		refreshText('hrs','0'+hrs);
+	} else {refreshText('hrs',hrs);}
 
 	if (min<10) {
-		refreshText("min",'0'+min);
-	} else {refreshText("min",min);}
+		refreshText('min','0'+min);
+	} else {refreshText('min',min);}
 
 	if (sec<10) {
-		refreshText("sec",'0'+sec);
-	} else {refreshText("sec",sec);}
+		refreshText('sec','0'+sec);
+	} else {refreshText('sec',sec);}
 }
 
+//получение рандомной точки из массива array
 function getRandomFrom(array) {
 	const index = Math.floor(Math.random() * array.length);
 	return array[index];
@@ -84,13 +80,14 @@ function tglClsActive(id) {
 }
 
 function gameConsoleLog(name,point,event) {
-	document.getElementById("steps").insertAdjacentHTML("afterbegin",
+	document.getElementById('steps').insertAdjacentHTML('afterbegin',
 		`<p id="steps-item"><span>#`+game.n+` </span><span class="who"> `+name+` </span><span>: </span><span class="where">`+game.alphabet[point.x]+`-`+(point.y+1)+`</span><span> </span><span class="what">`+event+`</span></p>`
 	);
 	game.n++;
 }
 
 function clrConsole() {
-	refreshText("steps","");
+	refreshText('steps','');
 	game.n = 1;
 }
+

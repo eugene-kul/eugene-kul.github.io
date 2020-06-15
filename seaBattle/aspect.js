@@ -36,17 +36,17 @@ document.getElementById('btn-skip').addEventListener('click', function(event) {
 });
 
 document.getElementById('btn-ok').addEventListener('click', function(event) {
-	let playerName = document.getElementById("namePlayer").value;
-	if (playerName !== "") {
+	let playerName = document.getElementById('namePlayer').value;
+	if (playerName !== '') {
 		game.player.name = playerName;
 	}
-	let campName = document.getElementById("nameCamp").value;
-	if (campName !== "") {
+	let campName = document.getElementById('nameCamp').value;
+	if (campName !== '') {
 		game.camp.name = campName;
 	}
 	rmvClsActive('input-block');
-	refreshText("mainNamePlayer",game.player.name);
-	refreshText("mainNameCamp",game.camp.name);
+	refreshText('mainNamePlayer',game.player.name);
+	refreshText('mainNameCamp',game.camp.name);
 });
 
 document.getElementById('btn-replay').addEventListener('click', function(event) {

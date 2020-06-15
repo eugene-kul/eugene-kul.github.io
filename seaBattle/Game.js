@@ -1,12 +1,12 @@
 class Game {
 	constructor() {
-		this.stage = 'preparation',
-		this.hitStatus = 'мимо',
-		this.isPlayerOrder = true,
+		this.alphabet = ['А','Б','В','Г','Д','Е','Ж','З','И','К'],
 		this.isChackedPoint = false,
+		this.isPlayerOrder = true,
+		this.hitStatus = 'мимо',
 		this.isTimeout = true,
 		this.isHit = false,
-		this.alphabet = ['А','Б','В','Г','Д','Е','Ж','З','И','К'],
+		this.stage = '',
 		this.n = 1,
 
 		this.player = new Topology({
@@ -36,34 +36,31 @@ class Game {
 		this.player.draw(context);
 		this.camp.draw(context);
 		if (this.stage === 'play') {
-			timer();
-			refreshText("level","Уровень сложности: "+this.camp.level);
-			refreshText("game_status","Игра началась!");
+			gameTimer();
 			addClsActive('order');
 			addClsActive('steps');
 			this.tickPlay(timestamp);
 			rmvClsActive('btn-block');
 			rmvClsActive('level-block');
+			refreshText('game_status','Игра началась!');
+			refreshText('level','Уровень сложности: '+this.camp.level);
 			if (this.camp.isGameOver()) {
-				this.stage = 'gameOver';
-				refreshText("winner",'Победил '+this.player.name+', поздравляем!')
-				refreshText("game_status","Game Over!");
+				refreshText('winner','Победил '+this.player.name+', поздравляем!');
 				this.player.win++;
-				refreshText("winPlayer",this.player.win);
+				refreshText('winPlayer',this.player.win);
 			}
 			else if (this.player.isGameOver()) {
-				this.stage = 'gameOver';
-				refreshText("winner",'Победил '+this.camp.name+', попробуй еще раз.')
-				refreshText("game_status","Game Over!");
+				refreshText('winner','Победил '+this.camp.name+', попробуй еще раз.');
 				this.camp.win++;
-				refreshText("winCamp",this.camp.win);
+				refreshText('winCamp',this.camp.win);
 			}
 			if (this.stage === 'gameOver') {
 				game.camp.hideShip = false;
-				refreshText("level","Ты можешь сменить уровень сложности:");
+				refreshText('level','Ты можешь сменить уровень сложности:');
+				refreshText('game_status','Game Over!');
 				addClsActive('level-block');
-				rmvClsActive('order');
 				addClsActive('gameOver');
+				rmvClsActive('order');
 				rmvClsActive('steps');
 			}
 		}
@@ -73,7 +70,7 @@ class Game {
 
 	tickPlay(timestamp) {
 		if (this.isPlayerOrder) {
-			refreshText("order","твой ход");
+			refreshText('order','твой ход');
 			if (!this.camp.isPointUnder(mouse)) {
 				return}
 			const point = this.camp.getCoordinats(mouse);
@@ -90,9 +87,9 @@ class Game {
 			}
 		} else {
 			if (this.camp.level === 1) {
-				refreshText("order","Ход кампьютера");
-				setTimeout( function() {game.isTimeout = false;},500);
-				if (this.isTimeout) {return};
+				refreshText('order','Ход кампьютера');
+				//setTimeout( function() {game.isTimeout = false;},500);
+				//if (this.isTimeout) {return};
 				let point = getRandomFrom(this.player.getUnknownFields());
 				this.player.addChecks(point);
 				this.player.update();
@@ -103,9 +100,9 @@ class Game {
 				}
 			}
 			if (this.camp.level !== 1) {
-				refreshText("order","Ход кампьютера");
-				setTimeout( function() {game.isTimeout = false;},500);
-				if (this.isTimeout) {return};
+				refreshText('order','Ход кампьютера');
+				//setTimeout( function() {game.isTimeout = false;},500);
+				//if (this.isTimeout) {return};
 				let point = 0;
 				if (this.player.getCheckenFields().length === 0) {
 					this.isHit = false;
