@@ -92,7 +92,7 @@ class Game {
 		} else {
 			if (this.camp.level === 1) {
 				refreshText("order","Ход кампьютера");
-				setTimeout( function() {game.isTimeout = false;},250);
+				setTimeout( function() {game.isTimeout = false;},600);
 				if (this.isTimeout) {return};
 				let point = getRandomFrom(this.player.getUnknownFields());
 				this.player.addChecks(point);
@@ -106,7 +106,7 @@ class Game {
 			}
 			if (this.camp.level !== 1) {
 				refreshText("order","Ход кампьютера");
-				setTimeout( function() {game.isTimeout = false;},250);
+				setTimeout( function() {game.isTimeout = false;},600);
 				if (this.isTimeout) {return};
 				let point = 0;
 				if (this.player.getCheckenFields().length === 0) {
