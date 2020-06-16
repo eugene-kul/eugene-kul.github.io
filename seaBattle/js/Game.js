@@ -92,8 +92,8 @@ class Game {
 		} else {
 			if (this.camp.level === 1) {
 				refreshText('order','Ход кампьютера');
-				//setTimeout( function() {game.isTimeout = false;},500);
-				//if (this.isTimeout) {return};
+				setTimeout( function() {game.isTimeout = false;},500);
+				if (this.isTimeout) {return};
 				let point = getRandomFrom(this.player.getUnknownFields());
 				this.player.addChecks(point);
 				this.player.update();

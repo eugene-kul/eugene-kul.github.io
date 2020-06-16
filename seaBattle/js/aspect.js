@@ -1,8 +1,16 @@
+/////////////////////////////////////////////////////////
 document.getElementById('hide-ships').addEventListener('click', function(event) {
 	tglClsActive('hide-ships');
 	game.camp.hideShip = !game.camp.hideShip;
 	playSound('sound-click');
 });
+document.getElementById('campWin').addEventListener('click', function(event) {
+	game.player.ships = [];
+});
+document.getElementById('playerWin').addEventListener('click', function(event) {
+	game.camp.ships = [];
+});
+///////////////////////////////////////////////
 
 document.getElementById('btn_random').addEventListener('click', function(event) {
 	game.player.randoming();
@@ -12,6 +20,13 @@ document.getElementById('btn_random').addEventListener('click', function(event) 
 
 document.getElementById('btn_play').addEventListener('click', function(event) {
 	game.stage = 'play';
+	playSound('sound-click');
+});
+
+let isSound = true;
+document.getElementById('not-sound').addEventListener('click', function(event) {
+	tglClsActive('not-sound');
+	isSound = !isSound;
 	playSound('sound-click');
 });
 
@@ -35,15 +50,12 @@ document.getElementById('btn-skip').addEventListener('click', function(event) {
 });
 
 document.getElementById('vol-plus').addEventListener('click', function(event) {
-
-	//if (document.getElementById('volume').value >= 1) {document.getElementById('volume').value = 1}
 	if (vol===100) {return;}
 	vol = vol + 10;
 	playSound('sound-click');
 	document.getElementById('volume').value = vol;
 });
 document.getElementById('vol-minus').addEventListener('click', function(event) {
-	//if (document.getElementById('volume').value <= 0) {document.getElementById('volume').value = 0}
 	if (vol===0) {return;}
 	vol = vol - 10;
 	playSound('sound-click');

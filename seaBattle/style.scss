@@ -327,6 +327,51 @@ body {
 	}
 }
 
+.not-sound {
+	cursor: pointer;
+	position: absolute;
+	top: -75px;
+	right: -370px;
+	z-index: 100;
+
+	span {
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		svg {path{fill:#445f7e;}width: 25px;height: 23px;}
+		&.yes {
+			position: absolute;
+			top: -1px;
+			right: 0px;
+			svg {position: relative;left: 5px;width: 25px;height: 25px;}
+		}
+		&.no {
+			display: none;
+			position: absolute;
+			top: -0.5px;
+			right: -1px;
+		}
+	}
+	&.active {span {&.yes{display: none;}&.no{display: inline-block;}}}
+}
+
+.winnerCheck {
+	display: none;
+	font-size: 16px;
+	cursor: pointer;
+	position: absolute;
+	top: -55px;
+	left: 295px;
+	background-color: #445f7e;
+	margin: 0px auto 0px;
+	z-index: 55;
+	border-radius: 5px;
+	padding: 5px;
+	letter-spacing: 1px;
+	&.w1 {left: 195px;}
+	&.w2 {left: 30px;}
+}
+
 .hide-ships {
 	display: none;
 	font-size: 16px;

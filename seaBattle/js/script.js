@@ -93,6 +93,7 @@ function clrConsole() {
 }
 
 function playSound(id) {
+	if (!isSound) {return}
 	let levels = document.querySelectorAll('[id^='+id+']');
 	let n = Math.floor(Math.random() * levels.length);
 	levels[n].volume=vol/100;
