@@ -8,6 +8,8 @@ canvas.width = 1055;
 canvas.height = 450;
 let s = 0;
 let vol = 50;
+let forRnd = false;
+let rnd = 0;
 
 function clearCanvas() {
 	canvas.width |= 0;

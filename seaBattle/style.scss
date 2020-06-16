@@ -196,12 +196,12 @@ body {
 		}
 		.camp-level {
 			cursor: pointer;
-			margin: 10px 5px 5px 5px;
+			margin: 10px 0px 5px 0px;
 			display: inline-block;
 			border: 2px solid #fff;
 			border-radius: 5px;
 			width: 35px;
-			padding: 2px 10px 0px;
+			padding: 2px 5px 0px;
 			font-weight: 600;
 			&.active {background-color: #fff;color: #445f7e;}
 		}
@@ -383,8 +383,9 @@ body {
 	margin: 0px auto 0px;
 	z-index: 55;
 	border-radius: 5px;
-	padding: 5px 35px 2px 5px;
+	padding: 5px 35px 3px 5px;
 	letter-spacing: 1px;
+	&.b2 {display: inline-block;top: 333px;left: 538px;max-width: 90px;padding: 5px 35px 5px 5px;}
 	&:before {
 		content:"";
 		border: 1px solid #ccc;
@@ -393,7 +394,7 @@ body {
 		position: absolute;
 		width: 23px;
 		height: 13px;
-		top: 5px;
+		top: 6px;
 		right: 5px;
 	}
 	&:after {
@@ -401,17 +402,17 @@ body {
 		@include anim(0.15s,0s);
 		border-radius: 50%;
 		border: 1px solid #445f7e;
-		background-color: #445f7e;
+		background-color: #fff;
 		position: absolute;
 		width: 11px;
 		height: 11px;
-		top: 6px;
-		right: 6px;
+		top: 7px;
+		right: 15px;
 	}
 	&.active {
 		&:after {
-			right: 15px;
-			background-color: #eee;
+			right: 6px;
+			background-color: #445f7e;
 		}
 	}
 }

@@ -4,6 +4,11 @@ document.getElementById('hide-ships').addEventListener('click', function(event) 
 	game.camp.hideShip = !game.camp.hideShip;
 	playSound('sound-click');
 });
+document.getElementById('speedy').addEventListener('click', function(event) {
+	tglClsActive('speedy');
+	forRnd = !forRnd;
+	playSound('sound-click');
+});
 document.getElementById('campWin').addEventListener('click', function(event) {
 	game.player.ships = [];
 });

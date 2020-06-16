@@ -12,6 +12,7 @@ class Topology {
 		this.isChecks = [];
 		this.injuries = [];
 		this.deadShips = [];
+		this.number = 0;
 		//для разработчика
 		this.isChecksF = [];
 		this.isChecksF2 = [];
@@ -28,7 +29,21 @@ class Topology {
 		return this
 	}
 
-	//добавление обьектов в массив
+	getRandomPoint() {
+
+	}
+
+
+	itIsChit() {
+		if(this.number >= 10) {return}
+		let point = getRandomFrom(this.getUnknownFields());
+		this.isShipUnderpoint(point);
+		if (this.isShipUnderpoint(point)) {return};
+		this.addIsChecks(point);
+		this.number++;
+	}
+
+	//добавление обьектов в массив (убитые корабли)
 	addDeadShips(...ships) {
 		for(const ship of ships) {
 			if (!this.deadShips.includes(ship)) {
@@ -38,7 +53,7 @@ class Topology {
 		return this
 	}
 
-	//добавление обьектов в массив
+	//добавление обьектов в массив (проверенные точки на поле)
 	addChecks(...checks) {
 		if (game.isPlayerOrder) {
 			const coordinate = this.getCoordinats(mouse);
@@ -66,110 +81,31 @@ class Topology {
 		return this;
 	}
 
-	//добавление обьектов в массив
+	//добавление обьектов в массив (точки вокруг подбитого корабля, куда компьютеру не надо стрелять. Точки добавляются в removeCheckenField())
 	addIsChecks(...isChecks) {
-		if (game.isPlayerOrder) {
-			const coordinate = this.getCoordinats(mouse);
-			for (const unk of this.getUnknownFields()) {
-				if (unk.x === coordinate.x && unk.y === coordinate.y) {
-					game.isCheckedPoint = true;
-					for(const isCheck of isChecks) {
-						if (!this.isChecks.includes(isCheck)) {
-							if (isCheck.x<=9 && isCheck.y<=9 && isCheck.x>=0 && isCheck.y>=0) {
-								if (unk.x === isCheck.x && unk.y === isCheck.y) {
-									this.isChecks.push(isCheck);
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-		else {
-			game.isCheckedPoint = false;
+		if (!game.isPlayerOrder) {
 			for(const isCheck of isChecks) {
 				if (!this.isChecks.includes(isCheck)) {
-					for (let unk of this.getUnknownFields()) {
-						if (isCheck.x<=9 && isCheck.y<=9 && isCheck.x>=0 && isCheck.y>=0) {
-							if (unk.x === isCheck.x && unk.y === isCheck.y) {
-								this.isChecks.push(isCheck);
-							}
-						}
-					}
+					this.isChecks.push(isCheck);
 				}
 			}
 		}
-		return this;
 	}
 
 	//для разработчика дублирование точек для отрисовки
 	addIsChecksF(...isChecksF) {
-		if (game.isPlayerOrder) {
-			const coordinate = this.getCoordinats(mouse);
-			for (const unk of this.getUnknownFields()) {
-				if (unk.x === coordinate.x && unk.y === coordinate.y) {
-					game.isCheckedPoint = true;
-					for(const isCheckF of isChecksF) {
-						if (!this.isChecksF.includes(isCheckF)) {
-							if (isCheckF.x<=9 && isCheckF.y<=9 && isCheckF.x>=0 && isCheckF.y>=0) {
-								if (unk.x === isCheckF.x && unk.y === isCheckF.y) {
-									this.isChecksF.push(isCheckF);
-								}
-							}
-						}
-					}
-				}
+		for(const isCheckF of isChecksF) {
+			if (!this.isChecksF.includes(isCheckF)) {
+				this.isChecksF.push(isCheckF);
 			}
 		}
-		else {
-			game.isCheckedPoint = false;
-			for(const isCheckF of isChecksF) {
-				if (!this.isChecksF.includes(isCheckF)) {
-					for (let unk of this.getUnknownFields()) {
-						if (isCheckF.x<=9 && isCheckF.y<=9 && isCheckF.x>=0 && isCheckF.y>=0) {
-							if (unk.x === isCheckF.x && unk.y === isCheckF.y) {
-								this.isChecksF.push(isCheckF);
-							}
-						}
-					}
-				}
-			}
-		}
-		return this;
 	}
 	addIsChecksF2(...isChecksF2) {
-		if (game.isPlayerOrder) {
-			const coordinate = this.getCoordinats(mouse);
-			for (const unk of this.getUnknownFields()) {
-				if (unk.x === coordinate.x && unk.y === coordinate.y) {
-					game.isCheckedPoint = true;
-					for(const isCheckF2 of isChecksF2) {
-						if (!this.isChecksF2.includes(isCheckF)) {
-							if (isCheckF2.x<=9 && isCheckF2.y<=9 && isCheckF2.x>=0 && isCheckF2.y>=0) {
-								if (unk.x === isCheckF2.x && unk.y === isCheckF2.y) {
-									this.isChecksF2.push(isCheckF);
-								}
-							}
-						}
-					}
-				}
+		for(const isCheckF2 of isChecksF2) {
+			if (!this.isChecksF2.includes(isCheckF2)) {
+				this.isChecksF2.push(isCheckF2);
 			}
 		}
-		else {
-			game.isCheckedPoint = false;
-			for(const isCheckF2 of isChecksF2) {
-				if (!this.isChecksF2.includes(isCheckF2)) {
-					for (let unk of this.getUnknownFields()) {
-						if (isCheckF2.x<=9 && isCheck2F.y<=9 && isCheckF2.x>=0 && isCheckF2.y>=0) {
-							if (unk.x === isCheckF2.x && unk.y === isCheck2F.y) {
-								this.isChecksF2.push(isCheckF);
-							}
-						}
-					}
-				}
-			}
-		}
-		return this;
 	}
 	//=============
 
@@ -184,12 +120,12 @@ class Topology {
 			this.drawChecks(context, check);
 		}
 		// для разработчика
-		// for (const isCheckF of this.isChecksF) {
-		// 	this.drawIsChecksF(context, isCheckF);
-		// }
-		// for (const isCheckF2 of this.isChecksF2) {
-		// 	this.drawIsChecksF2(context, isCheckF2);
-		// }
+		for (const isCheckF of this.isChecksF) {
+			this.drawIsChecksF(context, isCheckF);
+		}
+		for (const isCheckF2 of this.isChecksF2) {
+			this.drawIsChecksF2(context, isCheckF2);
+		}
 		//======
 		for (const injury of this.injuries) {
 			this.drawInjuries(context, injury);
@@ -651,6 +587,9 @@ class Topology {
 	//попадание в корабль
 	getShipHit(ship,x,y) {
 		ship.live = ship.live - 1;
+		if (game.camp.level === 4 || game.camp.level === 5) {
+			this.removeCheckenField(ship);
+		}
 		if (game.camp.level === 3) {
 			if (ship.live === ship.size - 2 && ship.size > 2) {
 				this.removeCheckenField(ship);
@@ -658,11 +597,14 @@ class Topology {
 		}
 		game.hitStatus = 'попал';
 		playSound('sound-hit');
+		game.stop = 0;
+		setTimeout( function() {game.stop = 1;},rnd);
 		if (ship.live===0) {
 			this.addDeadShips(ship);
 			this.getCheckAroundDeadShip(ship,x,y);
 			game.hitStatus = 'убил';
 			playSound('sound-kill');
+			game.stop = 0;
 		}
 	}
 

@@ -9,6 +9,7 @@ class Game {
 		this.stage = '',
 		this.n = 1,
 
+
 		this.player = new Topology({
 			name: 'Player',
 			offsetX: 32,
@@ -66,7 +67,7 @@ class Game {
 				rmvClsActive('steps');
 			}
 		}
-		game.isTimeout = true;
+		this.isTimeout = true;
 		mouse.pleft = mouse.left;
 	}
 
@@ -86,48 +87,35 @@ class Game {
 					if (!this.camp.isShipUnderpoint(point)) {
 						this.isPlayerOrder = false;
 						playSound('sound-shot');
+						if (forRnd) {rnd = 100;}
+						else {rnd = Math.round(Math.random() * (600 - 250) + 250);}
 					}
 				}
 			}
 		} else {
-			if (this.camp.level === 1) {
-				refreshText('order','Ход кампьютера');
-				setTimeout( function() {game.isTimeout = false;},500);
-				if (this.isTimeout) {return};
-				let point = getRandomFrom(this.player.getUnknownFields());
-				this.player.addChecks(point);
-				this.player.update();
-				gameConsoleLog(this.camp.name,point,this.hitStatus);
-				this.hitStatus = 'мимо';
-				if (!this.player.isShipUnderpoint(point)) {
-					this.isPlayerOrder = true;
-					playSound('sound-shot');
-				}
-			}
+			if (this.camp.level === 5) {this.player.itIsChit()};
+			refreshText('order','Ход компьютера');
+			setTimeout( function() {game.isTimeout = false;},rnd);
+			if (this.isTimeout || this.stop === 0) {return};
+			let point = 0;
+			this.stop = 0;
+
+			if (this.camp.level === 1) {point = getRandomFrom(this.player.getUnknownFields());}
 			if (this.camp.level !== 1) {
-				refreshText('order','Ход кампьютера');
-				setTimeout( function() {game.isTimeout = false;},500);
-				if (this.isTimeout) {return};
-				let point = 0;
-				if (this.player.getCheckenFields().length === 0) {
-					this.isHit = false;
-				}
-				if (this.isHit) {
-					point = getRandomFrom(this.player.getCheckenFields());
-				} else {
-				point = getRandomFrom(this.player.getUnknownFields());
-				}
-				this.player.addChecks(point);
-				this.player.update();
-				gameConsoleLog(this.camp.name,point,this.hitStatus);
-				this.hitStatus = 'мимо';
-				if (!this.player.isShipUnderpoint(point)) {
-					this.isPlayerOrder = true;
-					playSound('sound-shot');
-				}
-				if (this.player.isShipUnderpoint(point)) {
-					this.isHit = true;
-				}
+				
+				if (this.player.getCheckenFields().length === 0) {this.isHit = false;}
+				if (this.isHit) {point = getRandomFrom(this.player.getCheckenFields());}
+				else {point = getRandomFrom(this.player.getUnknownFields());}
+				if (this.player.isShipUnderpoint(point)) {this.isHit = true;}
+			}
+			this.player.addChecks(point);
+			this.player.update();
+			gameConsoleLog(this.camp.name,point,this.hitStatus);
+			this.hitStatus = 'мимо';
+			if (!this.player.isShipUnderpoint(point)) {
+				this.isPlayerOrder = true;
+				this.stop = 1;
+				playSound('sound-shot');
 			}
 		}
 	}
