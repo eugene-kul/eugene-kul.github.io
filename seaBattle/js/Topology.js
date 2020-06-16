@@ -184,12 +184,12 @@ class Topology {
 			this.drawChecks(context, check);
 		}
 		// для разработчика
-		for (const isCheckF of this.isChecksF) {
-			this.drawIsChecksF(context, isCheckF);
-		}
-		for (const isCheckF2 of this.isChecksF2) {
-			this.drawIsChecksF2(context, isCheckF2);
-		}
+		// for (const isCheckF of this.isChecksF) {
+		// 	this.drawIsChecksF(context, isCheckF);
+		// }
+		// for (const isCheckF2 of this.isChecksF2) {
+		// 	this.drawIsChecksF2(context, isCheckF2);
+		// }
 		//======
 		for (const injury of this.injuries) {
 			this.drawInjuries(context, injury);
@@ -577,7 +577,6 @@ class Topology {
 	getUnknownFields() {
 		const unknownFields = [];
 		this.isChecksF = unknownFields;
-
 		for (let y=0; y<10; y++) {
 			for (let x=0; x<10; x++) {
 				let isChecked = false;
@@ -658,10 +657,12 @@ class Topology {
 			}
 		}
 		game.hitStatus = 'попал';
+		playSound('sound-hit');
 		if (ship.live===0) {
 			this.addDeadShips(ship);
 			this.getCheckAroundDeadShip(ship,x,y);
 			game.hitStatus = 'убил';
+			playSound('sound-kill');
 		}
 	}
 

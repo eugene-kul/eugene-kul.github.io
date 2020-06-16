@@ -57,6 +57,7 @@ a:hover{text-decoration:none;}
 ul li{list-style:none;}
 img{vertical-align:top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {display: none;-webkit-appearance: none; margin: 0;}
 input[type=text],input[type=email],input[type=tel],textarea{-webkit-appearace:none;-moz-appearance:none;appearance:none;}
 //=================================================================================================================================//
 //=================================================================================================================================//
@@ -115,6 +116,38 @@ body {
 		@include flexbox();
 		flex-direction: column;
 		justify-content: space-between;
+		.volume {
+			color: #445f7e;
+			display: inline-block;
+			margin: 0px 0px 0px 10px;
+			justify-content: center;
+			position: relative;
+			font-size: 14px;
+			font-weight: 600;
+			z-index: 55;
+			.input-vol {
+				cursor: pointer;
+				border: 5px solid transparent; border-bottom: 8px solid #445f7e;
+				position: absolute;
+				width: 9px;
+				height: 9px;
+				top: -4px;
+				&:last-child {top: 11px;border: 5px solid transparent; border-top: 8px solid #445f7e;}
+				right: -13px;
+			}
+			input {
+				border: 3px solid #445f7e;
+				background-color: #445f7e;
+				color: #fff;
+				border-radius: 5px;
+				padding: 4px 2px 2px;
+				margin: 0px 0px 0px 0px;
+				line-height: 18px;
+				text-align: center;
+				width: 40px;
+				height: 20px;
+			}
+		}
 	}
 	&_time {
 		border-radius: 5px;
@@ -149,6 +182,7 @@ body {
 		flex-direction: column;
 		justify-content: space-between;
 		font-size: 18px;
+
 		.order {
 			margin: 0px 0px 0px 0px;
 			border-radius: 5px;

@@ -45,11 +45,13 @@ class Game {
 			refreshText('game_status','Игра началась!');
 			refreshText('level','Уровень сложности: '+this.camp.level);
 			if (this.camp.isGameOver()) {
+				playSound('sound-win');
 				refreshText('winner','Победил '+this.player.name+', поздравляем!');
 				this.player.win++;
 				refreshText('winPlayer',this.player.win);
 			}
 			else if (this.player.isGameOver()) {
+				playSound('sound-fail');
 				refreshText('winner','Победил '+this.camp.name+', попробуй еще раз.');
 				this.camp.win++;
 				refreshText('winCamp',this.camp.win);
@@ -69,6 +71,7 @@ class Game {
 	}
 
 	tickPlay(timestamp) {
+		//console.log(this.camp.level)
 		if (this.isPlayerOrder) {
 			refreshText('order','твой ход');
 			if (!this.camp.isPointUnder(mouse)) {
@@ -82,6 +85,7 @@ class Game {
 					this.hitStatus = 'мимо';
 					if (!this.camp.isShipUnderpoint(point)) {
 						this.isPlayerOrder = false;
+						playSound('sound-shot');
 					}
 				}
 			}
@@ -97,12 +101,13 @@ class Game {
 				this.hitStatus = 'мимо';
 				if (!this.player.isShipUnderpoint(point)) {
 					this.isPlayerOrder = true;
+					playSound('sound-shot');
 				}
 			}
 			if (this.camp.level !== 1) {
 				refreshText('order','Ход кампьютера');
-				//setTimeout( function() {game.isTimeout = false;},500);
-				//if (this.isTimeout) {return};
+				setTimeout( function() {game.isTimeout = false;},500);
+				if (this.isTimeout) {return};
 				let point = 0;
 				if (this.player.getCheckenFields().length === 0) {
 					this.isHit = false;
@@ -118,6 +123,7 @@ class Game {
 				this.hitStatus = 'мимо';
 				if (!this.player.isShipUnderpoint(point)) {
 					this.isPlayerOrder = true;
+					playSound('sound-shot');
 				}
 				if (this.player.isShipUnderpoint(point)) {
 					this.isHit = true;

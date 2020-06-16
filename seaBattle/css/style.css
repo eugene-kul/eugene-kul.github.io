@@ -92,6 +92,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  display: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 input[type=text], input[type=email], input[type=tel], textarea {
   -webkit-appearace: none;
   -moz-appearance: none;
@@ -194,6 +200,49 @@ body {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+
+.game_status .volume {
+  color: #445f7e;
+  display: inline-block;
+  margin: 0px 0px 0px 10px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 55;
+}
+
+.game_status .volume .input-vol {
+  cursor: pointer;
+  border: 5px solid transparent;
+  border-bottom: 8px solid #445f7e;
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  top: -4px;
+  right: -13px;
+}
+
+.game_status .volume .input-vol:last-child {
+  top: 11px;
+  border: 5px solid transparent;
+  border-top: 8px solid #445f7e;
+}
+
+.game_status .volume input {
+  border: 3px solid #445f7e;
+  background-color: #445f7e;
+  color: #fff;
+  border-radius: 5px;
+  padding: 4px 2px 2px;
+  margin: 0px 0px 0px 0px;
+  line-height: 18px;
+  text-align: center;
+  width: 40px;
+  height: 20px;
 }
 
 .game_time {

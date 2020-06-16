@@ -7,6 +7,7 @@ const CELL_SIZE = 30;
 canvas.width = 1055;
 canvas.height = 450;
 let s = 0;
+let vol = 50;
 
 function clearCanvas() {
 	canvas.width |= 0;
@@ -89,5 +90,12 @@ function gameConsoleLog(name,point,event) {
 function clrConsole() {
 	refreshText('steps','');
 	game.n = 1;
+}
+
+function playSound(id) {
+	let levels = document.querySelectorAll('[id^='+id+']');
+	let n = Math.floor(Math.random() * levels.length);
+	levels[n].volume=vol/100;
+	levels[n].play();
 }
 

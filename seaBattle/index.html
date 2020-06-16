@@ -4,18 +4,40 @@
 	<meta charset="UTF-8" >
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
 	<title>Морской бой</title>
 </head>
 <body>
 	<div class="container">
 		<div class="game noselect">
+			<div class="game-sound">
+				<audio id="sound-click1" src="sound/click1.ogg"></audio>
 
+				<audio id="sound-shot1" src="sound/shot/shot1.ogg"></audio>
+				<audio id="sound-shot2" src="sound/shot/shot2.ogg"></audio>
+				<audio id="sound-shot3" src="sound/shot/shot3.ogg"></audio>
+				<audio id="sound-shot4" src="sound/shot/shot4.ogg"></audio>
+				<audio id="sound-shot5" src="sound/shot/shot5.ogg"></audio>
+				<audio id="sound-shot6" src="sound/shot/shot6.ogg"></audio>
+				
+				<audio id="sound-fail1" src="sound/fail.ogg"></audio>
+				<audio id="sound-win1" src="sound/win.ogg"></audio>
+
+				<audio id="sound-hit1" src="sound/hit/hit1.ogg"></audio>
+				<audio id="sound-hit2" src="sound/hit/hit2.ogg"></audio>
+				<audio id="sound-hit3" src="sound/hit/hit3.ogg"></audio>
+				<audio id="sound-hit4" src="sound/hit/hit4.ogg"></audio>
+				<audio id="sound-hit5" src="sound/hit/hit5.ogg"></audio>
+
+				<audio id="sound-kill1" src="sound/kill/kill1.ogg"></audio>
+				<audio id="sound-kill2" src="sound/kill/kill2.ogg"></audio>
+				<audio id="sound-kill3" src="sound/kill/kill3.ogg"></audio>
+				<audio id="sound-kill4" src="sound/kill/kill4.ogg"></audio>
+			</div>
 			<div class="input-block active" id="input-block">
 				<div class="input-text">
-					<div class="item-name"><span>Имя игрока:</span><input type="text" maxlength="10" name="form[]" class="input" id="namePlayer"></div>
-					<div class="item-name"><span>Имя компьютера:</span><input type="text" maxlength="10" name="form[]" class="input" id="nameCamp"></div>
-					
+					<div class="item-name"><span>Имя игрока:</span><input type="text" maxlength="10" name="form[]" onkeyup="playSound('sound-click');" class="input" id="namePlayer"></div>
+					<div class="item-name"><span>Имя компьютера:</span><input type="text" maxlength="10" name="form[]" onkeyup="playSound('sound-click');" class="input" id="nameCamp"></div>
 				</div>
 				<div class="item-text">Ввод имени можно пропустить</div>
 				<div class="btn-block">
@@ -31,7 +53,10 @@
 				</div>
 				<div>
 					<div class="win-point"><span id="winPlayer">0</span> <span class="element">:</span> <span id="winCamp">0</span></div>
-					<div class="game_time" id="time"><span id="hrs">00</span>:<span id="min">00</span>:<span id="sec">00</span></div>
+					<p>
+						<div class="game_time" id="time"><span id="hrs">00</span>:<span id="min">00</span>:<span id="sec">00</span></div>
+						<div class="volume">Vol: <input type="number" min="0" max="100" step="10" value="50" maxlength="2" id="volume" oninput=""><span class="input-vol" id="vol-plus"></span><span class="input-vol" id="vol-minus"></span></div>
+					</p>
 					<div class="game_status-item" id="game_status">Нажми Play, <br> чтобы начать игру</div>
 				</div>
 				<div class="game_console">
@@ -46,9 +71,9 @@
 						<div>
 							<p id="level">Выбери уровень сложности компьютера</p>
 							<div class="level-block active" id="level-block">
-								<span class="camp-level" id="level1">1</span>
-								<span class="camp-level" id="level2">2</span>
-								<span class="camp-level active" id="level3">3</span>
+								<span class="camp-level" id="levelButton1">1</span>
+								<span class="camp-level" id="levelButton2">2</span>
+								<span class="camp-level active" id="levelButton3">3</span>
 							</div>
 						</div>
 					</div>
@@ -62,10 +87,10 @@
 		<canvas></canvas>
 	</div>
 	
-	<script src="Game.js"></script>
-	<script src="Topology.js"></script>
-	<script src="mouse.js"></script>
-	<script src="aspect.js"></script>
-	<script src="script.js"></script>
+	<script src="js/Game.js"></script>
+	<script src="js/Topology.js"></script>
+	<script src="js/mouse.js"></script>
+	<script src="js/aspect.js"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>

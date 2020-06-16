@@ -1,38 +1,53 @@
 document.getElementById('hide-ships').addEventListener('click', function(event) {
 	tglClsActive('hide-ships');
 	game.camp.hideShip = !game.camp.hideShip;
+	playSound('sound-click');
 });
 
 document.getElementById('btn_random').addEventListener('click', function(event) {
 	game.player.randoming();
 	game.player.isPlayerReady = true;
+	playSound('sound-click');
 });
 
 document.getElementById('btn_play').addEventListener('click', function(event) {
 	game.stage = 'play';
+	playSound('sound-click');
 });
 
-document.getElementById('level1').addEventListener('click', function(event) {
-	game.camp.level = 1;
-	addClsActive('level1');
-	rmvClsActive('level2');
-	rmvClsActive('level3');
-});
-document.getElementById('level2').addEventListener('click', function(event) {
-	game.camp.level = 2;
-	addClsActive('level2');
-	rmvClsActive('level1');
-	rmvClsActive('level3');
-});
-document.getElementById('level3').addEventListener('click', function(event) {
-	game.camp.level = 3;
-	addClsActive('level3');
-	rmvClsActive('level2');
-	rmvClsActive('level1');
-});
+
+let levels = document.querySelectorAll('[id^="levelButton"]');
+[].forEach.call(levels, function(elem){
+	elem.addEventListener('click',function(){
+		if (elem.id.replace(/[^\d]/g, '') == "" || this.classList.contains('active')) {return}
+		game.camp.level = Number(elem.id.replace(/[^\d]/g, ''));
+		for (let item of levels) {
+			item.classList.remove('active');
+		}
+		tglClsActive(elem.id);
+		playSound('sound-click');
+	})
+})
 
 document.getElementById('btn-skip').addEventListener('click', function(event) {
 	rmvClsActive('input-block');
+	playSound('sound-click');
+});
+
+document.getElementById('vol-plus').addEventListener('click', function(event) {
+
+	//if (document.getElementById('volume').value >= 1) {document.getElementById('volume').value = 1}
+	if (vol===100) {return;}
+	vol = vol + 10;
+	playSound('sound-click');
+	document.getElementById('volume').value = vol;
+});
+document.getElementById('vol-minus').addEventListener('click', function(event) {
+	//if (document.getElementById('volume').value <= 0) {document.getElementById('volume').value = 0}
+	if (vol===0) {return;}
+	vol = vol - 10;
+	playSound('sound-click');
+	document.getElementById('volume').value = vol;
 });
 
 document.getElementById('btn-ok').addEventListener('click', function(event) {
@@ -47,9 +62,11 @@ document.getElementById('btn-ok').addEventListener('click', function(event) {
 	rmvClsActive('input-block');
 	refreshText('mainNamePlayer',game.player.name);
 	refreshText('mainNameCamp',game.camp.name);
+	playSound('sound-click');
 });
 
 document.getElementById('btn-replay').addEventListener('click', function(event) {
+	playSound('sound-click');
 	game.camp.hideShip = true;
 	game.player = new Topology({
 		name: game.player.name,
