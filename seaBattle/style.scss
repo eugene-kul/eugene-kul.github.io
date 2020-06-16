@@ -330,10 +330,9 @@ body {
 .not-sound {
 	cursor: pointer;
 	position: absolute;
-	top: -75px;
+	top: -80px;
 	right: -370px;
 	z-index: 100;
-
 	span {
 		display: inline-block;
 		width: 30px;
@@ -436,13 +435,13 @@ body {
 
 .name {
 	position: relative;
-	font-size: 40px;
+	font-size: 35px;
 	font-weight: 600;
 	color: #445f7e;
 	position: absolute;
 	width: 1055px;
 	height: 85px;
-	top: -90px;
+	top: -85px;
 	left: -395px;
 	.player-name {
 		position: absolute;
