@@ -72,7 +72,7 @@ class Game {
 	}
 
 	tickPlay(timestamp) {
-		//console.log(this.camp.level)
+		//console.log(rnd);
 		if (this.isPlayerOrder) {
 			refreshText('order','твой ход');
 			if (!this.camp.isPointUnder(mouse)) {
@@ -88,8 +88,7 @@ class Game {
 					if (!this.camp.isShipUnderpoint(point)) {
 						this.isPlayerOrder = false;
 						playSound('sound-shot');
-						if (forRnd) {rnd = 100;}
-						else {rnd = Math.round(Math.random() * (600 - 300) + 300);}
+						
 					}
 				}
 			}

@@ -198,12 +198,12 @@ body {
 	font-weight: 600;
 	letter-spacing: 1px;
 	display: none;
-	&.active {
-		@include flexbox();
-		font-size: 20px;
-		flex-direction: column;
-		justify-content: center;
-	}
+	// &.active {
+	// 	@include flexbox();
+	// 	font-size: 20px;
+	// 	flex-direction: column;
+	// 	justify-content: center;
+	// }
 	&_item-name {font-size: 25px;}
 	&_item-input {
 		border: 2px solid #445f7e;

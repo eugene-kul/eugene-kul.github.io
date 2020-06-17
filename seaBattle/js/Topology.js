@@ -30,16 +30,6 @@ class Topology {
 		return this
 	}
 
-	//добавляет случайные 10 полей в начале раунда для компьютера 5 уровня сложности, куда камп стрелять не будет
-	itIsChit() {
-		if(this.number >= 10) {return}
-		let point = getRandomFrom(this.getUnknownFields());
-		this.isShipUnderpoint(point);
-		if (this.isShipUnderpoint(point)) {return};
-		this.addIsChecks(point);
-		this.number++;
-	}
-
 	//добавление обьектов в массив (убитые корабли)
 	addDeadShips(...ships) {
 		for(const ship of ships) {
@@ -120,12 +110,12 @@ class Topology {
 			this.drawHover(context, point);
 		}
 		// для разработчика
-		// for (const isCheckF of this.isChecksF) {
-		// 	this.drawIsChecksF(context, isCheckF);
-		// }
-		// for (const isCheckF2 of this.isChecksF2) {
-		// 	this.drawIsChecksF2(context, isCheckF2);
-		// }
+		for (const isCheckF of this.isChecksF) {
+			this.drawIsChecksF(context, isCheckF);
+		}
+		for (const isCheckF2 of this.isChecksF2) {
+			this.drawIsChecksF2(context, isCheckF2);
+		}
 		//======
 		for (const injury of this.injuries) {
 			this.drawInjuries(context, injury);
@@ -446,6 +436,10 @@ class Topology {
 	//обработка попадания в корабль
 	update() {
 		const map = this.getShipsMap();
+		if (this == game.player) {
+			if (forRnd) {rnd = 100;}
+			else {rnd = Math.round(Math.random() * (650 - 250) + 250);}
+		}
 		for (const check of this.checks) {
 			if (map[check.y][check.x]) {
 				this.injuries.push(check);
@@ -471,7 +465,7 @@ class Topology {
 		for (let y=0; y<10; y++) {
 			for (let x=0; x<10; x++) {
 				for (const injury of this.injuries) {
-					if (this.name == game.camp.name) {break}
+					if (this == game.camp) {break}
 					if (injury.x === x && injury.y === y) {
 						for (let unk of this.getUnknownFields()) {
 							for (let k=0; k<5; k++) {
@@ -510,6 +504,16 @@ class Topology {
 				}
 			}
 		}
+	}
+
+	//добавляет случайные 10 полей в начале раунда для компьютера 5 уровня сложности, куда камп стрелять не будет
+	itIsChit() {
+		if(this.number >= 77) {return}
+		let point = getRandomFrom(this.getUnknownFields());
+		this.isShipUnderpoint(point);
+		if (this.isShipUnderpoint(point)) {return};
+		this.addIsChecks(point);
+		this.number++;
 	}
 
 	//получает неизвестные точки на игровом поле
@@ -562,7 +566,7 @@ class Topology {
 
 	//получает точки вокруг убитого корабля
 	getCheckAroundDeadShip(ship,x,y) {
-		if (this.name == game.camp.name) {return}
+		if (this == game.camp) {return}
 		if (ship.direct === 0) {
 			for (let x=ship.x - 1; x<ship.x + ship.size + 1; x++) {
 				for (let y=ship.y - 1; y<ship.y + 2; y++) {
