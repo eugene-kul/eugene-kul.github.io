@@ -110,12 +110,12 @@ class Topology {
 			this.drawHover(context, point);
 		}
 		// для разработчика
-		for (const isCheckF of this.isChecksF) {
-			this.drawIsChecksF(context, isCheckF);
-		}
-		for (const isCheckF2 of this.isChecksF2) {
-			this.drawIsChecksF2(context, isCheckF2);
-		}
+		// for (const isCheckF of this.isChecksF) {
+		// 	this.drawIsChecksF(context, isCheckF);
+		// }
+		// for (const isCheckF2 of this.isChecksF2) {
+		// 	this.drawIsChecksF2(context, isCheckF2);
+		// }
 		//======
 		for (const injury of this.injuries) {
 			this.drawInjuries(context, injury);
@@ -508,7 +508,7 @@ class Topology {
 
 	//добавляет случайные 10 полей в начале раунда для компьютера 5 уровня сложности, куда камп стрелять не будет
 	itIsChit() {
-		if(this.number >= 77) {return}
+		if(this.number >= 10) {return}
 		let point = getRandomFrom(this.getUnknownFields());
 		this.isShipUnderpoint(point);
 		if (this.isShipUnderpoint(point)) {return};
