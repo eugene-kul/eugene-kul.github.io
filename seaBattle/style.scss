@@ -74,7 +74,7 @@ input[type=text],input[type=email],input[type=tel],textarea{-webkit-appearace:no
 //ОСНОВНОЙ БЛОК====================================================================================================================//
 .container {
 	align-items: center;
-	padding: 50px 0px 0px 0px;
+	padding: 100px 0px 0px 0px;
 	@include flexbox();
 	justify-content: center;
 	align-items: center;
@@ -96,7 +96,7 @@ body {
 }
 
 .game {
-	padding: 140px 0px 0px 0px;
+	padding: 190px 0px 0px 0px;
 	position: absolute;
 	top: 0px;
 	left: 50%;
@@ -332,7 +332,7 @@ body {
 	position: absolute;
 	width: 1055px;
 	height: 85px;
-	top: 54px;
+	top: 104px;
 	left: -395px;
 	&_player {
 		text-align: center;

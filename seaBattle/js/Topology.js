@@ -315,13 +315,16 @@ class Topology {
 			return true;
 	}
 
+	addHoverPoint(point) {
+		this.hover = [point];
+	}
+
 	//получает,координаты point относительно игрового поля
 	getCoordinats(point) {
 		if(!this.isPointUnder(point)) {
 			return false}
 		const x = parseInt((point.x - this.offsetX - 5 - FIELD_SIZE)/FIELD_SIZE);
 		const y = parseInt((point.y - this.offsetY - 6 - FIELD_SIZE)/FIELD_SIZE);
-		this.hover = [{x,y}];
 		return {
 			x: Math.max(0, Math.min(9, x)),
 			y: Math.max(0, Math.min(9, y)),

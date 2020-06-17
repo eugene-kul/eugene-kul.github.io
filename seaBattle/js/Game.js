@@ -31,7 +31,6 @@ class Game {
 	}
 
 	tick(timestamp) {
-
 		requestAnimationFrame(x => this.tick(x))
 		clearCanvas();
 		drawGrid();
@@ -79,7 +78,7 @@ class Game {
 			if (!this.camp.isPointUnder(mouse)) {
 				return}
 			const point = this.camp.getCoordinats(mouse);
-			this.camp.hoverPoint(point);
+			this.camp.addHoverPoint(point);
 			if (mouse.click) {
 				this.camp.addChecks(point);
 				if (this.isCheckedPoint) {
