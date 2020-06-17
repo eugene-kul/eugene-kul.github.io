@@ -127,7 +127,7 @@ document.getElementById('btn-main').addEventListener('click', function(event) {
 	refreshText('order','Ты можешь поменять расположение своих кораблей');
 	refreshText('level-text','Выбери уровень сложности компьютера');
 	refreshText('game_status','');
-	document.getElementById('game_status').insertAdjacentHTML('afterbegin',`Нажми Play, <br> чтобы начать игру`);
+	document.getElementById('game_status').insertAdjacentHTML('afterbegin',`Нажми играть, <br> чтобы начать`);
 	game.player = new Topology({
 		name: game.player.name,
 		offsetX: 32,

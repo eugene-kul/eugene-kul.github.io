@@ -30,7 +30,7 @@ class Topology {
 		return this
 	}
 
-	//читерские способности компьютера 5 уровня =)
+	//добавляет случайные 10 полей в начале раунда для компьютера 5 уровня сложности, куда камп стрелять не будет
 	itIsChit() {
 		if(this.number >= 10) {return}
 		let point = getRandomFrom(this.getUnknownFields());
