@@ -31,6 +31,7 @@ class Game {
 	}
 
 	tick(timestamp) {
+
 		requestAnimationFrame(x => this.tick(x))
 		clearCanvas();
 		drawGrid();
@@ -44,7 +45,7 @@ class Game {
 			rmvClsActive('btn-block');
 			rmvClsActive('level-block');
 			refreshText('game_status','Игра началась!');
-			refreshText('level','Уровень сложности: '+this.camp.level);
+			refreshText('level-text','Уровень сложности: '+this.camp.level);
 			if (this.camp.isGameOver()) {
 				playSound('sound-win');
 				refreshText('winner','Победил '+this.player.name+', поздравляем!');
@@ -59,7 +60,7 @@ class Game {
 			}
 			if (this.stage === 'gameOver') {
 				game.camp.hideShip = false;
-				refreshText('level','Ты можешь сменить уровень сложности:');
+				refreshText('level-text','Ты можешь сменить уровень сложности:');
 				refreshText('game_status','Game Over!');
 				addClsActive('level-block');
 				addClsActive('gameOver');
@@ -68,7 +69,7 @@ class Game {
 			}
 		}
 		this.isTimeout = true;
-		mouse.pleft = mouse.left;
+		mouse.click = false;
 	}
 
 	tickPlay(timestamp) {
@@ -78,7 +79,8 @@ class Game {
 			if (!this.camp.isPointUnder(mouse)) {
 				return}
 			const point = this.camp.getCoordinats(mouse);
-			if (mouse.left && !mouse.pleft) {
+			this.camp.hoverPoint(point);
+			if (mouse.click) {
 				this.camp.addChecks(point);
 				if (this.isCheckedPoint) {
 					this.camp.update();
@@ -88,7 +90,7 @@ class Game {
 						this.isPlayerOrder = false;
 						playSound('sound-shot');
 						if (forRnd) {rnd = 100;}
-						else {rnd = Math.round(Math.random() * (600 - 250) + 250);}
+						else {rnd = Math.round(Math.random() * (600 - 300) + 300);}
 					}
 				}
 			}

@@ -7,7 +7,7 @@ const CELL_SIZE = 30;
 canvas.width = 1055;
 canvas.height = 450;
 let s = 0;
-let vol = 50;
+let vol = 100;
 let forRnd = false;
 let rnd = 0;
 

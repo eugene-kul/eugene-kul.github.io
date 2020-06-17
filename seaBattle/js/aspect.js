@@ -51,6 +51,7 @@ let levels = document.querySelectorAll('[id^="levelButton"]');
 
 document.getElementById('btn-skip').addEventListener('click', function(event) {
 	rmvClsActive('input-block');
+	addClsActive('rename');
 	playSound('sound-click');
 });
 
@@ -77,9 +78,19 @@ document.getElementById('btn-ok').addEventListener('click', function(event) {
 		game.camp.name = campName;
 	}
 	rmvClsActive('input-block');
+	addClsActive('rename');
 	refreshText('mainNamePlayer',game.player.name);
 	refreshText('mainNameCamp',game.camp.name);
 	playSound('sound-click');
+});
+
+document.getElementById('rename').addEventListener('click', function(event) {
+	rmvClsActive('rename');
+	playSound('sound-click');
+	rmvClsActive('btn-skip');
+	rmvClsActive('input-text');
+	addClsActive('input-block');
+	refreshText('btn-ok','Применить');
 });
 
 document.getElementById('btn-replay').addEventListener('click', function(event) {
@@ -107,5 +118,38 @@ document.getElementById('btn-replay').addEventListener('click', function(event) 
 	game.camp.randoming();
 	game.player.randoming();
 	s = 0;
+	clrConsole();
+});
+document.getElementById('btn-main').addEventListener('click', function(event) {
+	playSound('sound-click');
+	game.camp.hideShip = true;
+	addClsActive('order');
+	refreshText('order','Ты можешь поменять расположение своих кораблей');
+	refreshText('level-text','Выбери уровень сложности компьютера');
+	refreshText('game_status','');
+	document.getElementById('game_status').insertAdjacentHTML('afterbegin',`Нажми Play, <br> чтобы начать игру`);
+	game.player = new Topology({
+		name: game.player.name,
+		offsetX: 32,
+		offsetY: 88,
+		isPlayerReady: false,
+		win: game.player.win,
+	});
+
+	game.camp = new Topology({
+		name: game.camp.name,
+		offsetX: 692,
+		offsetY: 88,
+		hideShip: game.camp.hideShip,
+		level: game.camp.level,
+		win: game.camp.win,
+	});
+	game.stage = '';
+	rmvClsActive('gameOver');
+	addClsActive('btn-block');
+	game.camp.randoming();
+	game.player.randoming();
+	s = 0;
+	gameTimer();
 	clrConsole();
 });

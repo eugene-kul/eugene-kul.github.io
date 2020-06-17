@@ -8,6 +8,7 @@ class Topology {
 		this.hideShip = param.hideShip || false;
 
 		this.ships = [];
+		this.hover = [];
 		this.checks = [];
 		this.isChecks = [];
 		this.injuries = [];
@@ -29,11 +30,7 @@ class Topology {
 		return this
 	}
 
-	getRandomPoint() {
-
-	}
-
-
+	//читерские способности компьютера 5 уровня =)
 	itIsChit() {
 		if(this.number >= 10) {return}
 		let point = getRandomFrom(this.getUnknownFields());
@@ -119,13 +116,16 @@ class Topology {
 		for (const check of this.checks) {
 			this.drawChecks(context, check);
 		}
+		for (const point of this.hover) {
+			this.drawHover(context, point);
+		}
 		// для разработчика
-		for (const isCheckF of this.isChecksF) {
-			this.drawIsChecksF(context, isCheckF);
-		}
-		for (const isCheckF2 of this.isChecksF2) {
-			this.drawIsChecksF2(context, isCheckF2);
-		}
+		// for (const isCheckF of this.isChecksF) {
+		// 	this.drawIsChecksF(context, isCheckF);
+		// }
+		// for (const isCheckF2 of this.isChecksF2) {
+		// 	this.drawIsChecksF2(context, isCheckF2);
+		// }
 		//======
 		for (const injury of this.injuries) {
 			this.drawInjuries(context, injury);
@@ -158,6 +158,20 @@ class Topology {
 			this.offsetY + injury.y * FIELD_SIZE+FIELD_SIZE+2,
 		);
 		context.stroke();
+		return this;
+	}
+
+	//отриcовка hover
+	drawHover(context, point) {
+		context.fillStyle = 'rgba(48, 75, 116, 0.5)'
+		context.beginPath();
+		context.rect(
+			this.offsetX + point.x * FIELD_SIZE+FIELD_SIZE,
+			this.offsetY + point.y * FIELD_SIZE+FIELD_SIZE,
+			FIELD_SIZE,
+			FIELD_SIZE,
+		);
+		context.fill();
 		return this;
 	}
 
@@ -217,7 +231,7 @@ class Topology {
 
 	//отрисова кораблей
 	drawShips(context, ship) {
-		context.fillStyle = 'rgba(68, 95, 126,0.8)'
+		context.fillStyle = 'rgba(68, 95, 126, 0.8)'
 		context.beginPath();
 		context.rect(
 			this.offsetX + ship.x * FIELD_SIZE+FIELD_SIZE,
@@ -307,6 +321,7 @@ class Topology {
 			return false}
 		const x = parseInt((point.x - this.offsetX - 5 - FIELD_SIZE)/FIELD_SIZE);
 		const y = parseInt((point.y - this.offsetY - 6 - FIELD_SIZE)/FIELD_SIZE);
+		this.hover = [{x,y}];
 		return {
 			x: Math.max(0, Math.min(9, x)),
 			y: Math.max(0, Math.min(9, y)),
@@ -450,61 +465,46 @@ class Topology {
 	getCheckenFields() {
 		const roundChecked = [];
 		this.isChecksF2 = roundChecked;
-		let x,y;
-		let n = 0;
-		for (let iy=0; iy<10; iy++) {
-			for (let ix=0; ix<10; ix++) {
+		for (let y=0; y<10; y++) {
+			for (let x=0; x<10; x++) {
 				for (const injury of this.injuries) {
 					if (this.name == game.camp.name) {break}
-					if (injury.x === ix && injury.y === iy) {
+					if (injury.x === x && injury.y === y) {
 						for (let unk of this.getUnknownFields()) {
 							for (let k=0; k<5; k++) {
 								for(let l=-1; l<2; l++) {
 									if (l===0){continue};
-									x = ix+l;
-									y = iy;
-									if (x <= 9 && x >= 0 && y <= 9 && y >= 0) {
-										if (unk.x === x && unk.y === y) {roundChecked.push({x,y});}
+									if ((x+l) <= 9 && (x+l) >= 0 && y <= 9 && y >= 0) {
+										if (unk.x === (x+l) && unk.y === y) {roundChecked.push({x:x+l,y:y});}
 									}
-									x = ix;
-									y = iy+l;
-									if (x <= 9 && x >= 0 && y <= 9 && y >= 0) {
-										if (unk.x === x && unk.y === y) {roundChecked.push({x,y});}
+									if (x <= 9 && x >= 0 && (y+l) <= 9 && (y+l) >= 0) {
+										if (unk.x === x && unk.y === (y+l)) {roundChecked.push({x:x,y:y+l});}
 									}
 								}
-								n++;
 								break;
 							}
 						}
 					}
 				}
 			}
-			if (n == 4 && n != 0) {n = 0;break;}
 		}
 		return roundChecked;
 	}
 
 	// функция убирает лишние точки из getCheckenFields после второго попадания в корабль
 	removeCheckenField(ship) {
-		let x,y;
-		if (ship.direct === 0) {
-			for (let k=0; k<ship.size; k++) {
-				x = ship.x + k;
-				y = ship.y+1;
-				this.addIsChecks({x,y});
-				x = ship.x + k;
-				y = ship.y-1;
-				this.addIsChecks({x,y});
+		//let x,y;
+		for (var i=-1; i<2; i++) {
+			if (i===0) {continue};
+			if (ship.direct === 0) {
+				for (let k=0; k<ship.size; k++) {
+					this.addIsChecks({x:ship.x+k,y:ship.y+i});
+				}
 			}
-		}
-		if (ship.direct === 1) {
-			for (let k=0; k<ship.size; k++) {
-				x = ship.x + 1;
-				y = ship.y + k;
-				this.addIsChecks({x,y});
-				x = ship.x - 1;
-				y = ship.y + k;
-				this.addIsChecks({x,y});
+			if (ship.direct === 1) {
+				for (let k=0; k<ship.size; k++) {
+					this.addIsChecks({x:ship.x+i,y:ship.y+k});
+				}
 			}
 		}
 	}
@@ -536,9 +536,7 @@ class Topology {
 						}
 					}
 				}
-				if (!isChecked) {
-					unknownFields.push({x,y})
-				}
+				if (!isChecked) {unknownFields.push({x,y})}
 			}
 		}
 		return unknownFields;
@@ -608,27 +606,25 @@ class Topology {
 		}
 	}
 
-	//получает корабль под точкой попадания (jx;jy)
-	getShipInPoint (jx, jy) {
+	//получает корабль под точкой попадания (x;y)
+	getShipInPoint (x, y) {
 		for (const ship of this.ships) {
 			let dx = ship.direct === 0;
 			let dy = ship.direct === 1;
-			let x = ship.x;
-			let y = ship.y;
 			for (let i=0; i<ship.size; i++) {
-				if (ship.x === jx && ship.y === jy) {
-					this.getShipHit(ship,x,y);
+				if (ship.x === x && ship.y === y) {
+					this.getShipHit(ship,ship.x,ship.y);
 					return ship;
 				}
-				if (ship.x === jx - i && ship.y === jy) {
+				if (ship.x === x - i && ship.y === y) {
 					if (ship.direct === 0) {
-						this.getShipHit(ship,x,y);
+						this.getShipHit(ship,ship.x,ship.y);
 						return ship;
 					}
 				}
-				if (ship.x === jx && ship.y === jy - i) {
+				if (ship.x === x && ship.y === y - i) {
 					if (ship.direct === 1) {
-						this.getShipHit(ship,x,y);
+						this.getShipHit(ship,ship.x,ship.y);
 						return ship;
 					}
 				}
