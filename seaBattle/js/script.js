@@ -99,6 +99,8 @@ function playSound(id) {
 	let levels = document.querySelectorAll('[id^='+id+']');
 	let n = Math.floor(Math.random() * levels.length);
 	levels[n].volume=vol/100;
+	levels[n].pause();
+	levels[n].currentTime = 0;
 	levels[n].play();
 }
 
