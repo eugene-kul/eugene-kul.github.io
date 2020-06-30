@@ -312,6 +312,12 @@
   color: #000;
 }
 
+@media (max-width: 992.98px) {
+  .content_item-body {
+    margin: 0px 10px;
+  }
+}
+
 @media (max-width: 479.98px) {
   .content_item-body {
     margin: 0;
