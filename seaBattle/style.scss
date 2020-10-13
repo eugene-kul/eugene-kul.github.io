@@ -37,7 +37,8 @@ $md5h:567.99; 		//@media max-height #1
 //=================================================================================================================================//
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 //Шрифт по умолчанию===============================================================================================================//
-$fontdefault:'Pangolin';
+$fontdefault:'Pangolin', sans-serif;
+ffa
 //обнуление========================================================================================================================//
 *{padding:0px;margin:0px;border:0px;}
 *,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
@@ -74,13 +75,14 @@ input[type=text],input[type=email],input[type=tel],textarea{-webkit-appearace:no
 //ОСНОВНОЙ БЛОК====================================================================================================================//
 .container {
 	align-items: center;
-	padding: 100px 0px 100px 0px;
+	padding: 100px 0px 0px 0px;
 	@include flexbox();
 	justify-content: center;
 	align-items: center;
 	position: relative;
 	min-width: 955px;
 }
+
 canvas {
 	background-color: #fff;
 	border: 4px solid #445f7e;
@@ -109,7 +111,7 @@ body {
 		border-radius: 5px;
 		background-color: #fff;
 		text-align: center;
-		padding: 10px;
+		padding: 10px 10px 9px;
 		width: 270px;
 		height: 340px;
 		margin: 0px auto 0px;
@@ -133,14 +135,14 @@ body {
 		font-size: 18px;
 		background-color: #445f7e;
 		border-radius: 5px;
-		padding: 10px 5px;
+		padding: 0px 5px;
 		@include flexbox();
 		flex-direction: column;
 		justify-content: space-between;
 		font-size: 18px;
 	}
 	&_order-text {
-		margin: 0px 0px 0px 0px;
+		margin: 5px 0px;
 		border-radius: 5px;
 		padding: 0px 10px;
 		display: none;
@@ -151,7 +153,8 @@ body {
 		font-weight: 600;
 		background-color: #fff;
 		color: #445f7e;
-		height: 170px;
+		height: 100%;
+		max-height: 180px;
 		overflow: hidden;
 		border-radius: 5px;
 		line-height: 20px;
@@ -160,6 +163,7 @@ body {
 		display: none;
 		text-align: left;
 		&.active {display: block;}
+		p {margin: 0}
 		&:hover{
 			overflow-y: auto;
 			overflow-x: hidden;
@@ -241,12 +245,17 @@ body {
 	margin: 10px 0px 0px 0px;
 	&_block {
 		@include flexbox();
+		flex-wrap: wrap;
 		padding: 0px 5px;
 		justify-content: space-around;
 		&.main-btn {
 			display: none;
 			padding: 0px;
-			&.active {@include flexbox();justify-content: space-between;}
+			&.active {
+				@include flexbox();
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
 		}
 	}
 	&_skip {display: none;&.active {display: inline-block;}}
@@ -266,44 +275,6 @@ body {
 		letter-spacing: 1px;
 		&.active {display: inline-block;}
 	}
-	&_speedy {
-		white-space: nowrap;
-		font-size: 14px;
-		cursor: pointer;
-		position: absolute;
-		background-color: #445f7e;
-		z-index: 55;
-		border-radius: 5px;
-		letter-spacing: 1px;
-		display: inline-block;
-		bottom: -29px;
-		right: -365px;
-		padding: 5px 35px 5px 5px;
-		&:before {
-			content:"";
-			border: 1px solid #ccc;
-			background-color: #eee;
-			border-radius: 20px;
-			position: absolute;
-			width: 23px;
-			height: 13px;
-			top: 6px;
-			right: 5px;
-		}
-		&:after {
-			content:"";
-			@include anim(0.15s,0s);
-			border-radius: 50%;
-			border: 1px solid #445f7e;
-			background-color: #fff;
-			position: absolute;
-			width: 11px;
-			height: 11px;
-			top: 7px;
-			right: 15px;
-		}
-		&.active {&:after {right: 6px;background-color: #445f7e;}}
-	}
 	&_not-sound {
 		cursor: pointer;
 		position: absolute;
@@ -319,10 +290,55 @@ body {
 		}
 		&.active {span {&.yes{display: none;}&.no{display: inline-block;}}}
 	}
-	&_main {width: 110px;}
-	&_replay {width: 110px;}
+	&_main {width: 45%;}
+	&_replay {width: 45%;}
+	&_replay2 {width: 100%;}
 	&_random {width: 117px;}
-	&_play {width: 117px;}
+	&_play {width: 117px;flex: 1 1 100%;}
+}
+
+.btn-checkbox {
+	white-space: nowrap;
+	font-size: 12px;
+	cursor: pointer;
+	position: absolute;
+	background-color: #445f7e;
+	z-index: 55;
+	bottom: -23px;
+	border-radius: 5px;
+	letter-spacing: 1px;
+	display: inline-block;
+	padding: 3px 33px 1px 5px;
+	&:before {
+		content:"";
+		border: 1px solid #ccc;
+		background-color: #eee;
+		border-radius: 20px;
+		position: absolute;
+		width: 20px;
+		height: 10px;
+		top: 3px;
+		right: 5px;
+	}
+	&:after {
+		content:"";
+		@include anim(0.15s,0s);
+		border-radius: 50%;
+		border: 1px solid #445f7e;
+		background-color: #fff;
+		position: absolute;
+		width: 8px;
+		height: 8px;
+		top: 4px;
+		right: 15px;
+	}
+	&.active {&:after {right: 6px;background-color: #445f7e;}}
+	&_speedy {
+		right: -365px;
+	}
+	&_safeShips {
+		right: 296px;
+	}
 }
 
 .name {
@@ -355,8 +371,9 @@ body {
 	white-space: nowrap;
 	font-size: 12px;
 	position: absolute;
+	width: 100%;
 	top: 350px;
-	left: -390px;
+	left: 0px;
 	font-weight: 600;
 	opacity: 0.5;
 	color: #445f7e;
@@ -366,66 +383,66 @@ body {
 	letter-spacing: 1px;
 }
 
+.developer {
+	cursor: default;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	top: 5px;
+	left: 5px;
+	font-size: 16px;
+	z-index: 25;
+}
+
 //для разработчика
-// .hide-ships {
-// 	//display: none;
-// 	font-size: 16px;
-// 	cursor: pointer;
-// 	position: absolute;
-// 	top: -35px;
-// 	left: 295px;
-// 	background-color: #445f7e;
-// 	max-width: 80px;
-// 	z-index: 55;
-// 	border-radius: 5px;
-// 	padding: 5px 35px 3px 5px;
-// 	letter-spacing: 1px;
-// 	&:before {
-// 		content:"";
-// 		border: 1px solid #ccc;
-// 		background-color: #eee;
-// 		border-radius: 20px;
-// 		position: absolute;
-// 		width: 23px;
-// 		height: 13px;
-// 		top: 6px;
-// 		right: 5px;
-// 	}
-// 	&:after {
-// 		content:"";
-// 		@include anim(0.15s,0s);
-// 		border-radius: 50%;
-// 		border: 1px solid #445f7e;
-// 		background-color: #fff;
-// 		position: absolute;
-// 		width: 11px;
-// 		height: 11px;
-// 		top: 7px;
-// 		right: 15px;
-// 	}
-// 	&.active {
-// 		&:after {
-// 			right: 6px;
-// 			background-color: #445f7e;
-// 		}
-// 	}
-// }
-// .winnerCheck {
-// 	//display: none;
-// 	font-size: 16px;
-// 	cursor: pointer;
-// 	position: absolute;
-// 	top: -55px;
-// 	left: 295px;
-// 	background-color: #445f7e;
-// 	margin: 0px auto 0px;
-// 	z-index: 55;
-// 	border-radius: 5px;
-// 	padding: 5px;
-// 	letter-spacing: 1px;
-// 	&.w1 {left: 195px;}
-// 	&.w2 {left: 30px;}
-// }
+.dev-block {
+	position: absolute;
+	top: 5px;
+	left: 25px;
+	display: none;
+	&.active {@include flexbox();}
+}
+.dev-btn {
+	position: relative;
+	display: inline-block;
+	font-size: 12px;
+	cursor: pointer;
+	background-color: #445f7e;
+	z-index: 155;
+	border-radius: 5px;
+	padding: 2px 35px 1px 5px;
+	margin: 0px 5px 0px 0px;
+	letter-spacing: 1px;
+	&:before {
+		content:"";
+		border: 1px solid #ccc;
+		background-color: #eee;
+		border-radius: 20px;
+		position: absolute;
+		width: 23px;
+		height: 13px;
+		top: 1px;
+		right: 5px;
+	}
+	&:after {
+		content:"";
+		@include anim(0.15s,0s);
+		border-radius: 50%;
+		border: 1px solid #445f7e;
+		background-color: #fff;
+		position: absolute;
+		width: 11px;
+		height: 11px;
+		top: 2px;
+		right: 15px;
+	}
+	&.active {
+		&:after {
+			right: 6px;
+			background-color: #445f7e;
+		}
+	}
+}
 //===========================
 
 .win-point {
@@ -503,7 +520,7 @@ body {
 	left: 5%;
 	font-size: 14px;
 	padding: 0px;
-	margin: 0px 0px 0px 0px;
+	margin: 5px 0px 0px 0px;
 	display: none;
 	flex-direction: column;
 	justify-content: space-between;
@@ -520,7 +537,7 @@ body {
 		z-index: 50;
 		padding: 0px 5px;
 	}
-	&_btn {margin: 5px 5px 10px 5px;}
+	&_btn {margin: 0px 5px 10px 5px;}
 }
 
 .level {
@@ -539,13 +556,6 @@ body {
 		font-weight: 600;
 		&.active {background-color: #fff;color: #445f7e;}
 	}
+	#level-text {margin: 5px 0px 7px;}
 }
-
-
-
-
-
-
-
-
 //ОСНОВНОЙ БЛОК====================================================================================================================//

@@ -4,12 +4,18 @@ const mouse = getMouse(canvas);
 const game = new Game;
 const FIELD_SIZE = 30;
 const CELL_SIZE = 30;
+let developer = false;
+let isSafeShips = false;
+let isPlayerReady = true;
+let falseOrderCamp = false;
+let falseOrder = false;
+let forRnd = false;
+let vol = 100;
+let rnd = 0;
+let s = 0;
+
 canvas.width = 1055;
 canvas.height = 450;
-let s = 0;
-let vol = 100;
-let forRnd = false;
-let rnd = 0;
 
 function clearCanvas() {
 	canvas.width |= 0;
@@ -104,3 +110,29 @@ function playSound(id) {
 	levels[n].play();
 }
 
+function newGame() {
+	game.player.deadShips =[];
+	game.camp.hideShip = true;
+	clrConsole();
+	s = 0;
+	game.player = new Topology({
+		name: game.player.name,
+		offsetX: game.player.offsetX,
+		offsetY: game.player.offsetY,
+		win: game.player.win,
+		ships: game.player.ships,
+	});
+	for (let ship of game.player.ships) {
+		ship.live = ship.size
+	}
+	if (!isSafeShips) {game.player.randoming()}
+	game.camp = new Topology({
+		name: game.camp.name,
+		offsetX: game.camp.offsetX,
+		offsetY: game.camp.offsetY,
+		hideShip: game.camp.hideShip,
+		level: game.camp.level,
+		win: game.camp.win,
+	});
+	game.camp.randoming();
+}

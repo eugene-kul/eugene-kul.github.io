@@ -2,13 +2,12 @@ class Game {
 	constructor() {
 		this.alphabet = ['А','Б','В','Г','Д','Е','Ж','З','И','К'],
 		this.isChackedPoint = false,
+		this.stage = 'preparation',
 		this.isPlayerOrder = true,
 		this.hitStatus = 'мимо',
 		this.isTimeout = true,
 		this.isHit = false,
-		this.stage = '',
 		this.n = 1,
-
 
 		this.player = new Topology({
 			name: 'Player',
@@ -27,17 +26,23 @@ class Game {
 		this.camp.randoming();
 		this.player.randoming();
 
-		requestAnimationFrame(x => this.tick(x))
+		requestAnimationFrame(x => this.tick(x));
 	}
 
 	tick(timestamp) {
-		requestAnimationFrame(x => this.tick(x))
+		requestAnimationFrame(x => this.tick(x));
 		clearCanvas();
 		drawGrid();
 		this.player.draw(context);
 		this.camp.draw(context);
+		if (this.stage === 'preparation') {
+			this.tickPreparation(timestamp);
+		}
+
 		if (this.stage === 'play') {
 			gameTimer();
+			this.player.getCheckenFields();
+			this.player.getUnknownFields();
 			addClsActive('order');
 			addClsActive('steps');
 			this.tickPlay(timestamp);
@@ -71,8 +76,55 @@ class Game {
 		mouse.click = false;
 	}
 
+	tickPreparation(timestamp) {
+		if (!this.player.isPointUnder(mouse)) {return}
+		const shipSizes = [4,3,3,2,2,2,1,1,1,1];
+		const shipSize = shipSizes[this.player.ships.length];
+		const coordinate = this.player.getCoordinats(mouse);
+
+		const ship = {
+			x: coordinate.x,
+			y: coordinate.y,
+			direct: mouse.scroll ? 1 : 0,
+			size: shipSize,
+			live: shipSize,
+		}
+		
+		if (!this.player.canStay(ship)) {
+
+			if(ship.direct === 0) {
+				if (ship.x+ship.size > 10) {ship.x = ship.x - (ship.size + coordinate.x - 10);}
+			}
+			if(ship.direct === 1) {
+				if (ship.y+ship.size > 10) {ship.y = ship.y - (ship.size + coordinate.y - 10);}
+			}
+		}
+
+		if (this.player.ships.length === 0) {
+			refreshText('btn_self','Расставить вручную');
+		}
+		
+		if (this.player.ships.length === 1) {
+			refreshText('btn_self','Очистить поле');
+		}
+		if (this.player.ships.length === 10) {
+			isPlayerReady = true;
+			return;
+		}
+		
+		this.player.drawShips(context, ship);
+		if (!this.player.canStay(ship)) {
+			this.player.drawDeadShips(context, ship);
+		}
+		if (mouse.click) {
+			if (this.player.canStay(ship)) {
+				playSound('sound-click');
+				this.player.addShips(ship);
+			}
+		}
+	}
+
 	tickPlay(timestamp) {
-		//console.log(rnd);
 		if (this.isPlayerOrder) {
 			refreshText('order','твой ход');
 			if (!this.camp.isPointUnder(mouse)) {
@@ -86,9 +138,9 @@ class Game {
 					gameConsoleLog(this.player.name,point,this.hitStatus);
 					this.hitStatus = 'мимо';
 					if (!this.camp.isShipUnderpoint(point)) {
-						this.isPlayerOrder = false;
 						playSound('sound-shot');
-						
+						if (falseOrder) {return}
+						this.isPlayerOrder = false;
 					}
 				}
 			}
@@ -113,9 +165,10 @@ class Game {
 			gameConsoleLog(this.camp.name,point,this.hitStatus);
 			this.hitStatus = 'мимо';
 			if (!this.player.isShipUnderpoint(point)) {
-				this.isPlayerOrder = true;
 				this.stop = 1;
 				playSound('sound-shot');
+				if (falseOrderCamp) {return}
+				this.isPlayerOrder = true;
 			}
 		}
 	}

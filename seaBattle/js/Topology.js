@@ -7,7 +7,7 @@ class Topology {
 		this.offsetY = param.offsetY;
 		this.hideShip = param.hideShip || false;
 
-		this.ships = [];
+		this.ships = param.ships || [];
 		this.hover = [];
 		this.checks = [];
 		this.isChecks = [];
@@ -97,11 +97,13 @@ class Topology {
 	//=============
 
 	draw(context) {
-		this.drawFields(context);
 		if (!this.hideShip) {
 			for (const ship of this.ships) {
 			this.drawShips(context, ship);
 			}
+		}
+		for (const ship of this.deadShips) {
+			this.drawDeadShips(context, ship);
 		}
 		for (const check of this.checks) {
 			this.drawChecks(context, check);
@@ -110,58 +112,17 @@ class Topology {
 			this.drawHover(context, point);
 		}
 		// для разработчика
-		// for (const isCheckF of this.isChecksF) {
-		// 	this.drawIsChecksF(context, isCheckF);
-		// }
-		// for (const isCheckF2 of this.isChecksF2) {
-		// 	this.drawIsChecksF2(context, isCheckF2);
-		// }
+		for (const isCheckF of this.isChecksF) {
+			this.drawIsChecksF(context, isCheckF);
+		}
+		for (const isCheckF2 of this.isChecksF2) {
+			this.drawIsChecksF2(context, isCheckF2);
+		}
 		//======
 		for (const injury of this.injuries) {
 			this.drawInjuries(context, injury);
 		}
-		for (const ship of this.deadShips) {
-			this.drawDeadShips(context, ship);
-		}
-		return this;
-	}
-
-	//отрисовка попадания в корабль
-	drawInjuries(context, injury) {
-		context.strokeStyle = 'rgba(250,0,50,0.5)'
-		context.lineWidth = 4;
-		context.beginPath();
-		context.moveTo(
-			this.offsetX + injury.x * FIELD_SIZE+FIELD_SIZE+2,
-			this.offsetY + injury.y * FIELD_SIZE+FIELD_SIZE+2,
-		);
-		context.lineTo(
-			this.offsetX + injury.x * FIELD_SIZE+FIELD_SIZE*2-2,
-			this.offsetY + injury.y * FIELD_SIZE+FIELD_SIZE*2-2,
-		);
-		context.moveTo(
-			this.offsetX + injury.x * FIELD_SIZE+FIELD_SIZE+2,
-			this.offsetY + injury.y * FIELD_SIZE+FIELD_SIZE*2-2,
-		);
-		context.lineTo(
-			this.offsetX + injury.x * FIELD_SIZE+FIELD_SIZE*2-2,
-			this.offsetY + injury.y * FIELD_SIZE+FIELD_SIZE+2,
-		);
-		context.stroke();
-		return this;
-	}
-
-	//отриcовка hover
-	drawHover(context, point) {
-		context.fillStyle = 'rgba(48, 75, 116, 0.5)'
-		context.beginPath();
-		context.rect(
-			this.offsetX + point.x * FIELD_SIZE+FIELD_SIZE,
-			this.offsetY + point.y * FIELD_SIZE+FIELD_SIZE,
-			FIELD_SIZE,
-			FIELD_SIZE,
-		);
-		context.fill();
+		this.drawFields(context);
 		return this;
 	}
 
@@ -211,7 +172,6 @@ class Topology {
 		for (let i=1; i<11; i++) {
 			context.fillText(
 				i,
-				//i-,
 				this.offsetX + FIELD_SIZE*.45,
 				this.offsetY+ i * FIELD_SIZE + FIELD_SIZE*0.7,
 			);
@@ -219,9 +179,62 @@ class Topology {
 		return this;
 	}
 
+	//отрисовка попадания в корабль
+	drawInjuries(context, injury) {
+		context.strokeStyle = 'rgba(250,0,0,0.5)';
+		context.lineWidth = 4;
+		context.beginPath();
+		context.moveTo(
+			this.offsetX + injury.x * FIELD_SIZE+FIELD_SIZE+2,
+			this.offsetY + injury.y * FIELD_SIZE+FIELD_SIZE+2,
+		);
+		context.lineTo(
+			this.offsetX + injury.x * FIELD_SIZE+FIELD_SIZE*2-2,
+			this.offsetY + injury.y * FIELD_SIZE+FIELD_SIZE*2-2,
+		);
+		context.moveTo(
+			this.offsetX + injury.x * FIELD_SIZE+FIELD_SIZE+2,
+			this.offsetY + injury.y * FIELD_SIZE+FIELD_SIZE*2-2,
+		);
+		context.lineTo(
+			this.offsetX + injury.x * FIELD_SIZE+FIELD_SIZE*2-2,
+			this.offsetY + injury.y * FIELD_SIZE+FIELD_SIZE+2,
+		);
+		context.stroke();
+		return this;
+	}
+
+	//отриcовка hover
+	drawHover(context, point) {
+		context.fillStyle = 'rgba(48, 75, 116, 0.5)';
+		context.beginPath();
+		context.rect(
+			this.offsetX + point.x * FIELD_SIZE+FIELD_SIZE,
+			this.offsetY + point.y * FIELD_SIZE+FIELD_SIZE,
+			FIELD_SIZE,
+			FIELD_SIZE,
+		);
+		context.fill();
+		return this;
+	}
+
 	//отрисова кораблей
 	drawShips(context, ship) {
-		context.fillStyle = 'rgba(68, 95, 126, 0.8)'
+		context.fillStyle = 'rgba(68, 95, 126, 0.8)';
+		context.beginPath();
+		context.rect(
+			this.offsetX + ship.x * FIELD_SIZE+FIELD_SIZE,
+			this.offsetY + ship.y * FIELD_SIZE+FIELD_SIZE,
+			(ship.direct === 0 ? ship.size : 1) * FIELD_SIZE,
+			(ship.direct === 1 ? ship.size : 1) * FIELD_SIZE,
+		);
+		context.fill();
+		return this;
+	}
+
+	//отрисовка убитых кораблей
+	drawDeadShips(context, ship) {
+		context.fillStyle = 'rgba(255, 100, 66, 0.5)';
 		context.beginPath();
 		context.rect(
 			this.offsetX + ship.x * FIELD_SIZE+FIELD_SIZE,
@@ -235,7 +248,7 @@ class Topology {
 
 	//отрисовка проверенных точек
 	drawChecks(context, check) {
-		context.fillStyle = 'rgba(51, 102, 153,0.8)'
+		context.fillStyle = 'rgba(251, 2, 3,0.4)';
 		context.beginPath();
 		context.arc(
 			this.offsetX + check.x * FIELD_SIZE+FIELD_SIZE *1.5,
@@ -250,7 +263,7 @@ class Topology {
 
 	//для разработчика отрисовка возможных ходов
 	drawIsChecksF(context, isCheck) {
-		context.fillStyle = 'rgba(251, 2, 3,0.3)'
+		context.fillStyle = 'rgba(251, 2, 3,0.3)';
 		context.beginPath();
 		context.arc(
 			this.offsetX + isCheck.x * FIELD_SIZE+FIELD_SIZE *1.5,
@@ -278,20 +291,6 @@ class Topology {
 	}
 	//===========
 
-	//отрисовка убитых кораблей
-	drawDeadShips(context, ship) {
-		context.fillStyle = 'rgba(255, 0, 0, 0.3)'
-		context.beginPath();
-		context.rect(
-			this.offsetX + ship.x * FIELD_SIZE+FIELD_SIZE,
-			this.offsetY + ship.y * FIELD_SIZE+FIELD_SIZE,
-			(ship.direct === 0 ? ship.size : 1) * FIELD_SIZE,
-			(ship.direct === 1 ? ship.size : 1) * FIELD_SIZE,
-		);
-		context.fill();
-		return this;
-	}
-
 	//проверяет, находится ли point над игровым полем
 	isPointUnder(point) {
 		if (
@@ -306,6 +305,7 @@ class Topology {
 	}
 
 	addHoverPoint(point) {
+		//добавление точки в массив для отрисовки,которая находится под мышкой, на вражеском поле
 		this.hover = [point];
 	}
 
@@ -458,36 +458,6 @@ class Topology {
 		return map[point.y][point.x];
 	}
 
-	//получает точки вокруг подбитого коробля, чтобы камп следующим ходом стрелял вокруг ранненного
-	getCheckenFields() {
-		const roundChecked = [];
-		this.isChecksF2 = roundChecked;
-		for (let y=0; y<10; y++) {
-			for (let x=0; x<10; x++) {
-				for (const injury of this.injuries) {
-					if (this == game.camp) {break}
-					if (injury.x === x && injury.y === y) {
-						for (let unk of this.getUnknownFields()) {
-							for (let k=0; k<5; k++) {
-								for(let l=-1; l<2; l++) {
-									if (l===0){continue};
-									if ((x+l) <= 9 && (x+l) >= 0 && y <= 9 && y >= 0) {
-										if (unk.x === (x+l) && unk.y === y) {roundChecked.push({x:x+l,y:y});}
-									}
-									if (x <= 9 && x >= 0 && (y+l) <= 9 && (y+l) >= 0) {
-										if (unk.x === x && unk.y === (y+l)) {roundChecked.push({x:x,y:y+l});}
-									}
-								}
-								break;
-							}
-						}
-					}
-				}
-			}
-		}
-		return roundChecked;
-	}
-
 	// функция убирает лишние точки из getCheckenFields после второго попадания в корабль
 	removeCheckenField(ship) {
 		//let x,y;
@@ -516,10 +486,44 @@ class Topology {
 		this.number++;
 	}
 
+	//получает точки вокруг подбитого коробля, чтобы камп следующим ходом стрелял вокруг ранненного
+	getCheckenFields() {
+		const roundChecked = [];
+		if(developer) {this.isChecksF2 = roundChecked}
+			else {this.isChecksF2 = []}
+		for (let y=0; y<10; y++) {
+			for (let x=0; x<10; x++) {
+				for (const injury of this.injuries) {
+					if (this == game.camp) {break}
+					if (injury.x === x && injury.y === y) {
+						for (let unk of this.getUnknownFields()) {
+							for (let k=0; k<5; k++) {
+								for(let l=-1; l<2; l++) {
+									if (l===0){continue};
+									if ((x+l) <= 9 && (x+l) >= 0 && y <= 9 && y >= 0) {
+										if (unk.x === (x+l) && unk.y === y) {roundChecked.push({x:x+l,y:y});}
+									}
+									if (x <= 9 && x >= 0 && (y+l) <= 9 && (y+l) >= 0) {
+										if (unk.x === x && unk.y === (y+l)) {roundChecked.push({x:x,y:y+l});}
+									}
+								}
+								break;
+							}
+						}
+					}
+				}
+			}
+		}
+		return roundChecked;
+	}
+
 	//получает неизвестные точки на игровом поле
 	getUnknownFields() {
 		const unknownFields = [];
-		this.isChecksF = unknownFields;
+		if(developer) {
+			if (this == game.player) {this.isChecksF = unknownFields;}
+		}
+			else {this.isChecksF = []}
 		for (let y=0; y<10; y++) {
 			for (let x=0; x<10; x++) {
 				let isChecked = false;

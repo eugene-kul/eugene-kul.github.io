@@ -3,6 +3,7 @@ function getMouse(element) {
 		x: 0,
 		y: 0,
 		click: false,
+		scroll: false,
 	}
 
 	element.addEventListener('mousemove', function (event) {
@@ -13,6 +14,9 @@ function getMouse(element) {
 
 	element.addEventListener('click', function(event) {
 		mouse.click = true;
+	});
+	element.addEventListener('wheel', function(event) {
+		mouse.scroll = !mouse.scroll;
 	});
 
 	return mouse;

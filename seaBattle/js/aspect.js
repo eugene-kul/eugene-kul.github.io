@@ -1,15 +1,32 @@
 /////////////////////////////////////////////////////////
 //для разработчика
+document.getElementById('developer').addEventListener('click', function(event) {
+	tglClsActive('dev-block');
+	playSound('sound-click');
+});
+
+document.getElementById('dev-btn').addEventListener('click', function(event) {
+	tglClsActive('dev-btn');
+	developer = !developer;
+	playSound('sound-click');
+});
+
+document.getElementById('order-btn').addEventListener('click', function(event) {
+	tglClsActive('order-btn');
+	falseOrder = !falseOrder;
+	playSound('sound-click');
+});
+
+document.getElementById('order-btn-camp').addEventListener('click', function(event) {
+	tglClsActive('order-btn-camp');
+	falseOrderCamp = !falseOrderCamp;
+	playSound('sound-click');
+});
+
 document.getElementById('hide-ships').addEventListener('click', function(event) {
 	tglClsActive('hide-ships');
 	game.camp.hideShip = !game.camp.hideShip;
 	playSound('sound-click');
-});
-document.getElementById('campWin').addEventListener('click', function(event) {
-	game.player.ships = [];
-});
-document.getElementById('playerWin').addEventListener('click', function(event) {
-	game.camp.ships = [];
 });
 ///////////////////////////////////////////////
 
@@ -19,13 +36,27 @@ document.getElementById('speedy').addEventListener('click', function(event) {
 	playSound('sound-click');
 });
 
+document.getElementById('safeShips').addEventListener('click', function(event) {
+	tglClsActive('safeShips');
+	isSafeShips = !isSafeShips;
+	playSound('sound-click');
+});
+
 document.getElementById('btn_random').addEventListener('click', function(event) {
 	game.player.randoming();
-	game.player.isPlayerReady = true;
+	isPlayerReady = true;
+	playSound('sound-click');
+});
+
+document.getElementById('btn_self').addEventListener('click', function(event) {
+	clearCanvas();
+	game.player.ships = [];
+	isPlayerReady = false;
 	playSound('sound-click');
 });
 
 document.getElementById('btn_play').addEventListener('click', function(event) {
+	if(!isPlayerReady) {return}
 	game.stage = 'play';
 	playSound('sound-click');
 });
@@ -51,12 +82,6 @@ let levels = document.querySelectorAll('[id^="levelButton"]');
 	})
 })
 
-document.getElementById('btn-skip').addEventListener('click', function(event) {
-	rmvClsActive('input-block');
-	addClsActive('rename');
-	playSound('sound-click');
-});
-
 document.getElementById('vol-plus').addEventListener('click', function(event) {
 	if (vol===100) {return;}
 	vol = vol + 10;
@@ -68,6 +93,12 @@ document.getElementById('vol-minus').addEventListener('click', function(event) {
 	vol = vol - 10;
 	playSound('sound-click');
 	document.getElementById('volume').value = vol;
+});
+
+document.getElementById('btn-skip').addEventListener('click', function(event) {
+	rmvClsActive('input-block');
+	addClsActive('rename');
+	playSound('sound-click');
 });
 
 document.getElementById('btn-ok').addEventListener('click', function(event) {
@@ -97,61 +128,21 @@ document.getElementById('rename').addEventListener('click', function(event) {
 
 document.getElementById('btn-replay').addEventListener('click', function(event) {
 	playSound('sound-click');
-	game.camp.hideShip = true;
-	game.player = new Topology({
-		name: game.player.name,
-		offsetX: 32,
-		offsetY: 88,
-		isPlayerReady: false,
-		win: game.player.win,
-	});
-
-	game.camp = new Topology({
-		name: game.camp.name,
-		offsetX: 692,
-		offsetY: 88,
-		hideShip: game.camp.hideShip,
-		level: game.camp.level,
-		win: game.camp.win,
-	});
 	game.stage = 'play';
 	rmvClsActive('gameOver');
 	addClsActive('btn-block');
-	game.camp.randoming();
-	game.player.randoming();
-	s = 0;
-	clrConsole();
+	newGame();
 });
-document.getElementById('btn-main').addEventListener('click', function(event) {
-	playSound('sound-click');
-	game.camp.hideShip = true;
-	addClsActive('order');
-	refreshText('order','Ты можешь поменять расположение своих кораблей');
-	refreshText('level-text','Выбери уровень сложности компьютера');
-	refreshText('game_status','');
-	document.getElementById('game_status').insertAdjacentHTML('afterbegin',`Нажми играть, <br> чтобы начать`);
-	game.player = new Topology({
-		name: game.player.name,
-		offsetX: 32,
-		offsetY: 88,
-		isPlayerReady: false,
-		win: game.player.win,
-	});
 
-	game.camp = new Topology({
-		name: game.camp.name,
-		offsetX: 692,
-		offsetY: 88,
-		hideShip: game.camp.hideShip,
-		level: game.camp.level,
-		win: game.camp.win,
-	});
-	game.stage = '';
-	rmvClsActive('gameOver');
+document.getElementById('btn-main').addEventListener('click', function(event) {
+	refreshText('order','Расставь свои корабли');
+	refreshText('level-text','Выбери уровень сложности компьютера');
+	refreshText('game_status','Подготовка к бою');
+	game.stage = 'preparation';
 	addClsActive('btn-block');
-	game.camp.randoming();
-	game.player.randoming();
-	s = 0;
+	playSound('sound-click');
+	rmvClsActive('gameOver');
+	addClsActive('order');
 	gameTimer();
-	clrConsole();
+	newGame();
 });
