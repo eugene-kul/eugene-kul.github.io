@@ -21,7 +21,10 @@ class Controller {
 
 	stopSound() {
 		let sounds = document.querySelectorAll('[id^=sound]');
-		for (let item of sounds) {item.volume = 0;}
+		for (let item of sounds) {
+			item.pause();
+			item.currentTime = 0;
+		}
 	}
 
 	update() {
@@ -32,8 +35,8 @@ class Controller {
 	updateView() {
 		const state = this.game.getState();
 		if (state.isGameOver) {
+			if (isPlaying) {this.gameOver();}
 			isPlaying = false;
-			this.gameOver();
 		}
 		else if (!isPlaying) {
 			
@@ -52,6 +55,8 @@ class Controller {
 	}
 
 	play() {
+		clearInterval(endInterval);
+		endInterval=null;
 		if (playStartMusic) {
 			this.playSound('sound-startMusic');
 			playStartMusic = false;
@@ -84,19 +89,17 @@ class Controller {
 	}
 
 	resetGame() {
-		clearInterval(endInterval);
-		endInterval=null;
 		this.stopSound();
 		this.game.resetGame();
 		this.play();
+		this.stopTimer();
+		this.startTime();
 	}
 
 	startTime() {
-		const speed = 1000 - this.game.getState().level*100;
+		speed = 1000 - this.game.getState().level*100;
 		if (!this.intervalId) {
-			this.intervalId = setInterval(() => {
-				this.update();
-			},speed > 0 ? speed : 100);
+			this.intervalId = setInterval(() => {this.update()},speed > 0 ? speed : 100);
 		}
 	}
 
@@ -168,12 +171,10 @@ class Controller {
 		}
 	}
 
-	handleKeyUp() {
+	handleKeyUp(event) {
 		switch (event.keyCode) {
 			case 40: //down
-				if (isPlaying) {
-					this.startTime();
-				}
+				if (isPlaying) {this.startTime()}
 				break;
 		}
 	}

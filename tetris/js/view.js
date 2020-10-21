@@ -1,13 +1,4 @@
 class View {
-	static colors = {
-		'1': '#353535',
-		'2': '#353535',
-		'3': '#353535',
-		'4': '#353535',
-		'5': '#353535',
-		'6': '#353535',
-		'7': '#353535',
-	};
 	constructor(width, height, rows, columns) {
 		this.width = width;
 		this.height = height;
@@ -89,7 +80,7 @@ class View {
 						this.playfieldY+(y*this.blockHeight),
 						this.blockWidth,
 						this.blockHeight,
-						View.colors[block]
+						'#353535'
 					)
 				}
 			}
@@ -120,7 +111,7 @@ class View {
 						y*this.nextfielHeight*this.nextMath+2,
 						this.nextfieldWidth*this.nextMath+2,
 						this.nextfielHeight*this.nextMath+2,
-						View.colors[block]
+						'#353535'
 					);
 				}
 			}

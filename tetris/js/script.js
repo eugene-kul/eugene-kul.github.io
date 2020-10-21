@@ -7,6 +7,9 @@ let endInterval = null;
 let hiScore = 0;
 let isSound = true;
 let playStartMusic = true;
+let speed = 1000;
+let pieceIndex = 7;
+let crazyGame = 0;
 
 let levelInfo = document.querySelector('#tetris-level .value');
 let scoreInfo = document.querySelector('#tetris-score .value');

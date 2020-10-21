@@ -41,6 +41,7 @@ class Game {
 	}
 
 	resetGame() {
+		speed = 1000;
 		this.score = 0;
 		this.lines = 0;
 		this.topOut = false;
@@ -61,59 +62,83 @@ class Game {
 	}
 
 	createPiece() {
-		const index = Math.floor(Math.random() * 7);
-		const type = 'IJLOSTZ'[index];
+		let o = 1;
+		const index = Math.floor(Math.random() * pieceIndex);
+		const type = '123456789'[index];
 		const piece = {};
 		switch (type) {
-			case 'I':
+			case '1':
 				piece.blocks = [
 					[0,0,0,0],
-					[1,1,1,1],
+					[o,o,o,o],
 					[0,0,0,0],
 					[0,0,0,0]
 				];
 				break;
-			case 'J':
+			case '2':
 				piece.blocks = [
 					[0,0,0],
-					[2,2,2],
-					[0,0,2]
+					[o,o,o],
+					[0,0,o],
+					[0,0,0]
 				];
 				break;
-			case 'L':
+			case '3':
 				piece.blocks = [
 					[0,0,0],
-					[3,3,3],
-					[3,0,0]
+					[o,o,o],
+					[o,0,0],
+					[0,0,0]
 				];
 				break;
-			case 'O':
+			case '4':
 				piece.blocks = [
 					[0,0,0,0],
-					[0,4,4,0],
-					[0,4,4,0],
+					[0,o,o,0],
+					[0,o,o,0],
 					[0,0,0,0]
 				];
 				break;
-			case 'S':
+			case '5':
 				piece.blocks = [
 					[0,0,0],
-					[0,5,5],
-					[5,5,0]
+					[0,o,o],
+					[o,o,0],
+					[0,0,0]
 				];
 				break;
-			case 'T':
+			case '6':
 				piece.blocks = [
 					[0,0,0],
-					[6,6,6],
-					[0,6,0]
+					[o,o,o],
+					[0,o,0],
+					[0,0,0]
 				];
 				break;
-			case 'Z':
+			case '7':
 				piece.blocks = [
 					[0,0,0],
-					[7,7,0],
-					[0,7,7]
+					[o,o,0],
+					[0,o,o],
+					[0,0,0]
+				];
+				break;
+			case '8':
+				piece.blocks = [
+					[0,0,0],
+					[o,o,0],
+					[0,o,0],
+					[0,o,o],
+					[0,0,0]
+				];
+				break;
+			case '9':
+				piece.blocks = [
+					[0,0,0],
+					[0,o,0],
+					[0,o,0],
+					[o,o,o],
+					[0,0,0]
 				];
 				break;
 			default:
@@ -172,9 +197,8 @@ class Game {
 		const x = Math.floor(length/2);
 		const y = length - 1;
 		for (let i=0; i<x; i++) {
-			for (let j=i; j<y-i; j++) {
+			for (let j=i+crazyGame; j<y-i; j++) {
 				const temp = blocks[i][j];
-
 				if(clockwise) {
 					blocks[i][j] = blocks[y-j][i];
 					blocks[y-j][i] = blocks[y-i][y-j];
