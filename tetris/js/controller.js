@@ -11,14 +11,14 @@ class Controller {
 
 	playSound(id) {
 		if (!isSound) {return}
-		let vol = 100;
+		let vol = 60;
 		let sound = document.querySelector('[id^='+id+']');
 		sound.volume=vol/100;
 		sound.pause();
 		sound.currentTime = 0;
 		sound.play();
 	}
-	
+
 	stopSound() {
 		let sounds = document.querySelectorAll('[id^=sound]');
 		for (let item of sounds) {item.volume = 0;}
