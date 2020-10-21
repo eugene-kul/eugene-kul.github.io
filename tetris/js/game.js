@@ -1,4 +1,4 @@
-export default class Game {
+class Game {
 	static points = {
 		'1': 40,
 		'2': 100,
@@ -11,21 +11,18 @@ export default class Game {
 	}
 
 	get level() {
-		console.log(Math.floor(this.lines * 0.1));
 		return Math.floor(this.lines * 0.1);
 	}
 
 	getState() {
 		const playfield = this.createPlayField();
 		const { y: pieceY, x: pieceX, blocks } = this.activePiece;
-
 		for (let y=0; y<this.playfield.length; y++) {
 			playfield[y] = [];
 			for (let x=0; x<this.playfield[y].length; x++) {
 				playfield[y][x] = this.playfield[y][x];
 			}
 		}
-
 		for (let y = 0; y < blocks.length; y++) {
 			for (let x = 0; x < blocks[y].length; x++) {
 				if (blocks[y][x]) {
@@ -33,7 +30,6 @@ export default class Game {
 				}
 			}
 		}
-
 		return {
 			score: this.score,
 			level: this.level,
@@ -55,9 +51,9 @@ export default class Game {
 
 	createPlayField() {
 		const playfield = [];
-		for (let y=0; y<20; y++) {
+		for (let y=0; y<row; y++) {
 			playfield[y] = [];
-			for (let x=0; x<10; x++) {
+			for (let x=0; x<column; x++) {
 				playfield[y][x] = 0;
 			}
 		}
@@ -123,40 +119,40 @@ export default class Game {
 			default:
 				throw new Error('неизвестный тип фигуры');
 		}
-
-		piece.x = Math.round((10 - piece.blocks[0].length)/2);
+		piece.x = Math.round((column - piece.blocks[0].length)/2);
 		piece.y = -1;
 		return piece;
 	}
 
 	movePieceLeft() {
 		this.activePiece.x -= 1;
+		controller.playSound('sound-move');
 		if (this.hasCollision()) {
 			this.activePiece.x += 1;
-			// console.log('no-l');
+			
 		}
-		// else {console.log('left');}
 	}
 
 	movePieceRight() {
 		this.activePiece.x += 1;
+		controller.playSound('sound-move');
 		if (this.hasCollision()) {
 			this.activePiece.x -= 1;
-			// console.log('no-r');
+			
 		}
-		// else {console.log('right');}
 	}
 
 	movePieceDown() {
 		if (this.topOut) return;
 		this.activePiece.y += 1;
 		if (this.hasCollision()) {
+			controller.playSound('sound-create');
 			this.activePiece.y -= 1;
 			this.lockPiece();
 			const clearedLines = this.clearLines();
 			this.updateScore(clearedLines);
 			this.updatePieces();
-		}
+		} else {controller.playSound('sound-move');}
 		if (this.hasCollision()) {
 			this.topOut = true;
 		}
@@ -164,6 +160,7 @@ export default class Game {
 
 	rotatePiece() {
 		this.rotateBlocks();
+		controller.playSound('sound-rotate');
 		if(this.hasCollision()) {
 			this.rotateBlocks(false);
 		}
@@ -174,7 +171,6 @@ export default class Game {
 		const length = blocks.length;
 		const x = Math.floor(length/2);
 		const y = length - 1;
-
 		for (let i=0; i<x; i++) {
 			for (let j=i; j<y-i; j++) {
 				const temp = blocks[i][j];
@@ -222,27 +218,25 @@ export default class Game {
 	}
 
 	clearLines() {
-		const rows = 20;
-		const columns = 10;
 		let lines = [];
-		for (let y=rows-1; y>=0; y--) {
+		for (let y=row-1; y>=0; y--) {
 			let numberOfBlocks = 0;
-			for (let x=0; x<columns; x++) {
+			for (let x=0; x<column; x++) {
 				if (this.playfield[y][x]) {
 					numberOfBlocks += 1;
 				}
 			}
 			if (numberOfBlocks === 0) {
 				break;
-			} else if (numberOfBlocks < columns) {
+			} else if (numberOfBlocks < column) {
 				continue;
-			} else if (numberOfBlocks === columns) {
+			} else if (numberOfBlocks === column) {
 				lines.unshift(y);
 			}
 		}
 		for (let index of lines) {
 			this.playfield.splice(index,1);
-			this.playfield.unshift(new Array(columns).fill(0));
+			this.playfield.unshift(new Array(column).fill(0));
 		}
 		return lines.length;
 	}
@@ -251,7 +245,7 @@ export default class Game {
 		if (clearedLines > 0) {
 			this.score += Game.points[clearedLines] * (this.level + 1);
 			this.lines += clearedLines;
-			console.log(this.score, this.lines, this.level);
+			controller.playSound('sound-line');
 		}
 	}
 
