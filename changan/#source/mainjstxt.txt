@@ -1,0 +1,27 @@
+//@prepros-append js/jQuery.min.js
+//@prepros-append js/jquery.parallax.js	===================(data-depth="0.0" + class .layer ang parent class .parallax__list)
+//@prepros-append js/galleryFB.js			=========================(<a> data-gbox="gallery1" "fancybox")
+//@prepros-append js/galleryBB.js			=========================(<div> class="gallery" "baguetteBox")
+//@prepros-append js/slick.js					============================(<div> class="slider__body")
+
+//@prepros-append js/startScript.js
+//@prepros-append js/script.js
+//@prepros-append js/endScript.js
+
+//@prepros-append js/ibg.js
+//@prepros-append js/wow.js
+//@prepros-append js/forms.js
+//@prepros-append js/scroll.js
+//@prepros-append js/burger.js
+//@prepros-append js/sliders.js
+//@prepros-append js/spoiler.js					=================.spBlock .spMain .spSub (oneBlock)
+//@prepros-append js/menulist.js
+//@prepros-append js/buttonUp.js
+//@prepros-append js/isMobile.js
+//@prepros-append js/googlemap.js
+//@prepros-append js/revealator.js
+//@prepros-append js/slowScroll.js				=================onclick="slowScroll('.wrapper')"
+//@prepros-append js/removeBlock.js
+//@prepros-append js/miniParallax.js
+//@prepros-append js/fullscreen(h).js
+//@prepros-append js/wheel-indicator.js

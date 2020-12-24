@@ -1,0 +1,19 @@
+$('.wrapper').addClass('loader');
+$('.icon-menu').click(function(event){
+	$(this).toggleClass('active');
+	$('.overflow').toggleClass('active');
+	$('.header').toggleClass('active');
+	$('body').toggleClass('lock');
+});
+$('.overflow').click(function(event){
+	$(this).toggleClass('active');
+	$('.icon-menu').toggleClass('active');
+	$('.header').toggleClass('active');
+	$('body').toggleClass('lock');
+});
+$('.header__link,.header__logo').click(function(event){
+	$('.overflow').removeClass('active');
+	$('.icon-menu').removeClass('active');
+	$('.header').removeClass('active');
+	$('body').removeClass('lock');
+});
