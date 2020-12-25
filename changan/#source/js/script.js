@@ -1,3 +1,6 @@
+let btnSvg1 = `<svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"><path d="M2.9842 0.0421448H0L5.9684 7.45481L0 14.9579H2.9842L8.9526 7.45481L2.9842 0.0421448Z"/><path d="M9.03156 0.0421448H6.04736L12.0158 7.45481L6.04736 14.9579H9.03156L15 7.45481L9.03156 0.0421448Z"/></svg>`;
+$('.btn.btn-type3').append(btnSvg1);
+
 $('.js-menu-icon').click(function(){
 	$(this).toggleClass('active');
 	$('.js-overflow').toggleClass('active');

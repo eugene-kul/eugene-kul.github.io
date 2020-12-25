@@ -16,7 +16,7 @@ if($('.slider__body').length>0){
 
 if($('.slider__body-cart').length>0){
 	$('.slider__body-cart').slick({
-		infinite: true,
+		infinite: false,
 		dots: true,
 		arrows: true,
 		slidesToShow: 1,

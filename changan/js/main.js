@@ -1,6 +1,9 @@
 
 $(function(){
 	
+let btnSvg1 = `<svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"><path d="M2.9842 0.0421448H0L5.9684 7.45481L0 14.9579H2.9842L8.9526 7.45481L2.9842 0.0421448Z"/><path d="M9.03156 0.0421448H6.04736L12.0158 7.45481L6.04736 14.9579H9.03156L15 7.45481L9.03156 0.0421448Z"/></svg>`;
+$('.btn.btn-type3').append(btnSvg1);
+
 $('.js-menu-icon').click(function(){
 	$(this).toggleClass('active');
 	$('.js-overflow').toggleClass('active');
@@ -123,7 +126,7 @@ function slimMenu() {
       //   true  - дождитесь загрузки изображения и затем отобразите;
       //   false - показать эскиз и загрузить полноразмерное изображение поверх,
       //           требует предварительно определенных размеров изображения (`data-width` and `data-height` attributes)
-      preload: false
+      preload: true
     },
 
     ajax: {
@@ -258,7 +261,7 @@ function slimMenu() {
     parentEl: "body",
 
     // Скрыть браузер вертикальной полосы прокрутки; Используйте на свой риск
-    hideScrollbar: true,
+    hideScrollbar: false,
 
     // Фокусировка
     // ==============
@@ -267,7 +270,7 @@ function slimMenu() {
     autoFocus: true,
 
     // Поместить фокус обратно на активный элемент после закрытия
-    backFocus: true,
+    backFocus: false,
 
     // Не позволяйте пользователю сосредоточиться на элементе вне модального содержимого
     trapFocus: true,
@@ -7843,7 +7846,7 @@ if($('.slider__body').length>0){
 
 if($('.slider__body-cart').length>0){
 	$('.slider__body-cart').slick({
-		infinite: true,
+		infinite: false,
 		dots: true,
 		arrows: true,
 		slidesToShow: 1,

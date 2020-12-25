@@ -1,7 +1,7 @@
 $bgCol:rgb(30, 30, 30);
 $color_button:rgba(30, 30, 30, 0.5);
 $number:#ccc;
-$bordermini:lime;
+$bordermini: var(--colorR1);
 
 body.compensate-for-scrollbar {
   overflow: hidden;
