@@ -141,7 +141,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   z-index: 60;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 .main-header__top-row {
   position: relative;
@@ -723,6 +723,61 @@ body {
 
 .m-a {
   margin: 0 auto;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 7px 5px;
+  margin: 10px 0 20px;
+}
+@media (max-width: 767.98px) {
+  .breadcrumb {
+    margin: 10px 0 0 0;
+  }
+}
+.breadcrumb li {
+  font-weight: 700;
+  position: relative;
+  line-height: 25px;
+  margin: 0 3px;
+}
+@media (max-width: 767.98px) {
+  .breadcrumb li {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .breadcrumb li {
+    font-size: 11px;
+  }
+}
+.breadcrumb li.active {
+  color: #999;
+  margin: 0;
+}
+.breadcrumb li.active:after {
+  content: "";
+}
+.breadcrumb li:after {
+  content: "/";
+  color: #0004;
+  font-size: 20px;
+  position: relative;
+  top: 2px;
+}
+.breadcrumb li a {
+  color: #333;
+}
+@media (max-width: 767.98px) {
+  .breadcrumb li a {
+    padding: 5px 0;
+  }
+}
+.breadcrumb li a:hover {
+  text-decoration: underline;
+  color: var(--colorO1);
 }
 
 .phone-type1 {
@@ -1901,6 +1956,9 @@ body {
   color: var(--colorR1);
 }
 
+.cart-model {
+  border: 1px solid #000;
+}
 #baguetteBox-overlay {
   display: none;
   opacity: 0;
