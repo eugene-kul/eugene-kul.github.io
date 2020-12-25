@@ -38,6 +38,32 @@ function slimMenu() {
 	}
 }
 
+let colors = $('.cart-model__content-colors-list-item');
+let colorName = $('.cart-model__content-colors-text span.color-name');
+let carImage = $('.cart-model__content-image img');
+
+$(colors).click(function(){
+	if ($(this).hasClass('active')) {return}
+	if($(colors).hasClass('active')){$(colors).removeClass('active')}
+	$(this).toggleClass('active');
+	refreshColor();
+});
+
+function refreshColor() {
+	$(colors).each(function(i,item) {
+		$(this).css('background-color', $(item).attr('data-color'));
+		if($(this).hasClass('active')) {
+			$(colorName).text($(item).attr('data-color-name'));
+			$(carImage).each(function(i,img) {
+				if ($(img).css('display') == 'inline-block') {$(img).css('display', 'none')};
+				if($(item).attr('data-color-name') == $(img).attr('data-color-name')) {$(img).css('display', 'inline-block')}
+			});
+		}
+	});
+}
+refreshColor();
+
+
 // gbox v3.5.7
 // ==================================================
 (function (window, document, $, undefined) {
