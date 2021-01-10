@@ -29,8 +29,8 @@
 				width: 30px;
 			}
 		}
-		&:hover{svg {path{fill:var(--colorO1);stroke: #ccc;}}}
-		&:active{svg {path{fill:var(--colorR3);}}}
+		&:hover{svg {path{fill:var(--colorO);stroke: #ccc;}}}
+		&:active{svg {path{fill:var(--colorR);}}}
 	}
 	.slick-next {right: 0px;}
 	.slick-prev {left: 0px;}
@@ -98,3 +98,50 @@
 	}
 }
 .slick-dotted.slick-slider {margin: 0 !important}
+
+.slider-body-other-models {
+	.slick-next {
+		&:after {left: 8px;}
+		right: -25px;
+		@media (max-width:$md3+px) {
+			right: -20px;
+		}
+	}
+	.slick-prev {
+		&:after {right: 8px;}
+		left: -25px;
+		@media (max-width:$md3+px) {
+			left: -20px;
+		}
+	}
+	.slick-next, .slick-prev {
+		@include anim(0.1s,0s,all);
+		height: 100%;
+		width: 60px;
+		bottom: 0;
+		z-index: 5;
+		&:after {
+			content:'';
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			top: calc(50% - 21px);
+			border-radius: 50%;
+			border: 2px solid #0004;
+			background-color: #fff;
+		}
+		svg {
+			position: relative;
+			z-index: 1;
+			width: 24px;
+			path{
+				@include anim(0.1s,0s,all);
+				fill: var(--colorO);
+				stroke: #666;
+				stroke-width: 10;
+			}
+		}
+		&:hover{svg {path{fill:var(--colorO);stroke: #ccc;}}}
+		&:active{svg {path{fill:var(--colorR);}}}
+	}
+}

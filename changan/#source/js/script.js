@@ -1,6 +1,8 @@
+//добавление иконки ко всем кнопкам btn-type3
 let btnSvg1 = `<svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"><path d="M2.9842 0.0421448H0L5.9684 7.45481L0 14.9579H2.9842L8.9526 7.45481L2.9842 0.0421448Z"/><path d="M9.03156 0.0421448H6.04736L12.0158 7.45481L6.04736 14.9579H9.03156L15 7.45481L9.03156 0.0421448Z"/></svg>`;
 $('.btn.btn-type3').append(btnSvg1);
 
+//мобильное меню
 $('.js-menu-icon').click(function(){
 	$(this).toggleClass('active');
 	$('.js-overflow').toggleClass('active');
@@ -35,17 +37,16 @@ function slimMenu() {
 	}
 }
 
+//смена цветов==============//
 let colors = $('.cart-model__content-colors-list-item');
 let colorName = $('.cart-model__content-colors-text span.color-name');
 let carImage = $('.cart-model__content-image img');
-
 $(colors).click(function(){
 	if ($(this).hasClass('active')) {return}
 	if($(colors).hasClass('active')){$(colors).removeClass('active')}
 	$(this).toggleClass('active');
 	refreshColor();
 });
-
 function refreshColor() {
 	$(colors).each(function(i,item) {
 		$(this).css('background-color', $(item).attr('data-color'));
@@ -60,3 +61,22 @@ function refreshColor() {
 }
 refreshColor();
 
+//tab===================
+$('.tab-block__tab-nav-item').click(function(){
+	if ($(this).hasClass('active')) {return;}
+	var tabItem = $(this).data('tab'),
+		tab = $('.tab-block__tab-item[data-tab="'+tabItem+'"]');
+	
+		$('.tab-block__tab-nav-item.active').removeClass('active');
+		$(this).addClass('active');
+
+		$('.tab-block__tab-item.active').removeClass('active');
+		$(tab).addClass('active');
+});
+
+//equipment list===================
+$('.equipment-block__item-drop-btn.list').click(function(){
+
+	$(this).toggleClass('active').next().slideToggle(300);;
+
+});
