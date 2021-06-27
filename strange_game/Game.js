@@ -9,15 +9,57 @@ class Game {
 			this.body.insertAdjacentHTML('beforeend',`<div class="game__row" id="game-row-${i}" data-id="${i}"></div>`);
 			let this_row = document.querySelector(`#game-row-${i}`);
 			for (let j=0;j<100;j++) {
-				let field = '';
-				let active = '';
-				if (j==0 && i==0 || j==0 && i==1 || j==1 && i==0 || j==1 && i==1 ){field = 'select';}
-				if (j==0 && i==0 || j==0 && i==1 || j==1 && i==0 ){active = 'active';}
-				this_row.insertAdjacentHTML('beforeend',`<div class="game__cell ${field} ${active}" id="game-cell-${j}" data-id="${j}"></div>`);
+				this_row.insertAdjacentHTML('beforeend',`<div class="game__cell" id="game-cell-${j}" data-id="${j}"></div>`);
 			}
 		}
 		this.cells = document.querySelectorAll('.game__cell');
 		this.active_cells = document.querySelectorAll('.game__cell.active');
+
+		this.setFields_v1();
+		this.start_v1();
+	}
+
+	setFields_v1() {
+		this.setFields(0,0);
+		this.setFields(0,1);
+		this.setFields(1,0);
+		this.setFields(1,1);
+	}
+	setFields_v2() {
+		this.setFields(0,0);
+		this.setFields(0,1);
+		this.setFields(1,0);
+		this.setFields(1,1);
+		this.setFields(0,2);
+		this.setFields(2,0);
+	}
+
+	start_v1() {
+		this.setCell(0,0);
+		this.setCell(0,1);
+		this.setCell(1,0);
+	}
+
+	start_v2() {
+		this.setCell(0,0);
+		this.setCell(1,1);
+	}
+
+	start_v3() {
+		this.setCell(0,0);
+		this.setCell(0,1);
+	}
+	start_v4() {
+		this.setCell(0,0);
+		this.setCell(0,1);
+		this.setCell(1,0);
+		this.setCell(1,1);
+	}
+
+	setFields(x,y) {
+		let row = document.querySelector(`#game-row-${x}`);
+		let cell = row.querySelector(`#game-cell-${y}`);
+		cell.classList.add('select');
 	}
 
 	setCell(x,y) {

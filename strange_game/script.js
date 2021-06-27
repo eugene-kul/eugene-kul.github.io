@@ -15,6 +15,31 @@ for (let cell of _game.cells) {
 	});
 }
 
+let reset_btns = document.querySelector('.js-reset');
+reset_btns.addEventListener('click', function(){
+	for (let cell of _game.active_cells) {
+		let point = {
+			x: Number(cell.parentNode.dataset.id),
+			y: Number(cell.dataset.id),
+		};
+		_game.removeCell(point);
+	}
+	_game.start_v1();
+});
+
+let var_btns = document.querySelector('.js-var-game');
+var_btns.addEventListener('click', function(){
+	let list = var_btns.nextElementSibling;
+	list.classList.toggle('active');
+	let items = list.querySelectorAll('li');
+	for(let item of items) {
+		item.addEventListener('click', function(){
+			console.log(item.textContent);
+			list.classList.remove('active');
+		});
+	}
+});
+
 let modal_btns = document.querySelectorAll('.js-open-modal');
 let modal_body = document.querySelector('.js-modal-body');
 let modal_overflow = document.querySelector('.js-modal-overflow');
