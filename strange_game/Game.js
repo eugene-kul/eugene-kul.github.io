@@ -2,6 +2,7 @@ class Game {
 	constructor() {
 		this.body = document.querySelector('#game');
 	}
+
 	
 	init() {
 		for (let i=0;i<100;i++) {
@@ -16,12 +17,14 @@ class Game {
 			}
 		}
 		this.cells = document.querySelectorAll('.game__cell');
+		this.active_cells = document.querySelectorAll('.game__cell.active');
 	}
 
 	setCell(x,y) {
 		let row = document.querySelector(`#game-row-${x}`);
 		let cell = row.querySelector(`#game-cell-${y}`);
 		cell.classList.add('active');
+		this.active_cells = document.querySelectorAll('.game__cell.active');
 	}
 
 	removeCell(point) {
