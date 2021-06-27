@@ -17,7 +17,7 @@ for (let cell of _game.cells) {
 
 let modal_btns = document.querySelectorAll('.js-open-modal');
 let modal_body = document.querySelector('.js-modal-body');
-let modal_overflow = modal_body.querySelector('.js-modal-overflow');
+let modal_overflow = document.querySelector('.js-modal-overflow');
 for (let btn of modal_btns) {
 	btn.addEventListener('click', function(e){
 		e.preventDefault();
