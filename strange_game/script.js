@@ -34,7 +34,7 @@ var_btns.addEventListener('click', function(){
 	let items = list.querySelectorAll('li');
 	for(let item of items) {
 		item.addEventListener('click', function(){
-			console.log(item.textContent);
+			console.log(this);
 			list.classList.remove('active');
 		});
 	}
