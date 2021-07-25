@@ -1,7 +1,11 @@
 #EXTM3U
-#EXTINF:-1,2×2
-http://93.91.113.8:9999/play/a06q/index.m3u8
-#EXTINF:-1,2×2 +2
-http://95.170.157.5:8088/channel3.m3u8
-#EXTINF:-1,2×2 +4
-http://195.88.16.15/2×2/index.m3u8
+#EXTINF:-1,https://playlist-iptv.ru
+https://playlist-iptv.ru/wp-content/uploads/2018/11/tv-logo.png
+#EXTINF:0,Пятница HD
+https://vs6.vcdn.biz/5b39f9d7689deb889ec1ee82c2c05328_megogo/vod/fs/o/16283521/u_sid/0/u_uid/0/u_vod/0/u_device/cms_html5/u_srvc/28561/type.live/chunklist-sid732518808-b4000000.m3u8
+#EXTINF:-1,Пятница 
+http://ott-cdn.ucom.am/s50/04.m3u8
+#EXTINF:0,Пятница
+http://gorod.tv/s/live/14/86.169.51.136/0/0.m3u8
+#EXTINF:0,Пятница +2
+http://5.59.200.194:81/udp/239.72.6.177:1234
