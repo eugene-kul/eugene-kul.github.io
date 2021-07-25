@@ -1,400 +1,604 @@
-#EXTM3U url-tvg="http://api.torrent-tv.ru/ttv.xmltv.xml.gz"
-#EXTINF:-1 group-title="- IPTV webarmen.com/iptv",[Обновлён 23.03.2019 18:15]
-#EXTGRP:- IPTV webarmen.com/iptv
-https://webarmen.com/my/iptv/uploads/files/videoplayback.mp4
-#EXTINF:-1 group-title="- IPTV webarmen.com/iptv",[Группа https://vk.com/iptvweb]
-#EXTGRP:- IPTV webarmen.com/iptv
-https://webarmen.com/my/iptv/uploads/files/dog.mp4
-#EXTINF:-1 group-title="- IPTV webarmen.com/iptv",[Пожертвования https://webarmen.com/iptv]
-#EXTGRP:- IPTV webarmen.com/iptv
-https://webarmen.com/my/iptv/uploads/files/videoplayback.mp4
-#EXTINF:-1 group-title="- IPTV webarmen.com/iptv",[Ваша поддержка помогает развивать проект и улучшать его качество!]
-#EXTGRP:- IPTV webarmen.com/iptv
-https://webarmen.com/my/iptv/uploads/files/videoplayback.mp4
-#EXTINF:-1 group-title="Новости;HD" tvg-id="7663" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/2.png" tvg-name="Первый канал HD",Первый канал HD
-#EXTGRP:Новости
-http://91.105.132.59:81/udp/239.54.5.61:1224
-#EXTINF:-1 group-title="Новости" tvg-id="7662" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/154.png" tvg-name="Первый канал",Первый канал
-#EXTGRP:Новости
-http://94.19.154.117:4444/udp/239.239.1.64:5239
-#EXTINF:-1 group-title="Новости;HD" tvg-id="7665" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/1.png" tvg-name="Россия 1 HD",Россия 1 HD
-#EXTGRP:Новости
-http://188.243.188.75:443/udp/239.239.3.66:5239
-#EXTINF:-1 group-title="Новости" tvg-id="7664" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/177.png" tvg-name="Россия 1",Россия 1
-#EXTGRP:Новости
-http://176.51.202.7:1234/udp/225.54.205.130:5000
-#EXTINF:-1 group-title="Новости" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/155.png" tvg-name="Россия 24",Россия 24
-#EXTGRP:Новости
-http://176.111.65.31:1234/udp/224.1.1.1:1234
-#EXTINF:-1 group-title="Новости" tvg-id="2245" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/88.png" tvg-name="BBC World News",BBC World News
-#EXTGRP:Новости
-http://rb-group-server.com:25461/rachid123/rachid321/3772
-#EXTINF:-1 group-title="Новости;HD" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/193.png" tvg-name="Дождь HD",Дождь HD
-#EXTGRP:Новости
-http://194.28.152.230:81/udp/225.0.56.65:1234
-#EXTINF:-1 group-title="Новости" tvg-id="6449" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/200.png" tvg-name="Москва 24",Москва 24
-#EXTGRP:Новости
-http://178.217.68.23:81/udp/239.224.0.46:1234
-#EXTINF:-1 group-title="Новости" tvg-id="397" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/210.png" tvg-name="РБК",РБК
-#EXTGRP:Новости
-http://176.51.74.227:1234/udp/233.7.70.35:5000
-#EXTINF:-1 group-title="Новости" tvg-id="404" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/217.png" tvg-name="Ru TV",Ru TV
-#EXTGRP:Новости
-http://185.242.18.195:81/udp/239.195.2.34:1234
-#EXTINF:-1 group-title="Развлекательные" tvg-id="1153" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/55.png" tvg-name="ТНТ",ТНТ
-#EXTGRP:Развлекательные
-http://video-4-206.rutube.ru/stream/10113616/546602986e6a424d74d594876ddb3f04/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Развлекательные" tvg-id="387" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/60.png" tvg-name="СТС",СТС
-#EXTGRP:Развлекательные
-http://188.243.189.238:81/udp/239.239.2.64:5239
-#EXTINF:-1 group-title="Детям;Развлекательные" tvg-id="390" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/4.png" tvg-name="2x2",2x2
-#EXTGRP:Детям
-http://188.243.93.225:81/udp/239.239.3.3:5239
-#EXTINF:-1 group-title="Развлекательные" tvg-id="754" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/5.png" tvg-name="Ю",Ю
-#EXTGRP:Развлекательные
-http://video-4-103.rutube.ru/stream/10113616/5c9327074e25ca86f3111d4085cbbb65/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Развлекательные" tvg-id="388" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/8.png" tvg-name="Пятница",Пятница
-#EXTGRP:Развлекательные
-http://video-4-105.rutube.ru/stream/10113616/9f87a9a0cecbe773be6fddcbd93585ac/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Развлекательные" tvg-id="385" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/137.png" tvg-name="Домашний",Домашний
-#EXTGRP:Развлекательные
-http://95.85.79.50:999/udp/239.191.254.23:13343
-#EXTINF:-1 group-title="Развлекательные" tvg-id="389" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/39.png" tvg-name="Че",Че
-#EXTGRP:Развлекательные
-http://109.201.117.114:7781/udp/234.109.202.2:1234
-#EXTINF:-1 group-title="Развлекательные" tvg-id="101" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/6.png" tvg-name="TLC",TLC
-#EXTGRP:Развлекательные
-http://185.35.4.21:22/udp/239.128.129.2:1300
-#EXTINF:-1 group-title="Развлекательные;HD" tvg-id="20356" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/202.png" tvg-name="Fine Living HD",Fine Living HD
-#EXTGRP:Развлекательные
-http://62.122.95.104:81/udp/238.1.2.40:1234
-#EXTINF:-1 group-title="Развлекательные" tvg-id="9303" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/201.png" tvg-name="Fine Living",Fine Living
-#EXTGRP:Развлекательные
-http://5.43.137.89:81/udp/239.255.0.192:1234
-#EXTINF:-1 group-title="Развлекательные;HD" tvg-id="1462" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/46.png" tvg-name="FOX HD",FOX HD
-#EXTGRP:Развлекательные
-http://37.235.175.161:81/udp/225.50.71.25:1234
-#EXTINF:-1 group-title="Развлекательные" tvg-id="401" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/9.png" tvg-name="FOX",FOX
-#EXTGRP:Развлекательные
-http://95.85.79.50:999/udp/239.191.254.107:13343
-#EXTINF:-1 group-title="Развлекательные;HD" tvg-id="12772" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/48.png" tvg-name="НТВ HD",НТВ HD
-#EXTGRP:Развлекательные
+#EXTM3U
+#EXTINF:-1,=== Обновлён: 22.03.2019 ===
+https://smarttvnews.ru/wp-content/uploads/2018/11/BT-2016-logo_color7890.png
+#EXTINF:-1,=== Обсуждение: smarttvnews.ru ===
+https://smarttvnews.ru/wp-content/uploads/2018/11/BT-2016-logo_color7890.png
+#EXTINF:-1,Discovery Channel
+http://46.32.68.167/s/live/423/86.169.51.136/2/0.m3u8
+#EXTINF:-1,Discovery Channel HD
+http://kp0t.vladna.club:7002/discoverhd/playlist.m3u8?token=RZ0F2dPt6FCRQgio
+#EXTINF:-1,Discovery Science HD
+http://kp0t.vladna.club:7002/discoverscihd/playlist.m3u8?token=RZ0F2dPt6FCRQgio
+#EXTINF:-1,Discovery Showcase HD
+http://kp0t.vladna.club:7002/showcasehd/playlist.m3u8?token=RZ0F2dPt6FCRQgio
+#EXTINF:-1,DTX
+http://182.73.122.74:10005/bysid/407
+#EXTINF:-1,ID Xtra
+http://46.32.68.167/s/live/403/86.169.51.136/2/0.m3u8
+#EXTINF:-1,National Geographic
+http://46.32.68.167/s/live/407/86.169.51.136/2/0.m3u8
+#EXTINF:-1,Nat Geo Wild HD
+https://utka.su/N_Geo_Wild_FHD
+#EXTINF:-1,TLC
+http://46.32.68.167/s/live/806/86.169.51.136/2/0.m3u8
+#EXTINF:-1,TLC HD
+https://utka.su/TLC_FHD
+#EXTINF:-1,Animal Planet HD
+http://2ng.ru/3g8
+#EXTINF:-1,DocuBox HD
+http://195.189.60.253/152/index.m3u8
+#EXTINF:-1,HDLife HD
+http://persik.by/stream/4402/392667/10295.m3u8
+#EXTINF:-1,Оружие
+http://46.32.68.167/s/live/804/86.169.51.136/2/0.m3u8
+#EXTINF:-1,Da Vinci Learning
+http://stream.euroasia.lfstrm.tv/da_vinci_learning/1/index.m3u8
+#EXTINF:-1,Viasat Explore
+http://stream.euroasia.lfstrm.tv/viasat_explore/1/index.m3u8
+#EXTINF:-1,Viasat History
+http://stream.euroasia.lfstrm.tv/viasat_history/1/index.m3u8
+#EXTINF:-1,Viasat Nature
+http://stream.euroasia.lfstrm.tv/viasat_nature/1/index.m3u8
+#EXTINF:-1,Приключения HD
+http://ott-cdn.ucom.am/s99/index.m3u8
+#EXTINF:-1,FINE LIVING
+http://ott-cdn.ucom.am/s51/index.m3u8
+#EXTINF:-1,Travel channel
+http://stream.euroasia.lfstrm.tv/travel_channel/1/index.m3u8
+#EXTINF:-1,Наука 2.0
+http://ott-cdn.ucom.am/s98/index.m3u8
+#EXTINF:-1,CGTN Русский
+http://live.cgtn.com/1000r/prog_index.m3u8
+#EXTINF:-1,Silence TV WORLD HD
+http://109.236.85.100:8081/SilenceTV/live/playlist.m3u8
+#EXTINF:-1,Buy Home TV
+http://hls-edge.cdn.buy-home.tv/bhtvlive/_definst_/live/playlist.m3u8
+#EXTINF:-1,Nano TV
+http://nano.teleservice.su:8080/hls/nano.m3u8
+#EXTINF:-1,Nano TV HD
+http://serv30.vintera.tv:8081/nano/nanohd/playlist.m3u8
+#EXTINF:-1,Моя планета
+http://stream.euroasia.lfstrm.tv/moya_planeta/1/index.m3u8
+#EXTINF:-1,Ocean TV
+http://91.192.168.242:9091
+#EXTINF:-1,Телепутешествия
+http://ott-cdn.ucom.am/s71/index.m3u8
+#EXTINF:-1,Вопросы и ответы
+http://31.184.192.35:12007
+#EXTINF:-1,Naroddip
+#EXTVLCOPT:http-user-agent=smartlabs
+http://hls.goodgame.ru/hls/33226.m3u8
+#EXTINF:-1,История
+http://ott-cdn.ucom.am/s40/index.m3u8
+#EXTINF:-1,Здоровое ТВ
+http://stream.euroasia.lfstrm.tv/zdorovoe_tv/1/index.m3u8
+#EXTINF:-1,Здоровье
+http://ott-cdn.ucom.am/s90/index.m3u8
+#EXTINF:-1,Зоо ТВ
+http://ott-cdn.ucom.am/s92/index.m3u8
+#EXTINF:-1,24 док
+http://stream.euroasia.lfstrm.tv/24_doc/1/index.m3u8
+#EXTINF:-1,Домашние Животные
+http://31.184.192.35:12005
+#EXTINF:0,Настоящее время
+http://rfe-lh.akamaihd.net/i/rfe_tvmc5@383630/master.m3u8
+#EXTINF:0,Russian Travel Guide
+http://ott-cdn.ucom.am/s80/01.m3u8
+#EXTINF:-1,Доктор
+http://ott-cdn.ucom.am/s76/index.m3u8
+#EXTINF:-1,Усадьба
+http://stream.euroasia.lfstrm.tv/usadba/1/index.m3u8
+#EXTINF:-1,Бобёр
+http://stream.euroasia.lfstrm.tv/bober/1/index.m3u8
+#EXTINF:-1,Загородная жизнь
+http://stream.euroasia.lfstrm.tv/zagorodnaya_zhizn/1/index.m3u8
+#EXTINF:-1,Загородный
+http://ott-cdn.ucom.am/s31/index.m3u8
+#EXTINF:-1,RTG
+http://ott-cdn.ucom.am/s80/index.m3u8
+#EXTINF:-1,RTG HD
+http://ott-cdn.ucom.am/s63/index.m3u8
+#EXTINF:0,Luxury
+http://nano.teleservice.su:8080/hls/luxury.m3u8
+#EXTINF:-1,РЖД ТВ HD
+http://hls.tva.cdnvideo.ru/tva/tvahd.sdp/chunklist.m3u8
+#EXTINF:0,Еда Премиум HD
+http://now2.eaglecdn.com/stream/tveda_12/index.m3u8
+#EXTINF:0,Food Network 
+http://ott-cdn.ucom.am/s18/index.m3u8
+#EXTINF:0,Магия Кухни ТВ
+http://sc.id-tv.kz/MagiyaKuhni_36_37.m3u8
+#EXTINF:-1,Renome
+http://85.238.112.40:8810/hls_sec/online/list-renome.m3u8
+#EXTINF:-1,Outdoor Channel
+http://46.32.68.167/s/live/815/86.169.51.136/2/0.m3u8
+#EXTINF:-1,Рыбалка и охота
+http://stream.euroasia.lfstrm.tv/ohota/1/index.m3u8
+#EXTINF:-1,Драйв
+http://stream.euroasia.lfstrm.tv/drive/1/index.m3u8
+#EXTINF:-1,Авто 24
+http://stream.euroasia.lfstrm.tv/avto_24/1/index.m3u8
+#EXTINF:-1,Авто плюс
+http://stream.euroasia.lfstrm.tv/auto_plus/1/index.m3u8
+#EXTINF:-1,Gamechanel
+#EXTVLCOPT:http-user-agent=smartlabs
+http://hls.goodgame.ru/hls/152506.m3u8
+#EXTINF:0,Travel HD BG
+http://31.13.223.104:1935/travel/community.stream/playlist.m3u8
+#EXTINF:0,Univer TV HD
+http://cdn.universmotri.ru/live/hq.sdp/playlist.m3u8
+#EXTINF:0,ID Fashion HD
+http://idfashion-hls1.cosmonova.net.ua/hls/idfashion_ua_hi/index.m3u8
+#EXTINF:0,World Fashion Channel Россия HD
+http://wfc.bonus-tv.ru:80/cdn/wfcrus/tracks-v1a1/index.m3u8
+#EXTINF:-1,Дом Кино Премиум HD
+http://91.231.219.145:80/tv_dom_kino_premium_HD/playlist.m3u8
+#EXTINF:-1,Дом Кино Премиум HD
+#EXTVLCOPT:http-user-agent=smartlabs
+http://91.231.219.145:80/tv_dom_kino_premium_HD/video.m3u8
+#EXTINF:-1,Кинопремиум HD
+http://kp0t.vladna.club:7002/kinopremiymhd/playlist.m3u8?token=RZ0F2dPt6FCRQgio
+#EXTINF:-1,Кинопремьера HD
+http://kp0t.vladna.club:7002/kinopremhd/playlist.m3u8?token=RZ0F2dPt6FCRQgio
+#EXTINF:-1,Шокирующее HD
+http://91.223.105.236:8081/hlsx/472/472.m3u8?id=1188&p=87e0c783e9b31451
+#EXTINF:-1,КОМЕДИЙНОЕ HD
+http://91.223.105.236:8081/hlsx/473/473.m3u8?id=1188&p=12326fa256d9bf86
+#EXTINF:-1,Paramount Channel
+http://stream.euroasia.lfstrm.tv/paramount_channel/1/index.m3u8
+#EXTINF:-1,Paramount Comedy
+http://46.32.68.167/s/live/250/86.169.51.136/2/0.m3u8
+#EXTINF:-1,VIP Premiere HD
+https://live-hls-viasat.cdnvideo.ru/viasat/VIP_Premiere.smil/6640f0188641fa1fccaa65a50ab7737f--viasat--VIP_Premiere_480--chunklist.m3u8
+#EXTINF:-1,VIP Megahit HD
+https://live-hls-viasat.cdnvideo.ru/viasat/VIP_Megahit_HD.smil/537abb00a2eed3a846054204ca641e65--viasat--VIP_Megahit_HD_480--chunklist.m3u8
+#EXTINF:-1,VIP Comedy HD
+https://live-hls-viasat.cdnvideo.ru/viasat/Comedy_HD.smil/df53c5c4a89c886451700863e53d2148--viasat--Comedy_HD_480--chunklist.m3u88
+#EXTINF:-1,TV1000 Action
+http://ott-cdn.ucom.am/s91/index.m3u8
+#EXTINF:-1,Sony Channel
+http://46.32.68.167/s/live/259/86.169.51.136/2/0.m3u8
+#EXTINF:-1,Sony Sci-Fi
+http://46.32.68.167/s/live/258/86.169.51.136/2/0.m3u8
+#EXTINF:-1,Sony Turbo
+http://46.32.68.167/s/live/260/86.169.51.136/2/0.m3u8
+#EXTINF:-1,Sony
+http://stream.euroasia.lfstrm.tv/sony/1/index.m3u8
+#EXTINF:-1,Sony Turbo
+http://stream.euroasia.lfstrm.tv/sony_turbo/1/index.m3u8
+#EXTINF:-1,U.HD
+http://95.216.143.86:8888/live/uhd/playlist.m3u8
+#EXTINF:-1,Hollywood
+http://46.32.68.167/s/live/256/86.169.51.136/2/0.m3u8
+#EXTINF:-1,Bollywood
+http://stream.euroasia.lfstrm.tv/bollywood_hd/1/index.m3u8
+#EXTINF:-1,BollywooD HD
+http://77.245.98.22:8000/play/403/index.m3u8
+#EXTINF:-1,Дом кино
+http://46.32.68.167/s/live/207/86.169.51.136/2/0.m3u8
+#EXTINF:-1,Киномикс
+http://46.32.68.167/s/live/265/86.169.51.136/2/0.m3u8
+#EXTINF:-1,Киносвидание
+http://46.32.68.167/s/live/267/86.169.51.136/2/0.m3u8
+#EXTINF:-1,Киносемья
+http://46.32.68.167/s/live/266/86.169.51.136/2/0.m3u8
+#EXTINF:-1,Кинокомедия
+http://46.32.68.167/s/live/254/86.169.51.136/2/0.m3u8
+#EXTINF:-1,Киносерия
+http://46.32.68.167/s/live/253/86.169.51.136/2/0.m3u8
+#EXTINF:-1,Мир Сериала
+http://46.32.68.167/s/live/261/86.169.51.136/2/0.m3u8
+#EXTINF:-1,Кинохит
+http://109.95.47.229:809/83/index.m3u8
+#EXTINF:-1,КИНОКОМЕДИЯ
+http://109.95.47.229:809/19/index.m3u8
+#EXTINF:-1,КИНОМИКС
+http://109.95.47.229:809/16/index.m3u8
+#EXTINF:-1,КИНОСВИДАНИЕ
+http://109.95.47.229:809/88/index.m3u8
+#EXTINF:-1,КИНОСЕМЪЯ
+http://109.95.47.229:809/87/index.m3u8
+#EXTINF:-1,Мужское кино
+http://46.32.68.167/s/live/255/86.169.51.136/2/0.m3u8
+#EXTINF:-1,Наше новое кино
+http://109.95.47.229:809/85/index.m3u8
+#EXTINF:-1,Индийское кино
+http://46.32.68.167/s/live/268/86.169.51.136/2/0.m3u8
+#EXTINF:-1,Родное кино
+http://109.95.47.229:809/15/index.m3u8
+#EXTINF:-1,Русский Бестселер
+http://182.73.122.74:10005/bysid/420
+#EXTINF:-1,Русский детектив
+http://182.73.122.74:10005/bysid/416
+#EXTINF:-1,Русский роман
+http://182.73.122.74:10005/bysid/415
+#EXTINF:-1,Иллюзион +
+http://stream.euroasia.lfstrm.tv/illusion_plus/1/index.m3u8
+#EXTINF:-1,Киноменю HD
+http://62.76.26.81:8081/hdmedia/menu/playlist.m3u8
+#EXTINF:-1,Комедийное
+http://91.223.105.236:8081/hlsx/473/473.m3u8?id=1188&p=12326fa256d9bf86
+#EXTINF:-1,Родное кино
+http://86.57.225.245:7015/play/a00j
+#EXTINF:-1,Еврокино
+http://stream.euroasia.lfstrm.tv/eurokino/1/index.m3u8
+#EXTINF:-1,Дорама
+http://ott-cdn.ucom.am/s95/index.m3u8
+#EXTINF:-1,НСТ
+http://ott-cdn.ucom.am/s87/index.m3u8
+#EXTINF:-1,Fox
+http://46.32.68.167/s/live/249/86.169.51.136/2/0.m3u8
+#EXTINF:-1,Fox Life
+http://46.32.68.167/s/live/248/86.169.51.136/2/0.m3u8
+#EXTINF:-1,Fox HD
+http://91.231.219.145:80/tv_fox_HD/video.m3u8
+#EXTINF:-1,КИНОМЕНЮ HD
+http://62.76.26.81:8081/hdmedia/menu/playlist.m3u8
+#EXTINF:-1,СТРК HD
+http://sochi-strk.ru:1936/strk/strk.stream/playlist.m3u8
+#EXTINF:-1,43 HD
+http://sochi-strk.ru:1936/strk/43Kanal.stream/playlist.m3u8
+#EXTINF:-1,312 КИНО HD
+http://176.126.166.43:1935/live/312kino/playlist.m3u8
+#EXTINF:-1,A HBO
+http://ott-cdn.ucom.am/s64/index.m3u8
+#EXTINF:-1,A-Media Hit
+http://46.32.68.167/s/live/210/86.169.51.136/2/0.m3u8
+#EXTINF:-1,A-Media Premium
+http://46.32.68.167/s/live/211/86.169.51.136/2/0.m3u8
+#EXTINF:-1,Amedia 1
+http://ott-cdn.ucom.am/s45/index.m3u8
+#EXTINF:-1,Amedia 2
+http://ott-cdn.ucom.am/s33/index.m3u8
+#EXTINF:-1,Amedia 1 HD
+http://stream.euroasia.lfstrm.tv/amedia_1/1/index.m3u8
+#EXTINF:-1,Amedia 2 HD
+http://stream.euroasia.lfstrm.tv/amedia_2/1/index.m3u8
+#EXTINF:-1,CINEMA
+http://stream.euroasia.lfstrm.tv/park_razvlecheniy/1/index.m3u8
+#EXTINF:-1,Киносат
+http://109.248.236.41:4433/udp/238.1.1.76:1234
+#EXTINF:-1,DOCENT 13
+#EXTVLCOPT:http-user-agent=smartlabs
+https://hls.goodgame.ru/hls/64556.m3u8
+#EXTINF:0,Кинозал Зарубежная киноклассика
+http://streams.tv.mts.by/zarubezhnaya_classica/1/index.m3u8
+#EXTINF:0,Кинозал Советская киноклассика
+http://streams.tv.mts.by/soviet_classic/1/index.m3u8
+#EXTINF:0,Кинозал Индийская киноклассика
+http://streams.tv.mts.by/indiyskaya_classica/1/index.m3u8
+#EXTINF:0,Кинозал Классика Голливуда
+http://streams.tv.mts.by/hollywood_classic/1/index.m3u8
+#EXTINF:-1,Кинопоказ HD 2
+http://91.223.105.236:8081/hlsx/473/473.m3u8?id=1188&p=12326fa256d9bf86
+#EXTINF:0,КиноЗаказ 1
+https://hls.goodgame.ru/hls/114023.m3u8
+#EXTINF:0,КиноЗаказ 2
+http://hls.goodgame.ru/hls/12949.m3u8
+#EXTINF:0,КиноЗаказ 3
+http://hls.goodgame.ru/hls/5346.m3u8
+#EXTINF:-1,Кино 1
+http://v2.myowntv.org/content/35618/index.m3u8?seg-uhd-club
+#EXTINF:-1,Кино 2
+http://v2.myowntv.org/content/35617/index.m3u8?seg-uhd-club
+#EXTINF:-1,Кино 3
+http://v2.myowntv.org/content/35608/index.m3u8?seg-uhd-club
+#EXTINF:-1,Кино 4
+http://v2.myowntv.org/content/35606/index.m3u8?seg-uhd-club
+#EXTINF:-1,Кино 5
+http://v2.myowntv.org/content/35601/index.m3u8?seg-uhd-club
+#EXTINF:-1,Кино 6
+http://v2.myowntv.org/content/35600/index.m3u8?seg-v1-a1.m3u
+#EXTINF:0,УЖАСЫ
+http://v2.myowntv.org/content/35026/index.m3u8
+#EXTINF:-1,ВИДЕОСАЛОН VHS
+#EXTVLCOPT:http-user-agent=smartlabs
+https://hls.goodgame.ru/hls/151157.m3u8
+#EXTINF:-1,U!Premium ATV
+http://ott-cdn.ucom.am/s83/index.m3u8
+#EXTINF:0,Armenia Comedy ATV
+http://ott-cdn.ucom.am/s32/index.m3u8
+#EXTINF:0,Cineman ATV 
+http://ott-cdn.ucom.am/s66/04.m3u8 
+#EXTINF:0,Filmzone ATV 
+http://ott-cdn.ucom.am/s48/04.m3u8 
+#EXTINF:0,Kinoman ATV 
+http://ott-cdn.ucom.am/s94/04.m3u8
+#EXTINF:-1,Haykino ATV
+http://ott-cdn.ucom.am/s22/index.m3u8
+#EXTINF:-1,НТМ HD
+http://live-ntm13.cdnvideo.ru/ntm13/smil:ntm13.smil/playlist.m3u8
+#EXTINF:-1,STR TV HD
+http://hls.goodgame.ru/hls/130048.m3u8
+#EXTINF:-1,Russian Extreme
+http://ott-cdn.ucom.am/s47/index.m3u8
+#EXTINF:-1,Eurosport 1
+http://46.32.68.167/s/live/501/86.169.51.136/2/0.m3u8
+#EXTINF:-1,Eurosport 2
+http://46.32.68.167/s/live/502/86.169.51.136/2/0.m3u8
+#EXTINF:-1,Viasat Sport
+http://stream.euroasia.lfstrm.tv/viasat_sport/1/index.m3u8
+#EXTINF:0,Setanta Sport
+http://ott-cdn.ucom.am/s81/index.m3u8
+#EXTINF:-1,Setanta Sport HD
+http://92.46.127.146:8080/SetantaSport/index.m3u8
+#EXTINF:-1,Setanta Sport Plus
+http://stream.euroasia.lfstrm.tv/setanta_sport_plus/1/index.m3u8
+#EXTINF:-1,Setanta Sport Plus HD
+http://92.46.127.146:8080/SetantaSportPlus/index.m3u8
+#EXTINF:-1,Беларусь 5 Спорт
+http://95.46.208.76:9898/belarus5
+#EXTINF:-1,Xsport
+http://95.67.103.251/hls/xsport_ua_mid/index.m3u8
+#EXTINF:0,Xsport HD
+http://95.67.103.251/hls/xsport_ua_hi/index.m3u8
+#EXTINF:-1,Nickelodeon
+http://stream.euroasia.lfstrm.tv/nickelodeon/1/index.m3u8
+#EXTINF:-1,Nick jr
+http://85.112.114.12:8080/ch1650/index.m3u8
+#EXTINF:-1,Niki Junior
+http://213.174.8.7:9100/index.m3u8
+#EXTINF:-1,Tiji
+http://stream.euroasia.lfstrm.tv/tiji/1/index.m3u8
+#EXTINF:-1,Tiji
+http://ott-cdn.ucom.am/s59/index.m3u8
+#EXTINF:-1,Disney канал
+http://ott-cdn.ucom.am/s60/index.m3u8
+#EXTINF:-1,Том & Джерри
+http://v2.myowntv.org/content/35845/index.m3u8?seg-uhd-club
+#EXTINF:-1,Рыжий
+http://ott-cdn.ucom.am/s57/index.m3u8
+#EXTINF:-1,Kidzone
+http://88.216.48.14:80/kidzone/live.m3u8
+#EXTINF:-1,Плюсs Плюс
+http://212.115.255.197/hls/plusplus.m3u8
+#EXTINF:-1,Cartoon Network
+http://stream.euroasia.lfstrm.tv/cartoon_network/1/index.m3u8
+#EXTINF:0,Малятко 
+http://api.tv.ipnet.ua/api/v1/manifest/1311963260.m3u8
+#EXTINF:-1,Детский
+http://stream.euroasia.lfstrm.tv/detskiy/1/index.m3u8
+#EXTINF:-1,Детский мир
+http://stream.euroasia.lfstrm.tv/detskiy_mir/1/index.m3u8
+#EXTINF:-1,clementia
+#EXTVLCOPT:http-user-agent=smartlabs
+http://hls.goodgame.ru/hls/153656.m3u8
+#EXTINF:-1,Tuntunik
+http://ott-cdn.ucom.am/s46/index.m3u8
+#EXTINF:0,Мульт 
+http://ott-cdn.ucom.am/s58/index.m3u8
+#EXTINF:0,Мультимания 
+http://82.193.71.93/MultimaniaLV/video.m3u8 
+#EXTINF:-1,Lale
+http://stream.atr.ua/lale//live/index.m3u8
+#EXTINF:-1,СКАЗКИ ЗАЙКИ
+http://skazki.vintera.tv:8081/skazki/zaj/playlist.m3u8
+#EXTINF:-1,Малятко ТВ
+http://api.tv.ipnet.ua/api/v1/manifest/1311963260.m3u8?codec=mpeg4&app=playlist
+#EXTINF:0,Мама 
+http://ott-cdn.ucom.am/s77/index.m3u8
+#EXTINF:-1,Первый Канал
+http://79.135.71.195:7777
+#EXTINF:-1,Первый канал
+http://182.73.122.74:10005/bysid/414
+#EXTINF:-1,Первый канал HD
+http://kp0t.vladna.club:7002/perviihd/playlist.m3u8?token=RZ0F2dPt6FCRQgio
+#EXTINF:-1,Время
+http://stream.euroasia.lfstrm.tv/vremya/1/index.m3u8
+#EXTINF:-1,Первый городской (Киров)
+http://live-1gorodskoi.cdnvideo.ru/1gorodskoi/1kirov.sdp/playlist.m3u8
+#EXTINF:-1,РТР Россия
+http://stream.euroasia.lfstrm.tv/rtr_planeta/1/index.m3u8
+#EXTINF:-1,Россия 1
+http://79.135.71.195:7778
+#EXTINF:-1,Россия 1 HD
+http://kp0t.vladna.club:7002/rossia1hd/playlist.m3u8?token=RZ0F2dPt6FCRQgio
+#EXTINF:-1,Россия 24
+http://stream.euroasia.lfstrm.tv/rossia_24/1/index.m3u8
+#EXTINF:0,Мир 
+http://hls.mirtv.cdnvideo.ru/mirtv-parampublish/mirtv3_2500/chunklist.m3u8
+#EXTINF:-1,Мир HD
+http://hls.mirtv.cdnvideo.ru/mirtv-parampublish/mirtv_2500/playlist.m3u8
+#EXTINF:0,МИР Premium
+http://hls.mirtv.cdnvideo.ru/mirtv-parampublish/hd/playlist.m3u8
+#EXTINF:0,Мир 24 HD 
+http://hls.mirtv.cdnvideo.ru/mirtv-parampublish/mir24_2500/playlist.m3u8
+#EXTINF:-1,ТНТ
+http://77.233.16.238:8081
+#EXTINF:-1,ТНТ HD
+#EXTVLCOPT:http-user-agent=smartlabs
+http://91.231.219.145:80/tv_tnt_HD/video.m3u8
+#EXTINF:-1,ТНТ 4
+http://kp0t.vladna.club:7002/tnt4/playlist.m3u8?token=RZ0F2dPt6FCRQgio
+#EXTINF:-1,НТВ
+https://live-4-102.rutube.ru/stream/10213616/42a58f895935bbf495089a2e1fe15e46/tracks-v1a1/mono.m3u8
+#EXTINF:-1,НТВ HD
 http://live-4-202.rutube.ru/stream/10113616/42a58f895935bbf495089a2e1fe15e46/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Развлекательные" tvg-id="10562" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/47.png" tvg-name="НТВ",НТВ
-#EXTGRP:Развлекательные
-http://88.201.207.63:81/udp/239.239.1.3:5239
-#EXTINF:-1 group-title="Развлекательные" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/92.png" tvg-name="Рен ТВ HD",Рен ТВ HD
-#EXTGRP:Развлекательные
-http://31.41.98.243:81/udp/225.0.56.96:1234
-#EXTINF:-1 group-title="Развлекательные;HD" tvg-id="386" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/96.png" tvg-name="Рен ТВ",Рен ТВ
-#EXTGRP:Развлекательные
+#EXTINF:-1,НТВ HD
+http://91.231.219.145:80/tv_ntv_HD/video.m3u8
+#EXTINF:-1,НТВ мир
+http://ott-cdn.ucom.am/s17/index.m3u8
+#EXTINF:-1,НТВ право
+http://88.216.48.14:80/ntvpravo/live.m3u8
+#EXTINF:-1,НТВ сериал
+http://88.216.48.14:80/ntvserial/live.m3u8
+#EXTINF:-1,НТВ стиль
+http://88.216.48.14:80/ntvstyle/live.m3u8
+#EXTINF:-1,Дождь
+http://37.194.184.105:81/udp/239.1.13.6:1234
+#EXTINF:0,Звезда 
+http://cdn-01.bonus-tv.ru:8080/zvezda/index.m3u8
+#EXTINF:0,Звезда HD 
+http://livezvezda.cdnvideo.ru/zv/zvezda1.sdp/playlist.m3u8 
+#EXTINF:-1,Россия РТР
+http://ott-cdn.ucom.am/s15/index.m3u8
+#EXTINF:0,Россия К 
+http://uiptv.do.am/1ufc/000000005/playlist.m3u8
+#EXTINF:-1,СТС
+http://46.32.64.42/s/live/8/86.169.51.136/1/0.m3u8
+#EXTINF:-1,Домашний
+http://46.32.64.42/s/live/17/86.169.51.136/1/0.m3u8
+#EXTINF:-1,Пятница
+http://46.32.64.42/s/live/14/86.169.51.136/1/0.m3u8
+#EXTINF:-1,Пятница HD
+https://vs309.vcdn.biz/5b39f9d7689deb889ec1ee82c2c05328_megogo/vod/fs/o/16283521/u_sid/0/u_uid/0/u_vod/0/u_device/cms_html5/u_srvc/28561/type.live/playlist.m3u8
+#EXTINF:0,Рен ТВ
 http://ott-cdn.ucom.am/s85/index.m3u8
-#EXTINF:-1 group-title="Развлекательные" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/134.png" tvg-name="Культура",Культура
-#EXTGRP:Развлекательные
-http://95.141.225.78:4022/udp/233.49.170.80:5000
-#EXTINF:-1 group-title="Развлекательные" tvg-id="20364" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/157.png" tvg-name="ТВ Центр",ТВ Центр
-#EXTGRP:Развлекательные
-http://uiptv.do.am/1ufc/000000009/playlist.m3u8
-#EXTINF:-1 group-title="Развлекательные" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/136.png" tvg-name="ТВ-3",ТВ-3
-#EXTGRP:Развлекательные
-http://video-4-206.rutube.ru/stream/10113616/7bf12d9c050f9a7ef3728db5730432ae/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="Развлекательные" tvg-id="1406" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/156.png" tvg-name="5 канал",5 канал
-#EXTGRP:Развлекательные
-http://95.85.79.50:999/udp/239.191.254.130:13343
-#EXTINF:-1 group-title="Развлекательные" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/145.png" tvg-name="CT 1 HD",CT 1 HD
-#EXTGRP:Развлекательные
-http://134.255.51.198:9000/stream/channelid/1312344126
-#EXTINF:-1 group-title="Развлекательные" tvg-id="20692" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/183.png" tvg-name="Армения ТВ",Армения ТВ
-#EXTGRP:Развлекательные
-http://213.193.6.177:12345/udp/239.255.10.85:5500
-#EXTINF:-1 group-title="Развлекательные" tvg-id="14476" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/199.png" tvg-name="E TV",E TV
-#EXTGRP:Развлекательные
-http://37.235.243.38:81/udp/225.50.64.98:1234
-#EXTINF:-1 group-title="Развлекательные" tvg-id="16057" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/213.png" tvg-name="КВН ТВ",КВН ТВ
-#EXTGRP:Развлекательные
-http://212.20.39.183:1234/udp/225.54.23.168:5000
-#EXTINF:-1 group-title="Кулинария;HD" tvg-id="8620" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/7.png" tvg-name="Еда Премиум",Еда Премиум
-#EXTGRP:Кулинария
-http://95.37.55.201:4088/udp/225.52.143.83:5000
-#EXTINF:-1 group-title="Кулинария" tvg-id="1429" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/175.png" tvg-name="Кухня ТВ",Кухня ТВ
-#EXTGRP:Кулинария
-http://109.248.69.41:15999/udp/239.195.1.163:1234
-#EXTINF:-1 group-title="Познавательные;HD" tvg-id="21007" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/11.png" tvg-name="Discovery Science HD",Discovery Science HD
-#EXTGRP:Познавательные
-http://31.41.99.62:81/udp/225.0.56.24:1234
-#EXTINF:-1 group-title="Познавательные" tvg-id="1231" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/12.png" tvg-name="Discovery Channel",Discovery Channel
-#EXTGRP:Познавательные
-http://212.164.32.26:1234/udp/233.7.70.12:5000
-#EXTINF:-1 group-title="Познавательные" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/77.png" tvg-name="Investigation Discovery",Investigation Discovery
-#EXTGRP:Познавательные
-http://5.2.47.55:81/udp/239.254.2.141:1234
-#EXTINF:-1 group-title="Познавательные;HD" tvg-id="10328" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/13.png" tvg-name="National Geographic HD",National Geographic HD
-#EXTGRP:Познавательные
-http://37.235.165.119:81/udp/225.50.71.16:1234
-#EXTINF:-1 group-title="Познавательные" tvg-id="737" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/14.png" tvg-name="Nat Geo Wild",Nat Geo Wild
-#EXTGRP:Познавательные
-http://5.137.25.22:1234/udp/233.7.70.43:5000
-#EXTINF:-1 group-title="Познавательные;HD" tvg-id="1535" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/17.png" tvg-name="Travel Channel HD",Travel Channel HD
-#EXTGRP:Познавательные
-http://188.35.9.77:14031/udp/174m
-#EXTINF:-1 group-title="Познавательные;HD" tvg-id="10366" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/28.png" tvg-name="Планета HD",Планета HD
-#EXTGRP:Познавательные
-http://46.50.233.81:34040/udp/239.54.7.170:1224
-#EXTINF:-1 group-title="Познавательные" tvg-id="1634" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/27.png" tvg-name="Планета",Планета
-#EXTGRP:Познавательные
-http://176.51.202.7:1234/udp/233.7.70.132:5000
-#EXTINF:-1 group-title="Познавательные" tvg-id="924" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/58.png" tvg-name="Наука 2.0",Наука 2.0
-#EXTGRP:Познавательные
-http://185.242.18.195:81/udp/239.195.4.88:1234
-#EXTINF:-1 group-title="Познавательные;HD" tvg-id="5433" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/63.png" tvg-name="History HD",History HD
-#EXTGRP:Познавательные
-http://5.43.146.140:8000/udp/239.255.0.148:1234
-#EXTINF:-1 group-title="Познавательные" tvg-id="5433" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/62.png" tvg-name="History",History
-#EXTGRP:Познавательные
-http://212.164.7.92:1234/udp/225.54.23.52:5000
-#EXTINF:-1 group-title="Познавательные" tvg-id="5435" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/82.png" tvg-name="Viasat Explore",Viasat Explore
-#EXTGRP:Познавательные
-http://176.111.66.216:1234/udp/224.1.1.93:1234
-#EXTINF:-1 group-title="Познавательные" tvg-id="5434" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/83.png" tvg-name="Viasat History",Viasat History
-#EXTGRP:Познавательные
-http://212.164.32.26:1234/udp/233.7.70.17:5000
-#EXTINF:-1 group-title="Познавательные" tvg-id="6986" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/86.png" tvg-name="Galaxy",Galaxy
-#EXTGRP:Познавательные
-http://178.163.86.191:4022/udp/234.0.0.111:2000
-#EXTINF:-1 group-title="Познавательные;HD" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/153.png" tvg-name="Живи HD",Живи HD
-#EXTGRP:Познавательные
-http://31.41.99.62:81/udp/225.0.56.54:1234
-#EXTINF:-1 group-title="Познавательные" tvg-id="2022" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/148.png" tvg-name="Живи!",Живи!
-#EXTGRP:Познавательные
-http://158.46.111.177:81/udp/239.255.42.22:1234
-#EXTINF:-1 group-title="Познавательные" tvg-id="21267" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/163.png" tvg-name="TRICK",TRICK
-#EXTGRP:Познавательные
-http://5.43.137.89:81/udp/239.255.0.219:1234
-#EXTINF:-1 group-title="Познавательные" tvg-id="2006" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/222.png" tvg-name="Travel + adventure",Travel + adventure
-#EXTGRP:Познавательные
-http://37.195.3.13:81/udp/239.1.5.7:1234
-#EXTINF:-1 group-title="Фильмы;HD" tvg-id="16924" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/19.png" tvg-name="Дом кино премиум HD",Дом кино премиум HD
-#EXTGRP:Фильмы
-http://5.43.137.89:81/udp/239.255.0.162:1234
-#EXTINF:-1 group-title="Фильмы" tvg-id="982" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/172.png" tvg-name="Дом кино",Дом кино
-#EXTGRP:Фильмы
-http://176.51.74.227:1234/udp/225.54.23.33:5000
-#EXTINF:-1 group-title="Фильмы" tvg-id="2850" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/25.png" tvg-name="Кинохит",Кинохит
-#EXTGRP:Фильмы
-http://193.238.130.169:4022/udp/239.1.21.27:1234
-#EXTINF:-1 group-title="Фильмы" tvg-id="2849" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/87.png" tvg-name="Киносемья",Киносемья
-#EXTGRP:Фильмы
-http://193.238.130.169:4022/udp/239.1.21.24:1234
-#EXTINF:-1 group-title="Фильмы" tvg-id="1436" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/149.png" tvg-name="Кинокомедия",Кинокомедия
-#EXTGRP:Фильмы
-http://95.85.79.50:999/udp/239.191.255.39:13343
-#EXTINF:-1 group-title="Фильмы" tvg-id="1415" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/203.png" tvg-name="Мужское кино",Мужское кино
-#EXTGRP:Фильмы
-http://5.2.47.55:81/udp/239.254.2.182:1234
-#EXTINF:-1 group-title="Фильмы;HD" tvg-id="20037" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/204.png" tvg-name="Мужское кино HD",Мужское кино HD
-#EXTGRP:Фильмы
-http://194.28.155.252:81/udp/225.0.56.11:1234
-#EXTINF:-1 group-title="Фильмы;Ужасы" tvg-id="1399" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/41.png" tvg-name="НСТ",НСТ
-#EXTGRP:Фильмы
-http://90.189.167.118:1234/udp/233.7.70.39:5000
-#EXTINF:-1 group-title="Фильмы;HD" tvg-id="18442" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/26.png" tvg-name="Paramount Comedy HD",Paramount Comedy HD
-#EXTGRP:Фильмы
-http://83.246.248.212:81/udp/239.54.5.117:1234
-#EXTINF:-1 group-title="Фильмы" tvg-id="3364" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/40.png" tvg-name="Paramount Comedy",Paramount Comedy
-#EXTGRP:Фильмы
-http://62.122.95.104:81/udp/238.1.2.127:1234
-#EXTINF:-1 group-title="Фильмы" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/188.png" tvg-name="Комедия",Комедия
-#EXTGRP:Фильмы
-http://176.51.74.227:1234/udp/225.54.23.166:5000
-#EXTINF:-1 group-title="Фильмы" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/101.png" tvg-name="TV XXI",TV XXI
-#EXTGRP:Фильмы
-http://185.24.34.97:8000/play/a071/index.m3u8
-#EXTINF:-1 group-title="Фильмы" tvg-id="6448" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/122.png" tvg-name="Москва Доверие",Москва Доверие
-#EXTGRP:Фильмы
-http://109.63.178.171:5000/udp/233.49.170.23:5000
-#EXTINF:-1 group-title="Фильмы" tvg-id="9307" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/211.png" tvg-name="Кино ТВ",Кино ТВ
-#EXTGRP:Фильмы
-http://178.163.125.147:81/udp/234.0.0.154:2000
-#EXTINF:-1 group-title="Фильмы;HD" tvg-id="16364" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/212.png" tvg-name="Кино ТВ HD",Кино ТВ HD
-#EXTGRP:Фильмы
-http://83.246.248.212:81/udp/239.54.6.185:1224
-#EXTINF:-1 group-title="Сериалы" tvg-id="5393" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/176.png" tvg-name="Загородная жизнь",Загородная жизнь
-#EXTGRP:Сериалы
-http://194.28.152.230:81/udp/225.0.55.17:1234
-#EXTINF:-1 group-title="Сериалы" tvg-id="20272" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/190.png" tvg-name="Дорама",Дорама
-#EXTGRP:Сериалы
-http://37.195.88.130:81/udp/239.1.21.56:1234
-#EXTINF:-1 group-title="Сериалы" tvg-id="18365" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/162.png" tvg-name="Супер",Супер
-#EXTGRP:Сериалы
-http://178.163.119.244:81/udp/234.0.0.100:2000
-#EXTINF:-1 group-title="Сериалы;HD" tvg-id="16567" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/161.png" tvg-name="Spike HD",Spike HD
-#EXTGRP:Сериалы
-http://193.238.130.169:4022/udp/239.1.21.57:1234
-#EXTINF:-1 group-title="Сериалы" tvg-id="16567" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/160.png" tvg-name="Spike",Spike
-#EXTGRP:Сериалы
-http://176.111.68.18:1234/udp/224.1.1.115:1234
-#EXTINF:-1 group-title="Сериалы" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/174.png" tvg-name="Zee tv",Zee tv
-#EXTGRP:Сериалы
-http://176.51.74.227:1234/udp/233.7.70.41:5000
-#EXTINF:-1 group-title="Сериалы" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/131.png" tvg-name="Sony Channel",Sony Channel
-#EXTGRP:Сериалы
-http://79.133.109.31:999/udp/239.191.254.48:13343
-#EXTINF:-1 group-title="Сериалы" tvg-id="9264" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/132.png" tvg-name="Sony Turbo",Sony Turbo
-#EXTGRP:Сериалы
-http://158.46.111.177:81/udp/239.255.42.93:1234
-#EXTINF:-1 group-title="Сериалы;HD" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/94.png" tvg-name="HBO HD",HBO HD
-#EXTGRP:Сериалы
-http://xxx.tvipbr.net:8080/lua/1234/8012
-#EXTINF:-1 group-title="Сериалы" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/93.png" tvg-name="HBO",HBO
-#EXTGRP:Сериалы
-http://lista.red:8880/live/011/011/34104.ts
-#EXTINF:-1 group-title="Детям" tvg-id="557" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/173.png" tvg-name="Nickelodeon",Nickelodeon
-#EXTGRP:Детям
-http://176.51.74.227:1234/udp/233.7.70.52:5000
-#EXTINF:-1 group-title="Детям" tvg-id="410" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/57.png" tvg-name="Карусель",Карусель
-#EXTGRP:Детям
-http://188.243.188.75:443/udp/239.239.1.8:5239
-#EXTINF:-1 group-title="Детям" tvg-id="1115" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/34.png" tvg-name="Cartoon Network",Cartoon Network
-#EXTGRP:Детям
-http://178.167.112.35:4022/udp/234.5.2.107:1234
-#EXTINF:-1 group-title="Детям" tvg-id="1428" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/71.png" tvg-name="Канал Disney",Канал Disney
-#EXTGRP:Детям
-http://188.243.216.113:443/udp/239.239.3.10:5239
-#EXTINF:-1 group-title="Детям" tvg-id="1387" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/72.png" tvg-name="Nick Jr.",Nick Jr.
-#EXTGRP:Детям
-http://5.43.146.140:8000/udp/239.255.0.49:1234
-#EXTINF:-1 group-title="Детям" tvg-id="14312" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/73.png" tvg-name="Детский",Детский
-#EXTGRP:Детям
-http://46.50.253.162:81/udp/239.54.5.127:1224
-#EXTINF:-1 group-title="Детям" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/76.png" tvg-name="Мульт и музыка",Мульт и музыка
-#EXTGRP:Детям
-http://91.190.178.28:81/udp/239.195.4.98:1234
-#EXTINF:-1 group-title="Детям" tvg-id="1820" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/74.png" tvg-name="TiJi",TiJi
-#EXTGRP:Детям
-http://185.242.22.207:4022/udp/239.195.65.35:1234
-#EXTINF:-1 group-title="Детям" tvg-id="10284" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/168.png" tvg-name="Рыжий",Рыжий
-#EXTGRP:Детям
-http://79.133.109.255:999/udp/239.191.254.196:13343
-#EXTINF:-1 group-title="Детям" tvg-id="15941" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/167.png" tvg-name="О!",О!
-#EXTGRP:Детям
-http://158.46.115.68:81/udp/239.255.42.130:1234
-#EXTINF:-1 group-title="Детям" tvg-id="13242" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/166.png" tvg-name="Ani",Ani
-#EXTGRP:Детям
-http://83.246.248.212:81/udp/239.54.6.109:1234
-#EXTINF:-1 group-title="Детям;HD" tvg-id="15814" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/165.png" tvg-name="TLUM HD",TLUM HD
-#EXTGRP:Детям
-http://46.241.81.71:81/udp/239.54.7.181:1234
-#EXTINF:-1 group-title="Детям" tvg-id="1427" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/198.png" tvg-name="JimJam",JimJam
-#EXTGRP:Детям
-http://178.163.32.156:81/udp/234.0.0.152:2000
-#EXTINF:-1 group-title="Детям" tvg-id="22656" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/207.png" tvg-name="FAN",FAN
-#EXTGRP:Детям
-http://37.235.243.38:81/udp/225.50.64.16:1234
-#EXTINF:-1 group-title="Детям;HD" tvg-id="22656" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/208.png" tvg-name="FAN HD",FAN HD
-#EXTGRP:Детям
-http://5.43.137.89:81/udp/239.255.0.235:1234
-#EXTINF:-1 group-title="Музыкальные;HD" tvg-id="8619" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/30.png" tvg-name="1HD",1HD
-#EXTGRP:Музыкальные
-http://88.201.207.63:81/udp/239.239.4.86:5239
-#EXTINF:-1 group-title="Музыкальные" tvg-id="403" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/31.png" tvg-name="Bridge TV",Bridge TV
-#EXTGRP:Музыкальные
-http://178.163.125.147:81/udp/234.0.0.180:2000
-#EXTINF:-1 group-title="Музыкальные" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/127.png" tvg-name="VH1 European",VH1 European
-#EXTGRP:Музыкальные
-http://176.51.74.227:1234/udp/233.7.70.2:5000
-#EXTINF:-1 group-title="Музыкальные" tvg-id="1129" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/171.png" tvg-name="VH1 Classic",VH1 Classic
-#EXTGRP:Музыкальные
-http://95.85.79.50:999/udp/239.191.254.168:13343
-#EXTINF:-1 group-title="Спорт;HD" tvg-id="13694" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/32.png" tvg-name="Матч! HD",Матч! HD
-#EXTGRP:Спорт
-http://93.100.115.107:4022/udp/239.239.3.34:5239
-#EXTINF:-1 group-title="Спорт" tvg-id="6886" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/38.png" tvg-name="Матч!",Матч!
-#EXTGRP:Спорт
-http://91.190.178.28:81/udp/239.195.1.3:1234
-#EXTINF:-1 group-title="Спорт" tvg-id="383" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/43.png" tvg-name="Матч! Арена",Матч! Арена
-#EXTGRP:Спорт
-http://109.248.69.41:15999/udp/239.195.1.68:1234
-#EXTINF:-1 group-title="Спорт;HD" tvg-id="1461" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/129.png" tvg-name="Матч! Игра HD",Матч! Игра HD
-#EXTGRP:Спорт
-http://178.163.125.147:81/udp/234.0.0.6:2000
-#EXTINF:-1 group-title="Спорт" tvg-id="1373" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/128.png" tvg-name="Матч! Игра",Матч! Игра
-#EXTGRP:Спорт
-http://193.238.130.169:4022/udp/239.1.12.10:1234
-#EXTINF:-1 group-title="Спорт" tvg-id="7017" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/66.png" tvg-name="Матч! Футбол 3",Матч! Футбол 3
-#EXTGRP:Спорт
-http://193.233.180.112:999/udp/239.191.255.20:13343
-#EXTINF:-1 group-title="Спорт" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/59.png" tvg-name="Матч Премьер",Матч Премьер
-#EXTGRP:Спорт
-http://185.242.22.207:4022/udp/239.195.65.65:1234
-#EXTINF:-1 group-title="Спорт" tvg-id="553" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/135.png" tvg-name="Матч! Боец",Матч! Боец
-#EXTGRP:Спорт
-http://81.94.31.41:81/udp/235.10.10.27:1234
-#EXTINF:-1 group-title="Спорт" tvg-id="380" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/33.png" tvg-name="Eurosport 1",Eurosport 1
-#EXTGRP:Спорт
-http://176.51.74.227:1234/udp/233.7.70.13:5000
-#EXTINF:-1 group-title="Спорт;HD" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/52.png" tvg-name="EUROSPORT 2 HD",EUROSPORT 2 HD
-#EXTGRP:Спорт
-http://193.238.130.169:4022/udp/239.1.18.2:1234
-#EXTINF:-1 group-title="Спорт" tvg-id="12204" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/61.png" tvg-name="Eurosport 2",Eurosport 2
-#EXTGRP:Спорт
-http://176.51.202.7:1234/udp/233.7.70.14:5000
-#EXTINF:-1 group-title="Спорт" tvg-id="406" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/170.png" tvg-name="Матч! Наш спорт",Матч! Наш спорт
-#EXTGRP:Спорт
-http://95.85.79.50:999/udp/239.191.254.203:13343
-#EXTINF:-1 group-title="Спорт" tvg-id="405" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/36.png" tvg-name="КХЛ",КХЛ
-#EXTGRP:Спорт
-http://109.248.66.39:4022/udp/239.195.1.73:1234
-#EXTINF:-1 group-title="Спорт;HD" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/81.png" tvg-name="Setanta Sports HD",Setanta Sports HD
-#EXTGRP:Спорт
-http://185.142.239.133:8000/play/513/index.m3u8
-#EXTINF:-1 group-title="Спорт" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/78.png" tvg-name="Setanta Sports",Setanta Sports
-#EXTGRP:Спорт
-http://92.43.140.204/s81/04.m3u8
-#EXTINF:-1 group-title="Спорт;HD" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/80.png" tvg-name="Setanta Sports + HD",Setanta Sports + HD
-#EXTGRP:Спорт
-http://185.142.239.133:8000/play/514/index.m3u8
-#EXTINF:-1 group-title="Спорт;HD" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/90.png" tvg-name="Bein Sport HD",Bein Sport HD
-#EXTGRP:Спорт
-http://linux-app.tv:6204/mme/123/2568
-#EXTINF:-1 group-title="Спорт" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/91.png" tvg-name="BeIn Sport",BeIn Sport
-#EXTGRP:Спорт
-http://cdnp.cli.tn/iptv/ch400?code=340018413514204&key=26409
-#EXTINF:-1 group-title="Спорт" tvg-id="4951" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/84.png" tvg-name="Viasat Sport",Viasat Sport
-#EXTGRP:Спорт
-http://176.51.74.227:1234/udp/233.7.70.15:5000
-#EXTINF:-1 group-title="Спорт" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/112.png" tvg-name="Sky Sports 2",Sky Sports 2
-#EXTGRP:Спорт
-http://5.254.66.150:8080/istar01/istar02/3414
-#EXTINF:-1 group-title="Спорт" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/169.png" tvg-name="Sky Sports F1",Sky Sports F1
-#EXTGRP:Спорт
-http://5.254.66.150:8080/hanen2/hanen2/4778
-#EXTINF:-1 group-title="Спорт;HD" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/126.png" tvg-name="SKY Sport News HD",SKY Sport News HD
-#EXTGRP:Спорт
-http://5.254.66.150:8080/istar01/istar02/3439
-#EXTINF:-1 group-title="Спорт" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/125.png" tvg-name="Sky Sport News",Sky Sport News
-#EXTGRP:Спорт
-http://88.152.15.230:7522/upnp/channelstream/117
-#EXTINF:-1 group-title="Спорт;HD" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/117.png" tvg-name="BT Sport 1 HD",BT Sport 1 HD
-#EXTGRP:Спорт
-http://gorillaiptv.online:25461/BWwGoSiTGA/Te91NfmvAC/1019
-#EXTINF:-1 group-title="Спорт" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/116.png" tvg-name="BT Sport 1",BT Sport 1
-#EXTGRP:Спорт
-http://deadpool.live:8080/123/123/6890
-#EXTINF:-1 group-title="Спорт;HD" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/124.png" tvg-name="BT Sport 3 HD",BT Sport 3 HD
-#EXTGRP:Спорт
-http://gorillaiptv.online:25461/BWwGoSiTGA/Te91NfmvAC/1015
-#EXTINF:-1 group-title="Спорт;HD" tvg-id="7496" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/206.png" tvg-name="Охотник и рыболов HD",Охотник и рыболов HD
-#EXTGRP:Спорт
-http://37.193.92.99:1234/udp/239.1.17.21:1234
-#EXTINF:-1 group-title="Спорт" tvg-id="10282" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/205.png" tvg-name="Охотник и рыболов",Охотник и рыболов
-#EXTGRP:Спорт
-http://46.174.80.24:7782/udp/238.1.2.9:1234
-#EXTINF:-1 group-title="Животные" tvg-id="5436" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/56.png" tvg-name="Viasat Nature",Viasat Nature
-#EXTGRP:Животные
-http://176.51.74.227:1234/udp/233.7.70.133:5000
-#EXTINF:-1 group-title="Животные;HD" tvg-id="12189" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/97.png" tvg-name="Animal Planet HD",Animal Planet HD
-#EXTGRP:Животные
-http://79.133.109.255:999/udp/239.191.254.212:15283
-#EXTINF:-1 group-title="Животные" tvg-id="392" tvg-logo="https://webarmen.com/my/iptv/uploads/icon/98.png" tvg-name="Animal Planet",Animal Planet
-#EXTGRP:Животные
-http://46.241.81.71:81/udp/239.54.6.84:1234
+#EXTINF:-1,ТВ Центр
+http://tvc-hls.cdnvideo.ru/tvc-p222/smil:tvc_p11.smil/playlist.m3u8
+#EXTINF:-1,RTVI
+http://stream.euroasia.lfstrm.tv/rtvi/1/index.m3u8
+#EXTINF:-1,Перец
+http://streams.tv.mts.by/peretz_int/1/index.m3u8
+#EXTINF:-1,Че!
+http://kp0t.vladna.club:7002/che/playlist.m3u8?token=RZ0F2dPt6FCRQgio
+#EXTINF:-1,Ю
+http://46.32.64.42/s/live/9/86.169.51.136/1/0.m3u8
+#EXTINF:-1,Новый мир
+http://stream.studio360.tv/nw/nw_576p/playlist.m3u8
+#EXTINF:-1,Sochi 24 HD
+http://live.maksmedia.cdnvideo.ru/maksmedia/maksmedia.sdp/playlist.m3u8
+#EXTINF:-1,360
+http://182.73.122.74:10005/bysid/404
+#EXTINF:-1,360 (Ярославль)
+http://gtk.tv/hls/gtr.m3u8
+#EXTINF:-1,78 Канал(Full HD)
+https://78.gcdn.co/streams/877_13/1080n/index.m3u8
+#EXTINF:-1,8 Канал
+http://80.65.18.213/perviy_molodeginyi_3100kb.m3u8
+#EXTINF:-1,Калейдоскоп ТВ 
+http://serv24.vintera.tv:8081/kaledoskop/kaledoskop/playlist.m3u8
+#EXTINF:0,ИКС HD 
+http://ikstv-htlive.cdn.ngenix.net/live/ikstv/playlist.m3u8
+#EXTINF:-1,ON! Пятница
+http://sc.id-tv.kz/Tan_36_37.m3u8
+#EXTINF:-1,Известия
+http://hls-igi.cdnvideo.ru/igi/igi_hq/playlist.m3u8
+#EXTINF:-1,TV Brics HD
+http://live2.mediacdn.ru/sr1/tvbrics/playlist.m3u8
+#EXTINF:0,Заречный ТВ 
+http://109.201.158.87:1935/trkz/trkz.sdp/playlist.m3u8
+#EXTINF:-1,Вместе РФ
+http://182.73.122.74:10005/bysid/428
+#EXTINF:-1,Вместе РФ HD
+http://cdn-01.bonus-tv.ru:8080/vmesterf/tracks-v1a1/index.m3u8
+#EXTINF:-1,Астрахань 24 +1
+http://streaming.astrakhan.ru/astrakhan24/tracks-v5a1/index.m3u8
+#EXTINF:-1,Беларусь 24
+http://stream.euroasia.lfstrm.tv/belarus_24/1/index.m3u8
+#EXTINF:-1,Беларусь 4
+http://95.46.208.8:26258/belarus4
+#EXTINF:-1,Беларусь 5
+http://95.46.208.76:9898/belarus5
+#EXTINF:0,Белгород 24 
+http://belnovosti.cdn.easyhoster.ru:8080/stream.m3u8
+#EXTINF:-1,Интер
+https://edge3.iptv.macc.com.ua/img/inter_3/index.m3u8
+#EXTINF:-1,К1
+http://109.68.40.67/life/k1_3/index.m3u8
+#EXTINF:-1,Київ
+http://api.tv.ipnet.ua/api/v1/manifest/1293296300.m3u8
+#EXTINF:-1,Brain TV HD
+http://jabber.divan.tv:8002/tv.m3u8
+#EXTINF:-1,UA TV
+http://api.tv.ipnet.ua/api/v1/manifest/2118742330.m3u8
+#EXTINF:-1,UA:Донбас
+http://api.tv.ipnet.ua/api/v1/manifest/1311274061.m3u8
+#EXTINF:-1,UA:КРИМ
+http://api.tv.ipnet.ua/api/v1/manifest/2118742409.m3u8
+#EXTINF:-1,UA:ПЕРШИЙ
+http://api.tv.ipnet.ua/api/v1/manifest/871803891.m3u8
+#EXTINF:-1,Сонце
+http://api.tv.ipnet.ua/api/v1/manifest/709640461.m3u8
+#EXTINF:-1,KRATU
+#EXTVLCOPT:network-caching=1000
+http://iptv.rubintele.com:8552/play/a008
+#EXTINF:-1,Citi TV
+http://api.tv.ipnet.ua/api/v1/manifest/2118742470.m3u8
+#EXTINF:-1,Новини 24
+http://api.tv.ipnet.ua/api/v1/manifest/1293298050.m3u8
+#EXTINF:-1,34
+http://api.tv.ipnet.ua/api/v1/manifest/2118742463.m3u8
+#EXTINF:-1,4 канал
+http://api.tv.ipnet.ua/api/v1/manifest/2118742331.m3u8
+#EXTINF:-1,ATR
+http://api.tv.ipnet.ua/api/v1/manifest/2007308341.m3u8
+#EXTINF:0,Макси ТВ 
+http://api.tv.ipnet.ua/api/v1/manifest/1293296550.m3u8
+#EXTINF:0,Еко ТВ 
+http://api.tv.ipnet.ua/api/v1/manifest/1311963170.m3u8
+#EXTINF:0,Еспресо 
+http://api.tv.ipnet.ua/api/v1/manifest/2007567821.m3u8
+#EXTINF:-1,ВТВ-Плюс
+#EXTVLCOPT:network-caching=1000
+http://iptv.rubintele.com:8552/play/a007
+#EXTINF:0,Думская TV HD
+http://cdn1.live-tv.od.ua:8081/dumska/dumska-abr/dumska/dumska720p/playlist.m3u8
+#EXTINF:-1,Галичина
+http://api.tv.ipnet.ua/api/v1/manifest/2118742464.m3u8
+#EXTINF:-1,Громадське ТБ
+http://api.tv.ipnet.ua/api/v1/manifest/2118742457.m3u8
+#EXTINF:0,5 Канал
+http://api.tv.ipnet.ua/api/v1/manifest/1293299450.m3u8
+#EXTINF:-1,112
+http://api.tv.ipnet.ua/api/v1/manifest/1442908080.m3u8
+#EXTINF:-1,112 HD
+http://app.live.112.events/hls-ua/112hd_hi/index.m3u8
+#EXTINF:-1,One.by
+http://rtmp.one.by:1200
+#EXTINF:-1,One.by 4K
+http://rtmp.one.by:1499
+#EXTINF:-1,One.by HD
+http://rtmp.one.by:1300
+#EXTINF:-1,One.by Россия
+http://rtmp.one.by:2200
+#EXTINF:-1,One.by Россия HD
+http://rtmp.one.by:2300
+#EXTINF:-1,SONG TV HD Russia
+https://songtvru.ru/lhigh/playlist.m3u8
+#EXTINF:-1,SONG TV FHD Russia
+https://songtvru.ru/hd/playlist.m3u8
+#EXTINF:0,Kronehit HD
+https://bitcdn-kronehit.bitmovin.com/v2/hls/chunklist_b3128000.m3u8
+#EXTINF:-1,KISS TV
+https://fms-https1.mediadirect.ro/live3/_definst_/kiss/playlist.m3u8
+#EXTINF:-1,Kral HD
+http://mid5dg6m.rocketcdn.com/kraltv_720/chunklist.m3u8
+#EXTINF:-1,Kral World HD
+http://stmpo0wa.rocketcdn.com/kralworldtv_720/chunklist.m3u8
+#EXTINF:-1,KRATU
+http://iptv.rubintele.com:8552/play/a008
+#EXTINF:-1,NR1 4K (Fake)
+http://nr1hls.radyotvonline.com/nr14k/nr14k_hd/playlist.m3u8
+#EXTINF:0 type="stream" channelId="-1", HIT TV HD
+http://kissfm-cires21-video.secure.footprint.net/hittv/bitrate_4.m3u8
+#EXTINF:-1,NRJ Hits
+http://5.196.138.6:1935/live/nrjbelgique_720p/playlist.m3u8
+#EXTINF:0 type="stream" channelId="-1", NRJ Hits HD
+http://5.196.138.6:1935/live/nrjbelgique_720p/playlist.m3u8
+#EXTINF:0,1 Music Channel
+http://stream.1music.hu/stream/1music.m3u8
+#EXTINF:0,BIM TV
+http://av.bimradio.ru/hls/video2/index.m3u8
+#EXTINF:-1,O-TV
+http://api.tv.ipnet.ua/api/v1/manifest/1293297500.m3u8
+#EXTINF:-1,М1
+http://212.115.255.197/hls/m1.m3u8
+#EXTINF:-1,М2
+http://212.115.255.197/hls/m2.m3u8
+#EXTINF:0,Шансон ТВ
+http://hls.shansontv.cdnvideo.ru/shansontv/shansontv_hq.sdp/playlist.m3u8
+#EXTINF:-1,MTV HD
+http://unilivemtveu-lh.akamaihd.net/i/mtvno_1@346424/index_3500_av-b.m3u8
+#EXTINF:-1,MTV HITS
+http://182.73.122.74:10005/bysid/412
+#EXTINF:-1,Music Box RU Gold
+http://live-musicbox.cdnvideo.ru/musicbox2/mboxtv.sdp/playlist.m3u8
+#EXTINF:-1,Music Choice
+http://edge.music-choice-play-chaina1.top.comcast.net/PlayMetadataInserter/play/chunklist.m3u8
+#EXTINF:0,MusicBox UA
+http://212.26.132.86/hls/mb_ua_2500.m3u8
+#EXTINF:0,MUSIC CHOICE
+http://edge.music-choice-play-chaina1.top.comcast.net/PlayMetadataInserter/play/chunklist.m3u8
+#EXTINF:-1,Retro Music Tv 
+http://stream.mediawork.cz/retrotv//retrotvHQ1/playlist.m3u8
