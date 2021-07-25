@@ -1,11 +1,4 @@
 #EXTM3U
-#EXTINF:1,ТНТ HD
-http://185.231.160.49/116/1/index.m3u8
-#EXTINF:1,ТНТ
-http://185.231.160.49/18/2/index.m3u8
-#EXTINF:1,ТНТ MUSIC
-http://185.231.160.49/22/2/index.m3u8
-#EXTINF:1,ТНТ
-http://185.231.160.49/82/2/index.m3u8
-#EXTINF:1,ТНТ4
-http://185.231.160.49/103/2/index.m3u8
+#EXTINF:-1,2×2 http://93.91.113.8:9999/play/a06q/index.m3u8
+#EXTINF:-1,2×2 +2 http://95.170.157.5:8088/channel3.m3u8
+#EXTINF:-1,2×2 +4 http://195.88.16.15/2×2/index.m3u8
