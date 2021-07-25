@@ -1,4 +1,7 @@
 #EXTM3U
-#EXTINF:-1,2×2 http://93.91.113.8:9999/play/a06q/index.m3u8
-#EXTINF:-1,2×2 +2 http://95.170.157.5:8088/channel3.m3u8
-#EXTINF:-1,2×2 +4 http://195.88.16.15/2×2/index.m3u8
+#EXTINF:-1,2×2
+http://93.91.113.8:9999/play/a06q/index.m3u8
+#EXTINF:-1,2×2 +2
+http://95.170.157.5:8088/channel3.m3u8
+#EXTINF:-1,2×2 +4
+http://195.88.16.15/2×2/index.m3u8
