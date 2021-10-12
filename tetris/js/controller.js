@@ -149,7 +149,7 @@ class Controller {
 					this.updateView();
 				}
 				break;
-			case 38: //up
+			case 32: //прабел
 				if (isPlaying) {
 					this.game.rotatePiece();
 					this.updateView();
