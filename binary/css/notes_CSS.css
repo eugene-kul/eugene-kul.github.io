@@ -1,9 +1,0 @@
-.block1__item {
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
-
-.block1__column {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 50%;
-  flex: 0 0 50%;
-  max-width: 50%; }
