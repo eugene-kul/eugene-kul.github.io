@@ -318,6 +318,16 @@ body {
     background-color: rgba(30, 30, 30, 0.6);
 }
 
+@media(max-width: 768px) {
+    .fields_body.fields_winner_player:before, .fields_body.fields_winner_comp:before {
+        padding: 10px 20px;
+        font-size: 30px;
+        line-height: 120%;
+        height: calc(100% - 20px);
+        width: calc(100% - 40px);
+    }
+}
+
 .field_container {
     margin: 3%;
     display: flex;

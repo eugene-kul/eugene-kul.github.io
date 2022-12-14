@@ -66,7 +66,7 @@ const setShips = (point, target) => {
                 'data-ship': matrix_value,
                 'data-error': error,
                 onmousedown: e => store.state.gameState === 'prepare' && target === 'player' && store.state[target].shipDragStart(e),
-                // todo! ontouchstart: e => target === "player" && store.state[target].shipDragStart(e),
+                ontouchstart: e => store.state.gameState === 'prepare' && target === 'player' && store.state[target].shipDragStart(e),
             })
     }
 
