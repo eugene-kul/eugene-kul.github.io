@@ -7,11 +7,11 @@ import store from './store/initialstore.js'
 const settings = {
     playerName: 'PLAYER',
     compName: 'COMP',
-    cellSize: 20,
-    maxShipCount: 27,
+    cellSize: 30,
+    maxShipCount: 4,
     fields: {
-        x: 32,
-        y: 32,
+        x: 10,
+        y: 10,
     },
 }
 actions.set('settings', settings)
