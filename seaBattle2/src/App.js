@@ -8,7 +8,7 @@ const settings = {
     playerName: 'PLAYER',
     compName: 'COMP',
     cellSize: 30,
-    maxShipCount: 4,
+    maxShipCount: 17,
     fields: {
         x: 10,
         y: 10,
