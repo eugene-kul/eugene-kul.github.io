@@ -47,22 +47,22 @@
 			<p>
 				<span class="item-info">это радиус главной точки, которая уже есть на экране</span>
 				<span>радиус:</span><input id="bigDotRad" 
-				value="15" type="number" name="form1">
+				value="10" type="number" name="form1">
 			</p>
 			<p>
 				<span class="item-info">это сила притяжения? 0 - частицы не будут следовать за курсором, 10000 - практически не отстают от курсора. При отрицательном значении, частицы будут отталкиваться, при положительном притягиваться</span>
 				<span>сила притяжения:</span><input id="gravity"
-				value="0" type="number" name="form1">
+				value="50000" type="number" name="form1">
 			</p>
 			<p>
 				<span class="item-info">это радиус отталкивания</span>
 				<span>радиус отталкивания:</span><input id="mouseSize" 
-				value="100" type="number" name="form1">
+				value="10" type="number" name="form1">
 			</p>
 			<p>
 				<span class="item-info">это сила отталкивания. При значении 0 не будут отталкиваться друг от друга</span>
 				<span>сила отталкивания:</span><input id="dotPushMain" 
-				value="10" type="number" name="form1">
+				value="500" type="number" name="form1">
 			</p>
 			<span class="desc">Все точки</span>
 			<p>
@@ -73,45 +73,45 @@
 			<p>
 				<span class="item-info">это max радиус появляющихся частиц, недопустимо, чтобы значение было меньше минимального</span>
 				<span>max радиус:</span><input id="dotMaxRad" 
-				value="20" type="number" name="form1">
+				value="6" type="number" name="form1">
 			</p>
 			<p>
 				<span class="item-info">окружность приятжения всех частиц, при значении 0 частицы будут собираться в точку</span>
 				<span>радиус притяжения:</span><input id="sphereRad" 
-				value="500" type="number" name="form1">
+				value="200" type="number" name="form1">
 			</p>
 			<p>
 				<span class="item-info">это сила взаимодействия частиц друг с другом, при значении 0 частицы неподвижны, при большом значении силы, частицы может выбить большим ускорением, свойство не действует на частицы, которые уже созданны, свойство применяется только на частицы созданные после изменения параметра</span>
 				<span>сила взаимосвязи частиц:</span><input id="massFactor" 
-				value="10" type="number" name="form1">
+				value="1" type="number" name="form1">
 			</p>
 			<p>
 				<span class="item-info">это скорость частиц</span>
 				<span>скорость частиц:</span><input id="dotSpeed" 
-				value="100" type="number" name="form1">
+				value="20000" type="number" name="form1">
 			</p>
 			<p>
 				<span class="item-info">0 - частицы неподвижны, <br> 100 - частицы никогда не остановятся. <br> оптимальное значение: 95-98</span>
 				<span>сопротивление:</span><input id="smooth" 
-				value="98" type="number" name="form1">
+				value="80" type="number" name="form1">
 			</p>
 			<p>
 				<span class="item-info">это сила ооталкивания частиц друг от друга. При значении 0 не будут отталкиваться друг от друга</span>
 				<span>сила отталкивания:</span><input id="dotPush" 
-				value="0.01" type="number" name="form1">
+				value="12" type="number" name="form1">
 			</p>
 			<p>
 				<span class="item-info">это вид частичек, либо полная заливка круга, либо только контур</span>
 				<span>Заливка частиц:</span>
 				<span class="checkbox">
-					<input class="active" checked="" id="checkbox" type="checkbox">
+					<input class="active" id="checkbox" type="checkbox">
 				</span>
 				
 			</p>
 			<p>
 				<span class="item-info">это цвет точек</span>
 				<span>цвет точек:</span><input class="color" id="defColor"
-				value="#ffffff" type="color">
+				value="#67a3c1" type="color">
 			</p>
 			<p>
 				<span class="item-info">это цвет фона</span>
